@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="../normalize.css">
 
     <style>
+        header{
+            width: 98.9vw;
+            height: 8vw;
+            position: relative;
+        }
+
         header>ul>li{
             display: inline-block;
             padding: 10px;
@@ -23,59 +29,75 @@
             right: 2px;
         }
 
-        main>aside{
-            width: 15vw;
-            height: 100vh;
-            background-color: rebeccapurple;
+        main{
+            width: 98.9vw;
+            height: 100vw;
+            position: relative;
+            background-color: aqua;
         }
 
         aside>ul>li{
             display: inline-block;
             color: white;
+            padding: 10px;
+        }
 
+        header>ul{
+            padding-right: 20px;
+            font-size: larger;
         }
 
         aside{
-            padding-top: 10px;
+            width: 15vw;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rebeccapurple;
+            padding-top: 15px;
         }
+
+
     </style>
 </head>
 
 <body>
+<header>
+    <img src="../../../asserts/images/ijse.png" alt="IJSE.image">
+
+    <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+    </ul>
+</header>
+
 <main>
-    <header>
-        <img src="../../../asserts/images/ijse.png" alt="IJSE.image">
-        
+    <aside>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
-        </ul>
-    </header>
-
-    <main>
-        <aside>
-            <ul>
                 <li>Home</li>
-            </ul>
+        </ul>
 
-            <ul>
+        <ul>
                 <li>Services</li>
-            </ul>
+        </ul>
 
-            <ul>
+        <ul>
                 <li>Contact</li>
-            </ul>
+        </ul>
 
-            <ul>
+        <ul>
                 <li>About Us</li>
-            </ul>
+        </ul>
 
-        </aside>
-        <section></section>
-    </main>
-    <footer></footer>
+    </aside>
+
+    <section></section>
 </main>
+
+<footer></footer>
 </body>
+
+
 </html>
