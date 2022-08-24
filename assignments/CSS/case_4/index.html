@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../normalize.css">
 
     <style>
-        main>section{
+        main>section:first-child{
             width: 100vw;
             height: 100vw;
             background-color: pink;
@@ -14,9 +14,32 @@
             position: relative;
         }
 
+        main>section{
+            width: 100vw;
+            height: 100vw;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        main>section:nth-child(2){
+            width: 100vw;
+            height: 100vw;
+            background-color: cornflowerblue;
+            border: 2px solid black;
+            position: relative;
+        }
+
         main>section:first-child>div{
             height: 7vh;
             background-color: red;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        main>section:nth-child(2)>div{
+            height: 7vh;
+            background-color: darkblue;
             position: sticky;
             top: 0;
             z-index: 1;
