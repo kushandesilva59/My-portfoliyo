@@ -7,57 +7,47 @@
 
     <style>
         main>section:first-child{
-            width: 100vw;
-            height: 100vw;
-            background-color: pink;
-            border: 2px solid black;
-            position: relative;
+            background-color: white;
         }
 
         main>section{
-            width: 100vw;
-            height: 100vw;
-            border: 2px solid black;
+            width: 98.9vw;
+            height: 100vh;
             position: relative;
         }
 
         main>section:nth-child(2){
-            width: 100vw;
-            height: 100vw;
             background-color: cornflowerblue;
-            border: 2px solid black;
-            position: relative;
         }
 
         main>section:nth-child(3){
-            width: 100vw;
-            height: 100vw;
             background-color: dimgrey;
-            border: 2px solid black;
-            position: relative;
+        }
+
+        main>section:nth-child(4){
+            background-color: red;
+        }
+
+        main>section>div{
+            height: 7vh;
+            top: 0;
+            position: sticky;
+            z-index: 1;
         }
 
         main>section:first-child>div{
-            height: 7vh;
             background-color: red;
-            position: sticky;
-            top: 0;
-            z-index: 1;
         }
 
         main>section:nth-child(2)>div{
-            height: 7vh;
             background-color: darkblue;
-            position: sticky;
-            top: 0;
-            z-index: 1;
         }
         main>section:nth-child(3)>div{
-            height: 7vh;
             background-color: black;
-            position: sticky;
-            top: 0;
-            z-index: 1;
+        }
+
+        main>section:nth-child(4)>div{
+            background-color: darkred;
         }
 
         main>section>div>h2{
@@ -71,14 +61,6 @@
            text-align: center;
            font-size: 10em;
         }
-
-        main>section>section{
-            height: 93vh;
-            padding-top: 46.5vh;
-            position: relative;
-        }
-
-
 
     </style>
 </head>
@@ -94,23 +76,29 @@
     </section>
 
     <section>
-        <div><h2>Card 2</h2></div>
+        <div>
+            <h2>Card 2</h2>
+        </div>
         <section>
             <h1>How</h1>
         </section>
     </section>
 
     <section>
-        <div><h2>Card 3</h2></div>
+        <div>
+            <h2>Card 3</h2>
+        </div>
         <section>
             <h1>Are</h1>
         </section>
     </section>
 
     <section>
-        <div><h2>Card 3</h2></div>
+        <div>
+            <h2>Card 4</h2>
+        </div>
         <section>
-            <h1>Are</h1>
+            <h1>You?</h1>
         </section>
     </section>
 
