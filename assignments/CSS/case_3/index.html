@@ -17,6 +17,7 @@
             top: 0;
             bottom: 0;
             margin: auto;
+            z-index: 5;
         }
 
         body>section:first-child>div{
@@ -30,6 +31,7 @@
             top: 0;
             bottom: 0;
             margin: auto;
+            z-index: 5;
         }
 
         body>section>div>div>h3{
@@ -64,6 +66,18 @@
             margin: auto;
         }
 
+        body>section:nth-child(4)>div{
+            width: 238px;
+            height: 238px;
+            border-radius: 100%;
+            background-color: indianred;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
 
         body>section:nth-child(2)>div>h3{
             text-align: center;
@@ -72,6 +86,12 @@
         }
 
         body>section:nth-child(3)>div>h3{
+            text-align: center;
+            padding-top: 90px;
+            color: white;
+        }
+
+        body>section:nth-child(4)>div>h3{
             text-align: center;
             padding-top: 90px;
             color: white;
@@ -87,6 +107,7 @@
         }
 
         body>section:nth-child(4){
+            position: relative;
              height: 1000px;
          }
 
@@ -107,6 +128,8 @@
     <section>
         <div><h3>Welcome to</h3></div>
     </section>
-    <section></section>
+    <section>
+        <div><h3>Institute of Software Engineering</h3></div>
+    </section>
 </body>
 </html>
