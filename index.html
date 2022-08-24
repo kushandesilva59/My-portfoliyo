@@ -5,6 +5,7 @@
     <title>Kushan De Silva - Portfolio</title>
     <link rel="icon" href="asserts/images/man.webp">
     <link rel="stylesheet" href="asserts/fonts/css/all.min.css">
+    <link rel="stylesheet" href="../My-Portfoliyo/assignments/CSS/normalize.css">
 
     <base href="this site url">
 
@@ -14,20 +15,9 @@
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=3 minimum-scale=1">
 
     <meta name="theme-color" content="03203C">
-
-   <!-- <style>
-        header li{
-            color: white;
-        }
-
-      section>article>h1{
-          color: #00BFFF;
-      }
-
-    </style>-->
-
+    
     <style>
-        header>nav>ul li{
+       /* header>nav>ul li{
             display: inline-block;
             padding-right: 10px;
         }
@@ -35,69 +25,102 @@
         header>nav>ul li:hover{
             background-color: yellow;
 
+        }*/
+
+        body>header>nav{
+            border: 2px solid black;
+            height: 4vw;
         }
+
+       body>header>nav>div>ul>li{
+          display: inline-block;
+       }
+       body>header>nav>div{
+           position: absolute;
+       }
+
+       body>header>nav>div:first-child{
+           right: 44vw;
+       }
+
+       body>header>nav>div:nth-child(2){
+           right: 37vw;
+       }
+
+       body>header>nav>div:nth-child(3){
+           right: 30vw;
+       }
+
+       body>header>nav>div:nth-child(4){
+           right: 23vw;
+       }
+
+       body>header>nav>div:nth-child(5){
+           right: 16vw;
+       }
+
+       body>header>nav>div:nth-child(6){
+           right: 9vw;
+       }
+
+       body>header>nav>div:nth-child(7){
+           right: 2vw;
+       }
+
+
     </style>
 
 </head>
 
 <body>
-    <header> <!--style="background-color: #03203C">-->
-        <section>
-                <img src="asserts/images/House.webp " height="40px" width="40px" border="circle">
-        </section>
-
-        <!--<nav>
-            <ul>
-                <li>Service</li>
-
-            </ul>
-
-            <ul>
-                <li>Skills</li>
-            </ul>
-
-            <ul>
-                <li>Projects</li>
-             </ul>
-            <ul>
-                <li>Journey</li>
-             </ul>
-
-            <ul>
-                 <li>Hobbies</li>
-            </ul>
-
-            <ul>
-                <li>Contact</li>
-            </ul>
-
-            <ul>
-                <li>Links</li>
-            </ul>
-
-        </nav>-->
+    <header>
+        <div>
+            <i class="fa-solid fa-house-chimney"></i>
+        </div>
 
         <nav>
-            <ul>
-                <li>Service</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Journey</li>
-                <li>Hobbies</li>
-                <li>Contact</li>
-                <li>Links</li>
-            </ul>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-earth-europe"></i>Services</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-award"></i>Skills</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-laptop-code"></i>Projects</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Journey</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-music"></i>Hobbies</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-paper-plane"></i>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fa-solid fa-link"></i>Links</li>
+                </ul>
+            </div>
         </nav>
         <section>
             <p>Hello, I'm</p>
             <p>Kushan De Silva</p>
             <p>Full Stack Developer</p>
 
-          <!--  <Article>
-                <p>Hello, I'm</p>
-                <h1>Kushan De Silva</h1>
-                <p>Full Stack Developer</p>
-            </Article>-->
+
         </section>
 
         <nav>
@@ -134,7 +157,7 @@
 </header>
 
 <main> <!--style="background-color: #03203C ">-->
-   <section>
+ <!--  <section>
        <p>My Services</p>
        <h1>What I Do</h1>
        <article>
@@ -238,7 +261,7 @@
    <section></section>
    <section></section>
    <section></section>
-   <section></section>
+   <section></section>-->
 </main>
 
 <footer>
