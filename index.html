@@ -29,7 +29,7 @@
 
         body>header>nav{
       /*     background-color: #03203C;*/
-            background-color: #002244;
+            background-color: #003153;
             height: 3.5vw;
         }
 
@@ -103,21 +103,22 @@
            right: 2vw;
        }
 
-        main>section>h2:first-child{
+        main>section:first-child>section>h2:first-child{
             position: relative;
             left: 3vw;
             top: 7vh;
             font-size: 4em;
             display: inline-block;
             margin: 0;
+            color: white;
         }
 
-        main>section:first-child{
+        main>section:first-child>section:first-child{
            /* border: 2px solid red;*/
             height: 50vh;
             position: relative;
         }
-       main>section>h2:nth-child(2){
+       main>section:first-child>section>h2:nth-child(2){
            position: relative;
            left: 4vw;
            top: 7vh;
@@ -127,7 +128,7 @@
            color: #00BFFF;
        }
 
-       main>section>h1:nth-child(3){
+       main>section:first-child>section>h1:nth-child(3){
            position: relative;
            top: 20vh;
            font-size: 6em;
@@ -137,18 +138,19 @@
            display: inline-block;
        }
 
-       main>section>h2:nth-child(4){
+       main>section:first-child>section>h2:nth-child(4){
            position: relative;
            top: 30vh;
            right: 58.6vw;
            font-size: 4em;
            display: inline-block;
            margin: 0;
+           color: white;
 
        }
 
 
-        main>nav:nth-child(2){
+        main>section:first-child>nav:nth-child(2){
             position: relative;
             left: 4vw;
             top: 2vh;
@@ -159,7 +161,7 @@
 
         }
 
-       main>nav:nth-child(2)>button{
+       main>section:first-child>nav:nth-child(2)>button{
            background-color: #00BFFF;
            border-radius: 7px;
            display:block;
@@ -169,49 +171,51 @@
 
        }
 
-        main>section:nth-child(3){
+        main>section:first-child>section:nth-child(3){
             height: 9vh;
             top: 4vw;
             position: relative;
            /* border: 2px solid black;*/
         }
 
-       main>section:nth-child(3)>h3{
+       main>section:first-child>section:nth-child(3)>h3{
            position: relative;
            margin: 0;
            font-size: 2em;
+           top: 0.1em;
            left: 3vw;
            display: inline-block;
+           color: white;
        }
 
-       main>section:nth-child(3)>a>img{
+       main>section:first-child>section:nth-child(3)>a>img{
            width: 3em;
        }
 
 
-       main>section:nth-child(3)>a:nth-child(2){
+       main>section:first-child>section:nth-child(3)>a:nth-child(2){
            position: absolute;
            width: 3em;
            left: 20vw;
        }
 
-       main>section:nth-child(3)>a:nth-child(3){
+       main>section:first-child>section:nth-child(3)>a:nth-child(3){
            position: absolute;
            width: 3em;
            left: 25vw;
        }
-       main>section:nth-child(3)>a:nth-child(4){
+       main>section:first-child>section:nth-child(3)>a:nth-child(4){
            position: absolute;
            width: 3em;
            left: 30vw;
        }
-       main>section:nth-child(3)>a:nth-child(5){
+       main>section:first-child>section:nth-child(3)>a:nth-child(5){
            position: absolute;
            width: 3em;
            left: 35vw;
        }
 
-        main>section:nth-child(4){
+        main>section:first-child>section:nth-child(4){
             background-color: cornflowerblue;
             height: 55vh;
             position: absolute;
@@ -221,17 +225,16 @@
             right: 3vw;
         }
 
-       main>section:nth-child(4)>img{
+       main>section:first-child>section:nth-child(4)>img{
            height: 55vh;
            position: relative;
            width: 55vh;
            border-radius: 100%;
        }
 
-        main{
-/*
+        main>section:first-child{
             background-color: #002244;
-*/
+            height: 70vh;
         }
 
     </style>
@@ -285,41 +288,43 @@
 </header>
 
 <main>
-    <section>
-       <h2>Hello,</h2>
-       <h2>I'm</h2>
-       <h1>Kushan De Silva</h1>
-       <h2>Full Stack Developer</h2>
-    </section>
+ <section>
+     <section>
+         <h2>Hello,</h2>
+         <h2>I'm</h2>
+         <h1>Kushan De Silva</h1>
+         <h2>Full Stack Developer</h2>
+     </section>
 
-    <nav>
-        <button>Let's Talk</button>
-    </nav>
+     <nav>
+         <button>Let's Talk</button>
+     </nav>
 
-    <section>
-        <h3>Check Out My</h3>
+     <section>
+         <h3>Check Out My</h3>
 
-        <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
-            <img src="asserts/images/LinkedIn-Image.png" alt="LinkedIn-Image" >
-        </a>
+         <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
+             <img src="asserts/images/LinkedIn-Image.png" alt="LinkedIn-Image" >
+         </a>
 
-        <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
-            <img src="asserts/images/Facebook-Image.png" alt="Facebook-Image" >
-        </a>
+         <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
+             <img src="asserts/images/Facebook-Image.png" alt="Facebook-Image" >
+         </a>
 
-        <a href="https://github.com/kushandesilva59" target="_blank">
-            <img src="asserts/images/Github-Image.png" alt="Github-Image" >
-        </a>
+         <a href="https://github.com/kushandesilva59" target="_blank">
+             <img src="asserts/images/Github-Image.png" alt="Github-Image" >
+         </a>
 
-        <a href="https://www.instagram.com/kush__________________/" target="_blank">
-            <img src="asserts/images/Instagram-Image.png" alt="Instagram-Image">
-        </a>
+         <a href="https://www.instagram.com/kush__________________/" target="_blank">
+             <img src="asserts/images/Instagram-Image.png" alt="Instagram-Image">
+         </a>
 
-    </section>
+     </section>
 
-    <section>
+     <section>
          <img src="asserts/images/Pic.jpeg" alt="">
-    </section>
+     </section>
+ </section>
 
 </main>
 
