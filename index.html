@@ -17,18 +17,7 @@
     <meta name="theme-color" content="03203C">
     
     <style>
-       /* header>nav>ul li{
-            display: inline-block;
-            padding-right: 10px;
-        }
-
-        header>nav>ul li:hover{
-            background-color: yellow;
-
-        }*/
-
         body>header>nav{
-      /*     background-color: #03203C;*/
             background-color: #003153;
             height: 3.5vw;
         }
@@ -38,6 +27,11 @@
            z-index: 1;
            color: white;
        }
+
+        main>section:first-child{
+            background-color: #002244;
+            height: 70vh;
+        }
 
        body>header>nav>div>ul>li{
           display: inline-block;
@@ -157,7 +151,7 @@
             border-radius: 15px;
             display: inline-block;
             background-color: #00BFFF;
-            box-shadow: 1px 5px red; /*shadow*/
+            box-shadow: 1px 5px 2px red; /*shadow*/
 
         }
 
@@ -166,7 +160,7 @@
            border-radius: 7px;
            display:block;
            border: 1px solid #00BFFF;
-           box-shadow: 1px 5px red; /*shadow*/
+           box-shadow: 1px 5px 2px red ; /*shadow*/
 
 
        }
@@ -232,10 +226,46 @@
            border-radius: 100%;
        }
 
-        main>section:first-child{
+        main>section:nth-child(2){
             background-color: #002244;
             height: 70vh;
         }
+
+
+        main>section:nth-child(2)>section:first-child>h2:first-child{
+            position: relative;
+            left: 3vw;
+            top: 7vh;
+            font-size: 4em;
+            display: inline-block;
+            margin: 0;
+            color: white;
+        }
+
+        main>section:nth-child(2)>section:first-child>h2:nth-child(2){
+            position: relative;
+            left: 3vw;
+            top: 7vh;
+            font-size: 4em;
+            display: inline-block;
+            margin: 0;
+            color: #00BFFF;
+        }
+
+        main>section:nth-child(2)>section:first-child>h1:nth-child(3){
+            position: relative;
+            top: 23vh;
+            right :18vw;
+            font-size: 6em;
+            display: inline-block;
+            margin: 0;
+            color: white;
+        }
+
+        main>section:nth-child(2)>section:first-child>h1{
+
+        }
+
 
     </style>
 
@@ -288,43 +318,51 @@
 </header>
 
 <main>
- <section>
      <section>
-         <h2>Hello,</h2>
-         <h2>I'm</h2>
-         <h1>Kushan De Silva</h1>
-         <h2>Full Stack Developer</h2>
+         <section>
+             <h2>Hello,</h2>
+             <h2>I'm</h2>
+             <h1>Kushan De Silva</h1>
+             <h2>Full Stack Developer</h2>
+         </section>
+
+         <nav>
+             <button>Let's Talk</button>
+         </nav>
+
+         <section>
+             <h3>Check Out My</h3>
+
+             <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
+                 <img src="asserts/images/LinkedIn-Image.png" alt="LinkedIn-Image" >
+             </a>
+
+             <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
+                 <img src="asserts/images/Facebook-Image.png" alt="Facebook-Image" >
+             </a>
+
+             <a href="https://github.com/kushandesilva59" target="_blank">
+                 <img src="asserts/images/Github-Image.png" alt="Github-Image" >
+             </a>
+
+             <a href="https://www.instagram.com/kush__________________/" target="_blank">
+                 <img src="asserts/images/Instagram-Image.png" alt="Instagram-Image">
+             </a>
+
+         </section>
+
+         <section>
+             <img src="asserts/images/Pic.jpeg" alt="">
+         </section>
      </section>
 
-     <nav>
-         <button>Let's Talk</button>
-     </nav>
-
-     <section>
-         <h3>Check Out My</h3>
-
-         <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
-             <img src="asserts/images/LinkedIn-Image.png" alt="LinkedIn-Image" >
-         </a>
-
-         <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
-             <img src="asserts/images/Facebook-Image.png" alt="Facebook-Image" >
-         </a>
-
-         <a href="https://github.com/kushandesilva59" target="_blank">
-             <img src="asserts/images/Github-Image.png" alt="Github-Image" >
-         </a>
-
-         <a href="https://www.instagram.com/kush__________________/" target="_blank">
-             <img src="asserts/images/Instagram-Image.png" alt="Instagram-Image">
-         </a>
-
-     </section>
-
-     <section>
-         <img src="asserts/images/Pic.jpeg" alt="">
-     </section>
- </section>
+    <section>
+        <section>
+            <h2>My</h2>
+            <h2>Services</h2>
+            <h1>What I Do</h1>
+        </section>
+    </section>
 
 </main>
 
