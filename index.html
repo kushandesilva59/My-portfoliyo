@@ -109,7 +109,7 @@
 
         main>section:first-child>section:first-child{
            /* border: 2px solid red;*/
-            height: 50vh;
+            height: 48vh;
             position: relative;
         }
        main>section:first-child>section>h2:nth-child(2){
@@ -227,8 +227,15 @@
        }
 
         main>section:nth-child(2){
+            position: relative;
             background-color: #003153;
-            height: 120vh;
+            height: 180vh;
+        }
+
+        main>section:nth-child(2)>section:first-child{
+            position: relative;
+            height: 50vh;
+            border: 2px solid red;
         }
 
 
@@ -285,19 +292,29 @@
             top: 0;
             margin: auto;
         }
+        /**/
 
-        main>section:nth-child(2)>section:nth-child(2)>div:first-child>div{
+
+        main>section:nth-child(2)>section:nth-child(2)>div:first-child>div:first-child{
             background-image: url("../My-Portfoliyo/asserts/images/Portfolio/Web.jpg");
             background-size: cover;
         }
 
-        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(2)>div{
+        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(2)>div:first-child{
             background-image: url("../My-Portfoliyo/asserts/images/Portfolio/Software.jpg");
             background-size: cover;
         }
-        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>div{
+        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>div:first-child{
             background-image: url("../My-Portfoliyo/asserts/images/Portfolio/UIUX-developing-Image.jpg");
             background-size: cover;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>div:nth-child(2){
+           position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
 
 
@@ -370,25 +387,25 @@
              <h3>Check Out My</h3>
 
              <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
-                 <img src="asserts/images/LinkedIn-Image.png" alt="LinkedIn-Image" >
+                 <img src="asserts/images/Portfolio/LinkedIn-Image.png" alt="LinkedIn-Image" >
              </a>
 
              <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
-                 <img src="asserts/images/Facebook-Image.png" alt="Facebook-Image" >
+                 <img src="asserts/images/Portfolio/Facebook-Image.png" alt="Facebook-Image" >
              </a>
 
              <a href="https://github.com/kushandesilva59" target="_blank">
-                 <img src="asserts/images/Github-Image.png" alt="Github-Image" >
+                 <img src="asserts/images/Portfolio/Github-Image.png" alt="Github-Image" >
              </a>
 
              <a href="https://www.instagram.com/kush__________________/" target="_blank">
-                 <img src="asserts/images/Instagram-Image.png" alt="Instagram-Image">
+                 <img src="asserts/images/Portfolio/Instagram-Image.png" alt="Instagram-Image">
              </a>
 
          </section>
 
          <section>
-             <img src="asserts/images/Pic.jpeg" alt="">
+             <img src="asserts/images/Portfolio/Pic.jpeg" alt="">
          </section>
      </section>
 
@@ -401,13 +418,17 @@
 
         <section>
             <div>
-                <div></div>
+                <div></div><!--Web pic-->
+                <div>
+                    <h5>Web Development</h5>
+                    <h5>Website develop With HTML,CSS and Javascript</h5>
+                </div>
             </div>
             <div>
-                <div></div>
+                <div></div><!--Software pic-->
             </div>
             <div>
-                <div></div>
+                <div></div><!--Ui/ux pic-->
             </div>
         </section>
     </section>
