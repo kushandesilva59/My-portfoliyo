@@ -227,7 +227,7 @@
        }
 
         main>section:nth-child(2){
-            background-color: #002244;
+            background-color: #003153;
             height: 70vh;
         }
 
@@ -262,8 +262,17 @@
             color: white;
         }
 
-        main>section:nth-child(2)>section:first-child>h1{
+        main>section:nth-child(2)>section:nth-child(2){
+            display: flex;
+            position: relative;
+            top: 180px;
+            justify-content: space-around;
+        }
 
+        main>section:nth-child(2)>section:nth-child(2)>div{
+            border: 2px solid red;
+            height: 400px;
+            width: 400px;
         }
 
 
@@ -361,6 +370,12 @@
             <h2>My</h2>
             <h2>Services</h2>
             <h1>What I Do</h1>
+        </section>
+
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
     </section>
 
