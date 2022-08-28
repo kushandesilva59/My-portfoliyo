@@ -270,10 +270,37 @@
         }
 
         main>section:nth-child(2)>section:nth-child(2)>div{
+            position: relative;
             border: 2px solid red;
             height: 400px;
             width: 400px;
         }
+
+        main>section:nth-child(2)>section:nth-child(2)>div>div{
+            position: absolute;
+            height: 250px;
+            width: 250px;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>div:first-child>div{
+            background-image: url("../My-Portfoliyo/asserts/images/Portfolio/Web.jpg");
+            background-size: cover;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(2)>div{
+            background-image: url("../My-Portfoliyo/asserts/images/Portfolio/Software.jpg");
+            background-size: cover;
+        }
+        main>section:nth-child(2)>section:nth-child(2)>div:nth-child(3)>div{
+            background-image: url("../My-Portfoliyo/asserts/images/Portfolio/UIUX-developing-Image.jpg");
+            background-size: cover;
+        }
+
+
 
 
     </style>
@@ -373,9 +400,15 @@
         </section>
 
         <section>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
         </section>
     </section>
 
