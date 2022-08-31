@@ -702,7 +702,7 @@
 
         main>section:nth-child(5){
             position: relative;
-            height: 500px;
+            height: 1000px;
             background-color: aqua;
         }
 
@@ -732,7 +732,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            height: 350px;
+            height: 850px;
             width: calc(100%/3);
             background-color: deeppink;
         }
@@ -743,20 +743,32 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            height: 350px;
+            height: 850px;
             width: calc(100%/3);
             background-color: yellow;
-
         }
 
         main>section:nth-child(5)>div:nth-child(4){
             position: absolute;
             right: 0;
             bottom: 0;
-            height: 350px;
+            height: 850px;
             width: calc(100%/3);
             background-color: brown;
         }
+
+        main>section:nth-child(5)>div:nth-child(3)>div:first-child{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: 2px solid black;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
 
 
 
@@ -959,9 +971,17 @@
             <h2>My journey so far</h2>
             <h3>Journey</h3>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><!--left-->
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div><!--pictures - middle-->
+        <div></div><!--right-->
     </section>
 
 </main>
