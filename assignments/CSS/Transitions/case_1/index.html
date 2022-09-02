@@ -4,30 +4,86 @@
     <meta charset="UTF-8">
     <title>case 1</title>
     <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="../../../../asserts/fonts/css/all.min.css">
+
+    <style>
+        section>div{
+            height: 50px;
+            width: 300px;
+            position: absolute;
+            background-color: #00BFFF;
+            left: -270px;
+        }
+
+        section>div:hover{
+            left: 0;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        section{
+            position: relative;
+            height: 800px;
+            width: 100%;
+        }
+
+        section>div:nth-child(2){
+
+            top: 70px;
+        }
+
+        section>div:nth-child(3){
+            top: 140px;
+        }
+
+        section>div:nth-child(4){
+            top: 210px;
+        }
+
+        section>div:nth-child(5){
+            top: 280px;
+        }
+
+        section>div:nth-child(6){
+            top: 350px;
+        }
+
+        section>div>i{
+            position: absolute;
+            left: 270px;
+        }
+
+    </style>
+
 </head>
 
 
 <body>
     <section>
         <div>
-
+            Menu One<i class="fa-solid fa-music"></i>
         </div>
 
         <div>
-
+            Menu Two<i class="fa-solid fa-music"></i>
         </div>
 
         <div>
-
+            Menu Three<i class="fa-solid fa-music"></i>
         </div>
 
         <div>
-
+            Menu Four<i class="fa-solid fa-music"></i>
         </div>
 
         <div>
-
+            Menu Five<i class="fa-solid fa-music"></i>
         </div>
+
+        <div>
+            Menu Six<i class="fa-solid fa-music"></i>
+        </div>
+
     </section>
 </body>
 
