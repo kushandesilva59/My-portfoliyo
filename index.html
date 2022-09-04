@@ -1284,6 +1284,11 @@
             width: 610px;
             margin: 10px;
             height: 30px;
+            border-radius: 10px;
+        }
+
+        main>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>form>fieldset>input:nth-child(4){
+           height: 90px;
         }
 
         main>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>form>fieldset>button{
@@ -1293,6 +1298,7 @@
             bottom: 0;
             width: 60px;
             margin: auto;
+            border-radius: 5px;
         }
 
 
@@ -1627,12 +1633,12 @@
                 </div>
 
                 <div>
-                    <form action="">
+                    <form action="" method="post">
                         <fieldset>
-                            <input type="text" placeholder="Your name" name="Sender name">
-                            <input type="email" placeholder="Your E-mail" name="Sender e-mail">
-                            <input type="text" placeholder="Subject" name="Subject">
-                            <input type="text" placeholder="Message" name="Message">
+                            <input type="text" placeholder="Your name" name="Sender name" required>
+                            <input type="email" placeholder="Your E-mail" name="Sender e-mail" required>
+                            <input type="text" placeholder="Subject" name="Subject" required>
+                            <input type="text" placeholder="Message" name="Message" required>
 
                             <button>Send</button>
                         </fieldset>
