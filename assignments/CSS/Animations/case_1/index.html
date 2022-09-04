@@ -9,15 +9,19 @@
         @keyframes my-animation {
             25%{
               margin: 0px 0px 0px  700px;
+                transform: rotate(360deg);
             }
             50%{
                 margin: 640px 0px 0px 700px;
+                transform: rotate(-360deg);
             }
             75%{
                 margin: 640px 0px 0px 0px;
+                transform: rotate(360deg);
             }
             100%{
 margin: 0px 0px 0px 0px;
+                transform: rotate(-360deg);
             }
         }
 
@@ -30,6 +34,7 @@ margin: 0px 0px 0px 0px;
 
 
         section>div{
+
             width: 150px;
             height: 70px;
             background-color: #ff253a;
