@@ -28,8 +28,6 @@
 
         section>div:nth-child(2)>div:first-child{
             background-image: url("../../../../asserts/images/cases/city.png");
-            z-index: 1;
-
             height: 250px;
             width: 400%;
             position: absolute;
@@ -38,14 +36,14 @@
             left: 0;
             right: 0;
             margin: auto;
-            animation-name: my-animation;
+            animation-name: city-animation;
             animation-iteration-count: 1;
             animation-duration: 5s;
             animation-timing-function: linear;
             animation-fill-mode: forwards;
         }
 
-        @keyframes my-animation{
+        @keyframes city-animation{
             0%{
                 left: -20%;
             }
@@ -66,6 +64,15 @@
                 left: -100%;
             }
         }
+
+        section>div:nth-child(2)>div:nth-child(2){
+            background-image: url("../../../../asserts/images/cases/car.png");
+            background-size: cover;
+            height: 150px;
+            width: 400px;
+            position: absolute;
+            bottom: 150px;
+        }
     </style>
 
 </head>
@@ -74,9 +81,9 @@
         <div></div>
 
         <div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><!--city--></div>
+            <div><!--car--></div>
+            <div><!--Wheel--></div>
         </div>
 
 
