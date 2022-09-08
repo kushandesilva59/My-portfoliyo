@@ -29,7 +29,7 @@
         section>div:nth-child(2)>div:first-child{
             background-image: url("../../../../asserts/images/cases/city.png");
             height: 250px;
-            width: 400%;
+            width: 600%;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -85,12 +85,32 @@
             100%{
                 left: -100%;
             }
+        }
 
+        @keyframes wheel-animation{
+            0%{
+                transform: rotate(-72deg);
+            }
 
+            25%{
+                transform: rotate(-144deg);
+            }
+
+            50%{
+                transform: rotate(-216deg);
+            }
+
+            75%{
+                transform: rotate(-288deg);
+            }
+
+            100%{
+                transform: rotate(-360deg);
+            }
         }
 
         section>div:nth-child(2)>div:nth-child(2){
-            width: 400%;
+            width: 600%;
             height: 237px;
             background-image: url("../../../../asserts/images/cases/road.jpg");
             position: absolute;
@@ -121,6 +141,11 @@
             background-size: cover;
             bottom: 140px;
             left: 380px;
+
+            animation-name: wheel-animation;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
         }
 
         section>div:nth-child(2)>div:nth-child(5){
@@ -131,6 +156,11 @@
             position: absolute;
             bottom: 140px;
             left: 628px;
+
+            animation-name: wheel-animation;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
         }
 
 
