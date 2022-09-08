@@ -6,11 +6,65 @@
 
     <link rel="stylesheet" href="../../normalize.css">
     <style>
+        section{
+            position: relative;
+        }
+
         section>div:first-child{
             height: 100vh;
             width: 100vw;
             background-image: url("../../../../asserts/images/cases/sky.jpg");
             background-size: cover;
+        }
+
+       /* body{
+            overflow: hidden;
+        }*/
+
+        section>div:nth-child(2){
+            width: 400%;
+
+        }
+
+        section>div:nth-child(2)>div:first-child{
+            background-image: url("../../../../asserts/images/cases/city.png");
+            z-index: 1;
+
+            height: 250px;
+            width: 400%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            animation-name: my-animation;
+            animation-iteration-count: 1;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes my-animation{
+            0%{
+                left: -20%;
+            }
+
+            25%{
+                left: -40%;
+            }
+
+            50%{
+                left: -60%;
+            }
+
+            75%{
+                left: -80%;
+            }
+
+            100%{
+                left: -100%;
+            }
         }
     </style>
 
@@ -18,7 +72,14 @@
 <body>
     <section>
         <div></div>
-        <div></div>
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
     </section>
 </body>
 </html>
