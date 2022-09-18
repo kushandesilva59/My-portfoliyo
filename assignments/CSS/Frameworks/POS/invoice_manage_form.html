@@ -7,14 +7,7 @@
     <link rel="stylesheet" href="../../Boostrap/css/bootstrap.min.css">
 
     <style>
-        section>div>div{
-            margin: 5vh;
-        }
 
-        body>section:nth-child(2)>div>button{
-            position: absolute;
-            right: 0;
-        }
     </style>
 
 </head>
@@ -94,6 +87,7 @@
 
     <!--Item select start-->
     <section class="col">
+
         <div class="row">
             <!--Item combo box start-->
             <div class="col">
@@ -105,16 +99,19 @@
                     <option value="3">Three</option>
                 </select>
             </div>
+            <!--Item combo box end-->
+
+            <!--Customer start-->
+            <div class="col">
+                <label for="txtItemCode"><b>Item Code :</b></label>
+                <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCode">
+            </div>
+            <!--customer end-->
 
         </div>
-        <!--Item combo box end-->
 
-        <!--Customer start-->
-        <div class="col">
-            <label for="txtItemCode"><b>Item Code :</b></label>
-            <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCode">
-        </div>
-        <!--customer end-->
+
+
 
         <div class="row">
             <!--Item Name start-->
@@ -125,14 +122,14 @@
             <!--Item Name end-->
 
             <!--Price start-->
-            <div class="col-2">
+            <div class="col">
                 <label for="txtPrice"><b>Price :</b></label>
-                <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtPrice">
+                <input type="number" class="form-control" placeholder="100.00" aria-label="Last name" id="txtPrice">
             </div>
             <!--Price end-->
 
             <!--QtyOnH start-->
-            <div class="col-2">
+            <div class="col">
                 <label for="txtQtyOnH"><b>QtyOnH :</b></label>
                 <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtQtyOnH">
             </div>
