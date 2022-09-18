@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Customer</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../Boostrap/css/bootstrap.min.css">
+
+    <style>
+        body>section>form>section{
+            position: absolute;
+            right: 0;
+        }
+
+        body>section{
+            position: relative;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section style="width: 500px" >
+        <form>
+            <div class="mb-3">
+                <label for="txtItemCode" class="form-label"><b>Item Code :</b></label>
+                <input type="text" class="form-control" id="txtItemCode" aria-describedby="ID">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtItemName" class="form-label"><b>Item Name :</b></label>
+                <input type="text" class="form-control" id="txtItemName">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtItemPrice" class="form-label"><b>Item Price :</b></label>
+                <input type="number" class="form-control" id="txtItemPrice" aria-describedby="ID">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtQTY" class="form-label"><b>Item Quantity :</b></label>
+                <input type="number" class="form-control" id="txtQTY" aria-describedby="ID">
+            </div>
+
+            <section>
+                <button type="button" class="btn btn-danger">Save</button>
+                <button type="button" class="btn btn-warning">Renew</button>
+                <button type="button" class="btn btn-info">Close</button>
+            </section>
+        </form>
+    </section>
+
+
+<script src="../../Boostrap/js/bootstrap.min.js"></script>
+</body>
+</html>
