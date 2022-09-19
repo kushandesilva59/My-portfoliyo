@@ -11,8 +11,16 @@
             background-color: greenyellow;
         }
 
+        body>section>section>section:first-child>div:first-child>h1{
+            text-align: center;
+        }
+
         body>section>section>section:nth-child(2)>div:first-child{
             background-color: greenyellow;
+        }
+
+        body>section>section>section:nth-child(2)>div:first-child>h1{
+            text-align: center
         }
 
         body>section>section{
@@ -34,6 +42,7 @@
         body>section>section>section{
             background-color: white;
             border: 2px solid black;
+            margin: 1vh;
         }
     </style>
 
@@ -145,7 +154,7 @@
 
                 <div class="row">
                     <!--Item Name start-->
-                    <div class="col-6">
+                    <div class="col-5">
                         <label for="txtItemName"><b>Item Name :</b></label>
                         <input type="text" class="form-control" placeholder="Malitha" aria-label="First name" id="txtItemName">
                     </div>
@@ -209,7 +218,7 @@
                     <!--Discount end-->
 
                     <!--Balance start-->
-                    <div class="col-12">
+                    <div class="col-11">
                         <label for="txtBalance"><b>QtyOnH :</b></label>
                         <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtBalance">
                     </div>
