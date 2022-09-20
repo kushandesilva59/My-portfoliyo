@@ -10,13 +10,17 @@
         body>section>section:first-child{
             margin-bottom: 2vh;
         }
+
+        body{
+            background-color: lightgrey;
+        }
     </style>
 </head>
 <body>
     <section class="container-fluid row" >
         <!--header start-->
         <section>
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,12 +55,12 @@
         <!--Header end-->
 
         <!--Form Start-->
-        <section class="col-5 row" style="background-color: #00BFFF">
-            <div><h3>Item search</h3></div>
+        <section class="col-5 mx-3 row" style="background-color: white" >
+            <div style="background-color: green"><h3 style="color: white; text-align: center">Item search</h3></div>
 
             <div class="row g-3">
                 <div class="col-11 mx-4 ">
-                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
                 </div>
             </div>
 
@@ -79,7 +83,7 @@
         <!--Form end-->
 
         <!--Two button start-->
-        <section class="col-7" style="background-color: #a52834" >
+        <section class="col-6">
             <div class="row justify-content-end">
                 <div class="col-4">
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
