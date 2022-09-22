@@ -9,40 +9,54 @@
 </head>
 <body>
 
-<!--header start-->
-<section>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="invoice_manage_form.html">Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="items.html">Items</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="customers.html">Customers</a>
-                    </li>
+<header>
+    <!--header start-->
+    <section>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                            <a class="nav-link" href="#" id="orders">Orders</a>
+                            <a class="nav-link" href="#" id="items">Items</a>
+                            <a class="nav-link" href="#" id="customers">Customers</a>
+                        </div>
 
 
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</section>
-<!--Header end-->
+        </nav>
+    </section>
+    <!--Header end-->
+</header>
+
+<main></main>
 
 
-<script src="../../CSS/Boostrap/js/bootstrap.min.js"></script>
+
+<script src="../../CSS/Frameworks/POS/asserts/js/jquery-3.6.1.min.js"></script>
+<script>
+    $("#home").click(function () {
+        alert("home");
+    })
+
+    $("#items").click(function () {
+        alert("items");
+    })
+
+    $("#customer").click(function () {
+        alert("customers");
+    })
+
+    $("#orders").click(function () {
+        alert("orders");
+    })
+</script>
 </body>
 </html>
