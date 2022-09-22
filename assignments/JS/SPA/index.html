@@ -194,6 +194,214 @@
     </section>
     <!--Customers end-->
 
+    <section id="ordersContent">
+        <section class="row">
+
+            <!--Invoice details start-->
+            <section class="col">
+                <div><h1>Invoice Details</h1></div>
+
+                <div class="row">
+                    <!--Order id start-->
+                    <div class="col">
+                        <label for="txtOrderId"><b>Order ID :</b></label>
+                        <input type="text" class="form-control" placeholder="D001" aria-label="First name" id="txtOrderId">
+                    </div>
+                    <!--Order id end-->
+
+                    <!--Date start-->
+                    <div class="col">
+                        <label for="dateDate"><b>Date :</b></label>
+                        <input type="date" class="form-control" placeholder="Last name" aria-label="Last name" id="dateDate">
+                    </div>
+                    <!--date end-->
+                </div>
+
+                <div class="row">
+                    <!--Customer combo box start-->
+                    <div class="col">
+                        <label for="txtCustomer"><b>Customer :</b></label>
+                        <select class="form-select" aria-label="Default select example" id="txtCustomer">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <!--Customer combo box end-->
+
+                    <!--Customer start-->
+                    <div class="col">
+                        <label for="txtCustomerId"><b>Customer :</b></label>
+                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtCustomerId">
+                    </div>
+                    <!--customer end-->
+                </div>
+
+
+
+                <div class="row">
+                    <!--Name start-->
+                    <div class="col">
+                        <label for="txtName"><b>Name :</b></label>
+                        <input type="text" class="form-control" placeholder="Malitha" aria-label="First name" id="txtName">
+                    </div>
+                    <!--Name end-->
+
+                    <!--Salary start-->
+                    <div class="col">
+                        <label for="txtSalary"><b>Salary :</b></label>
+                        <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtSalary">
+                    </div>
+                    <!--Salary end-->
+                </div>
+
+                <div class="row">
+                    <!--Address start-->
+                    <div class="col">
+                        <label for="txtAddress"><b>Address :</b></label>
+                        <input type="text" class="form-control" placeholder="Panadura" aria-label="First name" id="txtAddress">
+                    </div>
+                    <!--Name end-->
+                </div>
+            </section>
+            <!--Invoice Details end-->
+
+
+            <!--Item select start-->
+            <section class="col">
+                <div><h1>Item Select</h1></div>
+
+
+                <div class="row">
+                    <!--Item combo box start-->
+                    <div class="col">
+                        <label for="txtItem"><b>Item :</b></label>
+                        <select class="form-select" aria-label="Default select example" id="txtItem">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <!--Item combo box end-->
+
+                    <!--Customer start-->
+                    <div class="col">
+                        <label for="txtItemCode"><b>Item Code :</b></label>
+                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCode">
+                    </div>
+                    <!--customer end-->
+
+                </div>
+
+
+
+
+                <div class="row">
+                    <!--Item Name start-->
+                    <div class="col-5">
+                        <label for="txtItemName"><b>Item Name :</b></label>
+                        <input type="text" class="form-control" placeholder="Malitha" aria-label="First name" id="txtItemName">
+                    </div>
+                    <!--Item Name end-->
+
+                    <!--Price start-->
+                    <div class="col">
+                        <label for="txtPrice"><b>Price :</b></label>
+                        <input type="number" class="form-control" placeholder="100.00" aria-label="Last name" id="txtPrice">
+                    </div>
+                    <!--Price end-->
+
+                    <!--QtyOnH start-->
+                    <div class="col">
+                        <label for="txtQtyOnH"><b>QtyOnH :</b></label>
+                        <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtQtyOnH">
+                    </div>
+                    <!--QtyOnH end-->
+                </div>
+
+                <!--Order quantity start-->
+                <div class="row">
+                    <div class="col">
+                        <label for="txtOrderQty"><b>Order Quantity :</b></label>
+                        <input type="number" class="form-control" placeholder="2" aria-label="First name" id="txtOrderQty">
+                    </div>
+                </div>
+                <!--IOrder quantity end-->
+
+                <div>
+                    <button type="button" class="btn btn-danger">Add Item</button>
+                </div>
+
+            </section>
+            <!--Item select end-->
+
+            <section class="col">
+                <div>
+                    <label for="txtTotal">Total :</label>
+                    <input type="number" id="txtTotal">
+                </div>
+
+                <div>
+                    <label for="txtSubTotal">Sub Total :</label>
+                    <input type="number" id="txtSubTotal">
+                </div>
+
+                <div class="row">
+                    <!--Cash start-->
+                    <div class="col-5">
+                        <label for="txtCash"><b>Cash :</b></label>
+                        <input type="number" class="form-control" placeholder="5000" aria-label="First name" id="txtCash">
+                    </div>
+                    <!--Cash end-->
+
+                    <!--Discount start-->
+                    <div class="col-5">
+                        <label for="txtDiscount"><b>Discount :</b></label>
+                        <input type="number" class="form-control" placeholder="10" aria-label="Last name" id="txtDiscount">
+                    </div>
+                    <!--Discount end-->
+
+                    <!--Balance start-->
+                    <div class="col-11">
+                        <label for="txtBalance"><b>QtyOnH :</b></label>
+                        <input type="number" class="form-control" placeholder="10000.00" aria-label="Last name" id="txtBalance">
+                    </div>
+                    <!--Balance end-->
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success">Purchase</button>
+                </div>
+
+            </section>
+        </section>
+
+        <section>
+            <table class="table">
+                <thead class="table-dark">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>P002</td>
+                    <th>Keerisamba 5kg</th>
+                    <th>525.00</th>
+                    <th>2</th>
+                    <th>1050.00</th>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
 </main>
 
 
@@ -201,15 +409,19 @@
 <script src="../../CSS/Frameworks/POS/asserts/js/jquery-3.6.1.min.js"></script>
 <script>
     $("#home").click(function () {
-        alert("home");
+        $("#itemsContent").css("display","none");
+        $("#customersContent").css("display","none");
+
     })
 
     $("#items").click(function () {
-        alert("items");
+        $("#homeContent").css("display","none");
+        $("#customersContent").css("display","none");
     })
 
     $("#customer").click(function () {
-        alert("customers");
+        $("#itemsContent").css("display","none");
+        $("#homeContent").css("display","none");
     })
 
     $("#orders").click(function () {
