@@ -57,6 +57,7 @@
     </section>
     <!--Home end-->
 
+    <!--Items start-->
     <section id="itemsContent">
         <!--Form Start-->
         <section class="col-5 mx-3 row" style="background-color: white" >
@@ -122,8 +123,76 @@
         </section>
         <!--Table end-->
     </section>
+    <!--Items end-->
 
 
+    <!--Customers star-->
+    <section id="customersContent">
+        <!--Form Start-->
+        <section class="col-5 mx-3 row" style="background-color: white" >
+            <div style="background-color: green"><h3 style="color: white; text-align: center">Customer search</h3></div>
+
+            <div class="row g-3">
+                <div class="col-11 mx-4 ">
+                    <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
+                </div>
+            </div>
+
+            <div class="m-4 col-2">
+                <button type="button" class="btn btn-success">Search</button>
+            </div>
+
+            <div class="col-6 mt-4">
+                <select class="form-select" aria-label="Default select example" id="dropdownSearch2">
+                    <option selected="">Name</option>
+                    <option value="Item Code">Item Code</option>
+                    <option value="NIC">NIC</option>
+                </select>
+            </div>
+        </section>
+        <!--Form end-->
+
+        <!--Two button start-->
+        <section class="col-6">
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-info">New Customer</button>
+                        <button type="button" class="btn btn-warning">View All Customers</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Two button end-->
+
+        <!--Four button start-->
+        <section class="col-7 mt-4 mx-2" >
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Update</button>
+                <button type="button" class="btn btn-info">Details</button>
+                <button type="button" class="btn btn-success">Clear</button>
+            </div>
+        </section>
+        <!--Four button end-->
+
+        <!--Table start-->
+        <section>
+            <table class="table table-success table-striped mt-4">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                </tr>
+                </thead>
+            </table>
+        </section>
+        <!--Table end-->
+    </section>
+    <!--Customers end-->
 
 </main>
 
