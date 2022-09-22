@@ -41,23 +41,87 @@
     <section class="row mt-4" id="homeContent">
         <div class="col" >
             <div><h5 style="text-align: center">Customers</h5></div>
-            <a href="#" id=""><img class="img-fluid" src="asserts/Customers.jpeg" alt=""></a>
+            <a href="#" id="customerImage"><img class="img-fluid" src="asserts/Customers.jpeg" alt=""></a>
             <div><h2></h2></div>
         </div>
         <div class="col">
             <div><h5 style="text-align: center">Items</h5></div>
-            <a href="#"><img class="img-fluid" src="asserts/Items.jpeg" alt=""></a>
+            <a href="#" id="itemImage"><img class="img-fluid" src="asserts/Items.jpeg" alt=""></a>
             <div><h2></h2></div>
         </div>
         <div class="col">
             <div><h5 style="text-align: center">My Orders</h5></div>
-            <a href="#"><img class="img-fluid" src="asserts/Orders.jpeg" alt=""></a>
+            <a href="#" id="ordersImage"><img class="img-fluid" src="asserts/Orders.jpeg" alt=""></a>
             <div><h2></h2></div>
         </div>
-
-
     </section>
     <!--Home end-->
+
+    <section id="itemsContent">
+        <!--Form Start-->
+        <section class="col-5 mx-3 row" style="background-color: white" >
+            <div style="background-color: green"><h3 style="color: white; text-align: center">Item search</h3></div>
+
+            <div class="row g-3">
+                <div class="col-11 mx-4 ">
+                    <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
+                </div>
+            </div>
+
+            <div class="m-4 col-2">
+                <button type="button" class="btn btn-success">Search</button>
+            </div>
+
+            <div class="col-6 mt-4">
+                <select class="form-select" aria-label="Default select example" id="dropdownSearch">
+                    <option selected="">Name</option>
+                    <option value="Item Code">Item Code</option>
+                    <option value="NIC">NIC</option>
+                </select>
+            </div>
+        </section>
+        <!--Form end-->
+
+        <!--Two button start-->
+        <section class="col-6">
+            <div class="row justify-content-end">
+                <div class="col-4">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-info">New Item</button>
+                        <button type="button" class="btn btn-warning">View All Items</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Two button end-->
+
+        <!--Four button start-->
+        <section class="col-7 mt-4 mx-2" >
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Update</button>
+                <button type="button" class="btn btn-info">Details</button>
+                <button type="button" class="btn btn-success">Clear</button>
+            </div>
+        </section>
+        <!--Four button end-->
+
+        <!--Table start-->
+        <section>
+            <table class="table table-success table-striped mt-4">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                </tr>
+                </thead>
+            </table>
+        </section>
+        <!--Table end-->
+    </section>
 
 
 
@@ -81,6 +145,18 @@
 
     $("#orders").click(function () {
         alert("orders");
+    })
+
+    $("#customerImage").click(function () {
+
+    })
+
+    $("#itemImage").click(function () {
+
+    })
+
+    $("#ordersImage").click(function () {
+
     })
 </script>
 </body>
