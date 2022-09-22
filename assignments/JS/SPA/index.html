@@ -408,24 +408,39 @@
 
 <script src="../../CSS/Frameworks/POS/asserts/js/jquery-3.6.1.min.js"></script>
 <script>
+    $("#itemsContent").css("display","none");
+    $("#customersContent").css("display","none");
+    $("#ordersContent").css("display","none");
+
     $("#home").click(function () {
         $("#itemsContent").css("display","none");
         $("#customersContent").css("display","none");
+        $("#ordersContent").css("display","none");
+        $("#homeContent").css("display","inline-block");
+
 
     })
 
     $("#items").click(function () {
         $("#homeContent").css("display","none");
         $("#customersContent").css("display","none");
+        $("#ordersContent").css("display","none");
+        $("#itemsContent").css("display","inline");
     })
 
-    $("#customer").click(function () {
+    $("#customers").click(function () {
         $("#itemsContent").css("display","none");
         $("#homeContent").css("display","none");
+        $("#ordersContent").css("display","none");
+        $("#customersContent").css("display","inline");
+
     })
 
     $("#orders").click(function () {
-        alert("orders");
+        $("#itemsContent").css("display","none");
+        $("#homeContent").css("display","none");
+        $("#customersContent").css("display","none");
+        $("#ordersContent").css("display","inline");
     })
 
     $("#customerImage").click(function () {
