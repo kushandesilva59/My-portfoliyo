@@ -5,6 +5,7 @@
     <title>New Customer</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../../Boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asserts/js/jquery-3.6.1.min.js">
 
     <style>
         body>section>form>section{
@@ -44,14 +45,36 @@
             </div>
 
             <section>
-                <button type="button" class="btn btn-danger">Save</button>
-                <button type="button" class="btn btn-warning">Renew</button>
-                <button type="button" class="btn btn-info">Close</button>
+                <button type="button" class="btn btn-danger" id="btnSave">Save</button>
+                <button type="button" class="btn btn-warning">Remove</button>
+                <button type="button" class="btn btn-info">Update</button>
+                <button type="button" class="btn btn-warning">GetAll</button>
+                <button type="button" class="btn btn-info">ClearAll</button>
             </section>
         </form>
     </section>
 
 
 <script src="../../Boostrap/js/bootstrap.min.js"></script>
+<script src="asserts/js/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $("#btnSave").click(function () {
+            let cusId = $("#txtCustomerID").val();
+            let cusName = $("#txtCustomerName").val();
+            let cusAddress = $("#txtCustomerAddress").val();
+            let cusSalary = $("#txtCustomerSalary").val();
+
+            var customer = {
+                id : cusId,
+                name : cusName,
+                address:cusAddress,
+                salary:cusSalary
+
+            }
+
+            console.log(customer);
+        })
+    </script>
 </body>
 </html>

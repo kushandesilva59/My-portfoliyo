@@ -38,23 +38,25 @@
 
 <main class="container-fluid">
     <!--Home start-->
-    <section class="row mt-4" id="homeContent">
-        <div class="col" >
-            <div><h5 style="text-align: center">Customers</h5></div>
-            <a href="#" id="customerImage"><img class="img-fluid" src="asserts/Customers.jpeg" alt=""></a>
-            <div><h2></h2></div>
-        </div>
-        <div class="col">
-            <div><h5 style="text-align: center">Items</h5></div>
-            <a href="#" id="itemImage"><img class="img-fluid" src="asserts/Items.jpeg" alt=""></a>
-            <div><h2></h2></div>
-        </div>
-        <div class="col">
-            <div><h5 style="text-align: center">My Orders</h5></div>
-            <a href="#" id="ordersImage"><img class="img-fluid" src="asserts/Orders.jpeg" alt=""></a>
-            <div><h2></h2></div>
-        </div>
-    </section>
+  <section id="homeContent">
+      <section class="row mt-4" >
+          <div class="col" >
+              <div><h5 style="text-align: center">Customers</h5></div>
+              <a href="#" id="customerImage"><img class="img-fluid" src="asserts/Customers.jpeg" alt=""></a>
+              <div><h2></h2></div>
+          </div>
+          <div class="col">
+              <div><h5 style="text-align: center">Items</h5></div>
+              <a href="#" id="itemImage"><img class="img-fluid" src="asserts/Items.jpeg" alt=""></a>
+              <div><h2></h2></div>
+          </div>
+          <div class="col">
+              <div><h5 style="text-align: center">My Orders</h5></div>
+              <a href="#" id="ordersImage"><img class="img-fluid" src="asserts/Orders.jpeg" alt=""></a>
+              <div><h2></h2></div>
+          </div>
+      </section>
+  </section>
     <!--Home end-->
 
     <!--Items start-->
@@ -416,7 +418,7 @@
         $("#itemsContent").css("display","none");
         $("#customersContent").css("display","none");
         $("#ordersContent").css("display","none");
-        $("#homeContent").css("display","inline-block");
+        $("#homeContent").css("display","inline");
 
 
     })
