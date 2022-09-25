@@ -18,7 +18,7 @@
             margin: auto;
         }
 
-        body>section:first-child>button:first-child{
+        body>section>section:first-child>button:first-child{
             width: 80px;
             height: 80px;
             background-color: #e6dbb9;
@@ -27,7 +27,7 @@
             top: 20px;
         }
 
-        body>section:first-child>div:nth-child(2){
+        body>section>section:first-child>div:nth-child(2){
             width: 600px;
             height: 80px;
             border: 2px solid black;
@@ -35,6 +35,39 @@
             right: 30px;
             top: 20px;
         }
+
+        body>section>section>div{
+            width: 50px;
+            height: 50px;
+            border: 2px solid #bb2d3b;
+
+        }
+
+        body>section>section:nth-child(2){
+            background-color: #e6dbb9;
+            top: 120px;
+            position: relative;
+        }
+
+       body>section>section:nth-child(3){
+           background-color: #bb2d3b;
+           top: 150px;
+           position: relative;
+       }
+
+        body>section>section:nth-child(4){
+            background-color: #e6dbb9;
+            top: 180px;
+            position: relative;
+        }
+
+        body>section>section:nth-child(5){
+            background-color: #e6dbb9;
+            top: 210px;
+            position: relative;
+        }
+
+
     </style>
 
 </head>
@@ -43,13 +76,44 @@
 <body>
     <!--background black color square start-->
     <section>
-        <!--C button start-->
-        <button>C</button>
-        <!--C button end-->
+       <section>
+           <!--C button start-->
+           <button>C</button>
+           <!--C button end-->
 
-        <!--textfield square start-->
-        <div></div>
-        <!--Textfield square end-->
+           <!--textfield square start-->
+           <div></div>
+           <!--Textfield square end-->
+       </section>
+
+        <section class="row justify-content-around">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </section>
+
+        <section class="row justify-content-around">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+
+        </section>
+
+        <section class="row justify-content-around">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </section>
+
+        <section class="row justify-content-around">
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+        </section>
     </section>
     <!--Background black color square end-->
 
