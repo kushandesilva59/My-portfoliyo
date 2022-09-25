@@ -3,8 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-</head>
-<body>
+    <link rel="stylesheet" href="asserts/Boostrap/css/bootstrap.min.css">
 
+    <style>
+        body>section{
+            width: 800px;
+            height: 600px;
+            border: 2px solid black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        body>section:first-child>button:first-child{
+            width: 80px;
+            height: 80px;
+            background-color: #e6dbb9;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        body>section:first-child>div:nth-child(2){
+            width: 600px;
+            height: 80px;
+            border: 2px solid black;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!--background black color square start-->
+    <section>
+        <!--C button start-->
+        <button>C</button>
+        <!--C button end-->
+
+        <!--textfield square start-->
+        <div></div>
+        <!--Textfield square end-->
+    </section>
+    <!--Background black color square end-->
+
+<script src="asserts/Boostrap/js/bootstrap.min.js"></script>
+<script src="asserts/js/jquery-3.6.1.min.js"></script>
 </body>
 </html>
