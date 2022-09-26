@@ -27,6 +27,15 @@
             top: 20px;
         }
 
+       /* body>section>section:first-child>button:nth-child(2){
+            width: 80px;
+            height: 80px;
+            background-color: #e6dbb9;
+            position: absolute;
+            left: 120px;
+            top: 20px;
+        }*/
+
         body>section>section:first-child>div:nth-child(2){
             width: 400px;
             height: 80px;
@@ -66,6 +75,8 @@
         }
 
 
+
+
     </style>
 
 </head>
@@ -73,14 +84,16 @@
 
 <body>
     <!--background black color square start-->
-    <section>
+    <section class="bg-dark rounded">
        <section class="row">
            <!--C button start-->
-           <button id="btnC" class="btn btn-outline-warning">C</button>
+           <button id="btnC" class="btn btn-outline-warning text-light">C</button>
            <!--C button end-->
 
+
+
            <!--textfield square start-->
-           <div id="div" class="rounded"><h1 id="textField" ></h1></div>
+           <div id="div" class="rounded bg-secondary"><h1 id="textField" class="text-light"></h1></div>
            <!--Textfield square end-->
        </section>
 
