@@ -154,14 +154,14 @@
 
         //meka
         $("#btnPlus").click(function () {
-           /* if($("#textField").text()==""){
-
-            }else {*/
+            if($("#textField").text()==""){
+                symbol = "+";
+            }else {
                 prevNumber = $("#textField").text();
                 symbol = "+"
                 $("#textField").text("");
                 /* alert(prevNumber);*/
-            //}
+            }
         })
 
         $("#btn4").click(function () {
@@ -180,10 +180,14 @@
         })
 
         $("#btnMiners").click(function () {
-            prevNumber = $("#textField").text();
-            symbol = "-";
-          /* alert(prevNumber);*/
-            $("#textField").text("");
+           if($("#textField").text()==""){
+               symbol = "-";
+           }else {
+               prevNumber = $("#textField").text();
+               symbol = "-";
+               /* alert(prevNumber);*/
+               $("#textField").text("");
+           }
         })
 
         $("#btn1").click(function () {
@@ -202,10 +206,15 @@
         })
 
         $("#btnDivide").click(function () {
-            prevNumber = $("#textField").text();
-            symbol = "/";
-            $("#textField").text("");
-           /* alert(prevNumber);*/
+            if($("#textField").text()==""){
+                symbol = "/";
+            }else{
+                prevNumber = $("#textField").text();
+                symbol = "/";
+                $("#textField").text("");
+                /* alert(prevNumber);*/
+            }
+
         })
 
         $("#btn0").click(function () {
@@ -242,10 +251,16 @@
         })
 
         $("#btnMultiple").click(function () {
-            prevNumber = $("#textField").text();
-            symbol = "*";
-            $("#textField").text("");
-            /*alert(prevNumber);*/
+            if($("#textField").text()==""){
+                symbol = "*";
+            }else {
+                prevNumber = $("#textField").text();
+                symbol = "*";
+                $("#textField").text("");
+                /*alert(prevNumber);*/
+            }
+
+
         })
     </script>
 </body>
