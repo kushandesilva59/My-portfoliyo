@@ -7,8 +7,8 @@
 
     <style>
         body>section{
-            width: 800px;
-            height: 600px;
+            width: 600px;
+            height: 400px;
             border: 2px solid black;
             position: absolute;
             top: 0;
@@ -28,7 +28,7 @@
         }
 
         body>section>section:first-child>div:nth-child(2){
-            width: 600px;
+            width: 400px;
             height: 80px;
             border: 2px solid black;
             position: absolute;
@@ -74,13 +74,13 @@
 <body>
     <!--background black color square start-->
     <section>
-       <section>
+       <section class="row">
            <!--C button start-->
            <button id="btnC" class="btn btn-outline-warning">C</button>
            <!--C button end-->
 
            <!--textfield square start-->
-           <div id="div"><h1 id="textField"></h1></div>
+           <div id="div" class="rounded"><h1 id="textField" ></h1></div>
            <!--Textfield square end-->
        </section>
 
@@ -88,7 +88,7 @@
             <div class="col-2"><button id="btn7" class="btn btn-outline-secondary">7</button></div>
             <div class="col-2"><button id="btn8" class="btn btn-outline-secondary">8</button></div>
             <div class="col-2"><button id="btn9" class="btn btn-outline-secondary">9</button></div>
-            <div class="col-2"><button id="btnPlus" class="btn btn-outline-secondary">+</button></div>
+            <div class="col-2"><button id="btnPlus" class="btn btn-outline-primary">+</button></div>
 
         </section>
 
@@ -96,7 +96,7 @@
             <div class="col-2"><button id="btn4" class="btn btn-outline-secondary">4</button></div>
             <div class="col-2"><button id="btn5" class="btn btn-outline-secondary">5</button></div>
             <div class="col-2"><button id="btn6" class="btn btn-outline-secondary">6</button></div>
-            <div class="col-2"><button id="btnMiners" class="btn btn-outline-secondary">-</button></div>
+            <div class="col-2"><button id="btnMiners" class="btn btn-outline-primary">-</button></div>
 
         </section>
 
@@ -104,15 +104,15 @@
             <div class="col-2"><button id="btn1" class="btn btn-outline-secondary">1</button></div>
             <div class="col-2"><button id="btn2" class="btn btn-outline-secondary">2</button></div>
             <div class="col-2"><button id="btn3" class="btn btn-outline-secondary">3</button></div>
-            <div class="col-2"><button id="btnDivide" class="btn btn-outline-secondary">/</button></div>
+            <div class="col-2"><button id="btnDivide" class="btn btn-outline-primary">/</button></div>
 
         </section>
 
         <section class="row justify-content-around">
             <div class="col-2"><button id="btn0" class="btn btn-outline-secondary">0</button></div>
             <div class="col-2"><button id="btnDot" class="btn btn-outline-secondary">.</button></div>
-            <div class="col-2"><button id="btnEqual" class="btn btn-outline-secondary">=</button></div>
-            <div class="col-2"><button id="btnMultiple" class="btn btn-outline-secondary">*</button></div>
+            <div class="col-2"><button id="btnEqual" class="btn btn-outline-success">=</button></div>
+            <div class="col-2"><button id="btnMultiple" class="btn btn-outline-primary">*</button></div>
 
         </section>
     </section>
