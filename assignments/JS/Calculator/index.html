@@ -202,10 +202,24 @@
         })
 
         $("#btnEqual").click(function () {
-            let number1 = parseInt(prevNumber)+parseInt($("#textField").text());
-            $("#textField").text(number1);
+            if(symbol=="+"){
+                let number1 = parseInt(prevNumber)+parseInt($("#textField").text());
+                $("#textField").text(number1);
+            }else if(symbol == "-"){
+                let number1 = parseInt(prevNumber)-parseInt($("#textField").text());
+                $("#textField").text(number1);
+            }else if(symbol == "/"){
+                let number1 = parseInt(prevNumber)/parseInt($("#textField").text());
+                $("#textField").text(number1);
+            }else if(symbol=="*"){
+                let number1 = parseInt(prevNumber)*parseInt($("#textField").text());
+                $("#textField").text(number1);
+            }
+        })
 
-
+        $("#btnC").click(function () {
+            $("#textField").text("");
+            prevNumber = 0;
         })
 
         $("#btnMultiple").click(function () {
