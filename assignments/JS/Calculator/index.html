@@ -154,10 +154,14 @@
 
         //meka
         $("#btnPlus").click(function () {
-            prevNumber = $("#textField").text();
-            symbol = "+"
-            $("#textField").text("");
-           /* alert(prevNumber);*/
+           /* if($("#textField").text()==""){
+
+            }else {*/
+                prevNumber = $("#textField").text();
+                symbol = "+"
+                $("#textField").text("");
+                /* alert(prevNumber);*/
+            //}
         })
 
         $("#btn4").click(function () {
@@ -228,6 +232,8 @@
                 let number1 = parseInt(prevNumber)*parseInt($("#textField").text());
                 $("#textField").text(number1);
             }
+
+            console.log($('#textField').text());
         })
 
         $("#btnC").click(function () {
