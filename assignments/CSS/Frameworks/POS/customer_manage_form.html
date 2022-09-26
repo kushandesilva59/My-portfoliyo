@@ -48,7 +48,7 @@
                 <button type="button" class="btn btn-danger" id="btnSave">Save</button>
                 <button type="button" class="btn btn-warning">Remove</button>
                 <button type="button" class="btn btn-info">Update</button>
-                <button type="button" class="btn btn-warning">GetAll</button>
+                <button type="button" class="btn btn-warning" id="btnGetAll">GetAll</button>
                 <button type="button" class="btn btn-info">ClearAll</button>
             </section>
         </form>
@@ -59,6 +59,8 @@
 <script src="asserts/js/jquery-3.6.1.min.js"></script>
 
     <script>
+        var customers = [];
+
         $("#btnSave").click(function () {
             let cusId = $("#txtCustomerID").val();
             let cusName = $("#txtCustomerName").val();
@@ -66,15 +68,25 @@
             let cusSalary = $("#txtCustomerSalary").val();
 
             var customer = {
-                id : cusId,
-                name : cusName,
-                address:cusAddress,
-                salary:cusSalary
+                id: cusId,
+                name: cusName,
+                address: cusAddress,
+                salary: cusSalary
 
             }
 
-            console.log(customer);
+            customers.push(customer);
+
         })
+
+        $("#btnGetAll").click(function () {
+            for (var i of customers){
+                console.log(i.id);
+            }
+        })
+
+
+
     </script>
 </body>
 </html>
