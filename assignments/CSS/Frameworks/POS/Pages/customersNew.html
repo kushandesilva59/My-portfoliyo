@@ -112,7 +112,7 @@
     <!--Four button start-->
     <section class="col-7 mt-4 mx-2" >
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger">Add</button>
+            <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
             <button type="button" class="btn btn-warning">Update</button>
             <button type="button" class="btn btn-info">Delete</button>
             <button type="button" class="btn btn-success">Get All</button>
@@ -123,7 +123,7 @@
 
     <!--Table start-->
     <section>
-        <table class="table table-success table-striped mt-4">
+        <table class="table table-success table-striped mt-4 text-center" id="tblCustomers">
             <thead>
             <tr>
                 <th>Id</th>
@@ -142,7 +142,15 @@
 <script src="../../../Boostrap/js/bootstrap.min.js"></script>
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
+    $("#btnAdd").click(function () {
+        let customerId = $("#txtCustomerID").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerSalary = $("#txtCustomerSalary").val();
 
+        $("#tblCustomers").append("<tr><td>"+customerId+"</td> <td>"+customerName+"</td><td>"+customerAddress+"</td><td>"+customerSalary+"</td></tr>");
+
+    })
 </script>
 </body>
 </html>
