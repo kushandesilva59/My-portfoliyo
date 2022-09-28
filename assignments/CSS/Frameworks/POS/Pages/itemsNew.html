@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers | New</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../../../Boostrap/css/bootstrap.min.css">
+
+    <style>
+       /* body>section>section:first-child{
+            margin-bottom: 2vh;
+        }*/
+
+        body{
+            background-color: lightgrey;
+        }
+    </style>
+
+</head>
+<body>
+
+<section class="container-fluid row" >
+    <!--header start-->
+    <section>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoice_manage_form.html">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../items.html">Items</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../customers.html">Customers</a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!--Header end-->
+
+    <div class="row">
+        <div class="col-8 justify-content-center">
+            <!--Customer form start-->
+            <section class="col-6">
+                <form >
+                    <div class="mb-3" >
+                          <label for="txtCustomerID" class="form-label"><b>Item Code:</b></label>
+                        <input type="text" class="form-control" id="txtCustomerID" aria-describedby="ID">
+                    </div>
+
+                    <div class="mb-3 ">
+                          <label for="txtCustomerName" class="form-label"><b>Item Name:</b></label>
+                        <input type="text" class="form-control" id="txtCustomerName">
+                    </div>
+
+                    <div class="mb-3">
+                                        <label for="txtCustomerAddress" class="form-label"><b>Item Price:</b></label>
+                        <input type="text" class="form-control" id="txtCustomerAddress" aria-describedby="ID">
+                    </div>
+
+                    <div class="mb-3">
+                                        <label for="txtCustomerSalary" class="form-label"><b>Item Quantity:</b></label>
+                        <input type="number" class="form-control" id="txtCustomerSalary" aria-describedby="ID">
+                    </div>
+
+                </form>
+            </section>
+            <!--Customer form end-->
+        </div>
+
+        <div class="col justify-content-end" >
+            <!--Form Start-->
+            <section class="col mx-3 row rounded " style="background-color: white" >
+
+                <div class="row g-3">
+                    <div class="col-11 mx-4 ">
+                        <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
+                    </div>
+                </div>
+
+                <div class="m-4 col-2">
+                    <button type="button" class="btn btn-success">Search</button>
+                </div>
+
+                <div class="col-6 mt-4">
+                    <select class="form-select" aria-label="Default select example" id="dropdownSearch">
+                        <option selected="">Name</option>
+                        <option value="Item Code">Item Code</option>
+                        <option value="NIC">NIC</option>
+                    </select>
+                </div>
+            </section>
+            <!--Form end-->
+        </div>
+    </div>
+
+    <!--Four button start-->
+    <section class="col-7 mt-4 mx-2" >
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger">Add</button>
+            <button type="button" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-info">Delete</button>
+            <button type="button" class="btn btn-success">Get All</button>
+            <button type="button" class="btn btn-success">Clear</button>
+        </div>
+    </section>
+    <!--Four button end-->
+
+    <!--Table start-->
+    <section>
+        <table class="table table-success table-striped mt-4">
+            <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+        </table>
+    </section>
+    <!--Table end-->
+
+</section>
+
+
+<script src="../../../Boostrap/js/bootstrap.min.js"></script>
+<script src="../asserts/js/jquery-3.6.1.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>
