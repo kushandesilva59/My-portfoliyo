@@ -123,9 +123,9 @@
 
     <!--Table start-->
     <section>
-        <table class="table table-success table-striped mt-4">
+        <table class="table table-success table-striped mt-4 r text-center" id="tblItems">
             <thead>
-            <tr>
+            <tr >
                 <th>Item Code</th>
                 <th>Item Name</th>
                 <th>Item Price</th>
@@ -143,7 +143,12 @@
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
     $("#btnAdd").click(function () {
-        $("#txt")
+        let itemCode = $("#txtItemCode").val();
+        let itemName = $("#txtItemName").val();
+        let itemPrice = $("#txtItemPrice").val();
+        let itemQuantity = $("#txtItemQuantity").val();
+
+        $("#tblItems").append("<tr><td>"+itemCode+"</td> <td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+itemQuantity+"</td></tr>");
     })
 </script>
 </body>
