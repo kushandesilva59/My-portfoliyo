@@ -55,32 +55,32 @@
 
     <div class="row">
         <div class="col-8 justify-content-center">
-            <!--Customer form start-->
+            <!--Item form start-->
             <section class="col-6">
                 <form >
                     <div class="mb-3" >
-                          <label for="txtCustomerID" class="form-label"><b>Item Code:</b></label>
-                        <input type="text" class="form-control" id="txtCustomerID" aria-describedby="ID">
+                          <label for="txtItemCode" class="form-label"><b>Item Code:</b></label>
+                        <input type="text" class="form-control" id="txtItemCode" aria-describedby="ID">
                     </div>
 
                     <div class="mb-3 ">
-                          <label for="txtCustomerName" class="form-label"><b>Item Name:</b></label>
-                        <input type="text" class="form-control" id="txtCustomerName">
+                          <label for="txtItemName" class="form-label"><b>Item Name:</b></label>
+                        <input type="text" class="form-control" id="txtItemName">
                     </div>
 
                     <div class="mb-3">
-                                        <label for="txtCustomerAddress" class="form-label"><b>Item Price:</b></label>
-                        <input type="text" class="form-control" id="txtCustomerAddress" aria-describedby="ID">
+                        <label for="txtItemPrice" class="form-label"><b>Item Price:</b></label>
+                        <input type="number" class="form-control" id="txtItemPrice" aria-describedby="ID">
                     </div>
 
                     <div class="mb-3">
-                                        <label for="txtCustomerSalary" class="form-label"><b>Item Quantity:</b></label>
-                        <input type="number" class="form-control" id="txtCustomerSalary" aria-describedby="ID">
+                        <label for="txtItemQuantity" class="form-label"><b>Item Quantity:</b></label>
+                        <input type="number" class="form-control" id="txtItemQuantity" aria-describedby="ID">
                     </div>
 
                 </form>
             </section>
-            <!--Customer form end-->
+            <!--Item form end-->
         </div>
 
         <div class="col justify-content-end" >
@@ -109,17 +109,17 @@
         </div>
     </div>
 
-    <!--Four button start-->
+    <!--Five button start-->
     <section class="col-7 mt-4 mx-2" >
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger">Add</button>
+            <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
             <button type="button" class="btn btn-warning">Update</button>
             <button type="button" class="btn btn-info">Delete</button>
             <button type="button" class="btn btn-success">Get All</button>
             <button type="button" class="btn btn-success">Clear</button>
         </div>
     </section>
-    <!--Four button end-->
+    <!--Five button end-->
 
     <!--Table start-->
     <section>
@@ -142,7 +142,9 @@
 <script src="../../../Boostrap/js/bootstrap.min.js"></script>
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
-
+    $("#btnAdd").click(function () {
+        $("#txt")
+    })
 </script>
 </body>
 </html>
