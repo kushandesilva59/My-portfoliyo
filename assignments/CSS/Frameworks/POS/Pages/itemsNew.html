@@ -142,13 +142,30 @@
 <script src="../../../Boostrap/js/bootstrap.min.js"></script>
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
+    var items = [];
+
     $("#btnAdd").click(function () {
         let itemCode = $("#txtItemCode").val();
         let itemName = $("#txtItemName").val();
         let itemPrice = $("#txtItemPrice").val();
         let itemQuantity = $("#txtItemQuantity").val();
 
-        $("#tblItems").append("<tr><td>"+itemCode+"</td> <td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+itemQuantity+"</td></tr>");
+        var item = {
+            itemCode : itemCode,
+            itemName : itemName,
+            itemPrice : itemPrice,
+            itemQuantity : itemQuantity
+        }
+
+        items.push(item);
+
+        /*$("#tblItems").append("<tr><td>"+itemCode+"</td> <td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+itemQuantity+"</td></tr>");*/
+
+
+    })
+
+    $("#tblItems>tr").click(function () {
+        console.log($(this).children().eq(0))
     })
 </script>
 </body>
