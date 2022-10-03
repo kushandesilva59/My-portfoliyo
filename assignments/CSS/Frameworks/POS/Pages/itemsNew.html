@@ -123,7 +123,7 @@
 
     <!--Table start-->
     <section>
-        <table class="table table-success table-striped mt-4 r text-center" id="tblItems">
+        <table class="table table-success table-striped mt-4 r text-center" >
             <thead>
             <tr >
                 <th>Item Code</th>
@@ -132,6 +132,10 @@
                 <th>Quantity</th>
             </tr>
             </thead>
+
+            <tbody id="tblItems">
+
+            </tbody>
         </table>
     </section>
     <!--Table end-->
@@ -159,7 +163,7 @@
 
         items.push(item);
 
-        /*$("#tblItems").append("<tr><td>"+itemCode+"</td> <td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+itemQuantity+"</td></tr>");*/
+        getAllItems();
 
 
     })
@@ -167,6 +171,17 @@
     $("#tblItems>tr").click(function () {
         console.log($(this).children().eq(0))
     })
+
+    function getAllItems() {
+
+        $("#tblItems").empty();
+
+        for (let item of items) {
+            let row = "<tr><td>"+item.itemCode+"</td> <td>"+item.itemName+"</td><td>"+item.itemPrice+"</td><td>"+item.itemQuantity+"</td></tr>";
+
+            $("#tblItems").append(row);
+        }
+    }
 </script>
 </body>
 </html>
