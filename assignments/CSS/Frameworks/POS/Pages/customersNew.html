@@ -151,6 +151,24 @@
         $("#tblCustomers").append("<tr><td>"+customerId+"</td> <td>"+customerName+"</td><td>"+customerAddress+"</td><td>"+customerSalary+"</td></tr>");
 
     })
+
+    $("#txtCustomerID").on("keyup",function (event) {
+        if(event.key=="Enter"){
+            $("#txtCustomerName").focus();
+        }
+    })
+
+    $("#txtCustomerName").on("keyup",function (event) {
+        if(event.key=="Enter"){
+            $("#txtCustomerAddress").focus();
+        }
+    })
+
+    $("#txtCustomerAddress").on("keyup",function (event) {
+        if(event.key=="Enter"){
+            $("#txtCustomerSalary").focus();
+        }
+    })
 </script>
 </body>
 </html>
