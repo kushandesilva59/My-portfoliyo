@@ -115,7 +115,7 @@
             <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
             <button type="button" class="btn btn-warning">Update</button>
             <button type="button" class="btn btn-info">Delete</button>
-            <button type="button" class="btn btn-success">Get All</button>
+            <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
             <button type="button" class="btn btn-success">Clear</button>
         </div>
     </section>
@@ -123,15 +123,18 @@
 
     <!--Table start-->
     <section>
-        <table class="table table-success table-striped mt-4 text-center" id="tblCustomers">
+        <table class="table table-success table-striped mt-4 text-center" >
             <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Salary</th>
-            </tr>
+                 <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                </tr>
             </thead>
+            <tbody id="tblCustomers">
+
+            </tbody>
         </table>
     </section>
     <!--Table end-->
@@ -142,13 +145,28 @@
 <script src="../../../Boostrap/js/bootstrap.min.js"></script>
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
-    $("#btnAdd").click(function () {
-        let customerId = $("#txtCustomerID").val();
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerSalary = $("#txtCustomerSalary").val();
+ var customers = [];
 
+
+    $("#btnAdd").click(function () {
+
+
+        var customer = {
+            id : $("#txtCustomerID").val(),
+            name : $("#txtCustomerName").val(),
+            address : $("#txtCustomerAddress").val(),
+            salary: $("#txtCustomerSalary").val()
+        }
+
+        customers.push(customer);
+
+
+
+       getAllCustomers();
+
+/*
         $("#tblCustomers").append("<tr><td>"+customerId+"</td> <td>"+customerName+"</td><td>"+customerAddress+"</td><td>"+customerSalary+"</td></tr>");
+*/
 
     })
 
@@ -167,8 +185,25 @@
     $("#txtCustomerAddress").on("keyup",function (event) {
         if(event.key=="Enter"){
             $("#txtCustomerSalary").focus();
+
         }
     })
+
+    $("#btnGetAll").click(function () {
+        getAllCustomers()
+    })
+
+    function getAllCustomers() {
+        $("#tblCustomers").empty();
+
+        for (let customer of customers) {
+
+            let row = "<tr><td>"+customer.id+"</td> <td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>";
+
+            $("#tblCustomers").append(row);
+
+        }
+    }
 </script>
 </body>
 </html>
