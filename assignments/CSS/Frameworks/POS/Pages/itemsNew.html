@@ -173,7 +173,6 @@
     })
 
     function getAllItems() {
-
         $("#tblItems").empty();
 
         for (let item of items) {
@@ -196,10 +195,38 @@
     })
 
     $("#txtItemPrice").on("keyup",function (event) {
-        if(event.key=="Enter"){
+
+      if(event.key=="Enter"){
             $("#txtItemQuantity").focus();
+      }
+       /* if($("#txtItemPrice").val()==""){
+            alert("Null");
+        }else{
+            alert("Not null");
+        }*/
+    })
+
+    $("#txtItemQuantity").on("keyup",function (event) {
+        if(event.key=="Enter"){
+            var item = {
+                itemCode: $("#txtItemCode").val(),
+                itemName: $("#txtItemName").val(),
+                itemPrice: $("#txtItemPrice").val(),
+                itemQuantity: $("#txtItemQuantity").val()
+            }
+
+            items.push(item);
+            getAllItems();
+
+           //clear text fields
+
+            $("#txtItemCode").focus();
         }
     })
+
+    function clearTextFields() {
+
+    }
 
 
 </script>
