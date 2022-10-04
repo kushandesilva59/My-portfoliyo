@@ -160,10 +160,11 @@
 
         customers.push(customer);
 
+        clearTextFields();
 
+         getAllCustomers();
 
-       getAllCustomers();
-
+         $("#txtCustomerID").focus();
 /*
         $("#tblCustomers").append("<tr><td>"+customerId+"</td> <td>"+customerName+"</td><td>"+customerAddress+"</td><td>"+customerSalary+"</td></tr>");
 */
@@ -189,6 +190,27 @@
         }
     })
 
+     $("#txtCustomerSalary").on("keyup",function (event) {
+         if(event.key=="Enter"){
+             var customer = {
+                 id : $("#txtCustomerID").val(),
+                 name : $("#txtCustomerName").val(),
+                 address : $("#txtCustomerAddress").val(),
+                 salary: $("#txtCustomerSalary").val()
+             }
+
+             customers.push(customer);
+             getAllCustomers();
+
+             clearTextFields();
+
+             $("#txtCustomerID").focus();
+
+         }
+     })
+
+
+
     $("#btnGetAll").click(function () {
         getAllCustomers()
     })
@@ -203,6 +225,13 @@
             $("#tblCustomers").append(row);
 
         }
+    }
+
+    function clearTextFields() {
+        $("#txtCustomerID").val("");
+        $("#txtCustomerName").val("");
+        $("#txtCustomerAddress").val("");
+        $("#txtCustomerSalary").val("");
     }
 </script>
 </body>
