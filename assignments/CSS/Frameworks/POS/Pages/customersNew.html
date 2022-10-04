@@ -165,20 +165,30 @@
          getAllCustomers();
 
          $("#txtCustomerID").focus();
-/*
-        $("#tblCustomers").append("<tr><td>"+customerId+"</td> <td>"+customerName+"</td><td>"+customerAddress+"</td><td>"+customerSalary+"</td></tr>");
-*/
 
     })
 
     $("#txtCustomerID").on("keyup",function (event) {
         if(event.key=="Enter"){
+            let regEx = /^(C)[0-9]{3}$/;
+            let ifCorrect = regEx.test($("#txtCustomerID").val());
+
+            alert(ifCorrect);
+
             $("#txtCustomerName").focus();
         }
+
+
     })
 
     $("#txtCustomerName").on("keyup",function (event) {
         if(event.key=="Enter"){
+
+           let regEx =  /^[A-z]{4}/;
+           let ifCorrect = regEx.test($("#txtCustomerName").val());
+
+           alert(ifCorrect);
+
             $("#txtCustomerAddress").focus();
         }
     })
