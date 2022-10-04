@@ -219,13 +219,18 @@
             getAllItems();
 
            //clear text fields
+            clearTextFields();
 
             $("#txtItemCode").focus();
         }
+
     })
 
     function clearTextFields() {
-
+        $("#txtItemCode").val("");
+        $("#txtItemName").val("");
+        $("#txtItemPrice").val("");
+        $("#txtItemQuantity").val("");
     }
 
 
