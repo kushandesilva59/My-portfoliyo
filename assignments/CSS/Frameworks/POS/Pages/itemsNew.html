@@ -191,10 +191,18 @@
             $("#tblItems").append(row);
         }
 
+        bindClickEvent();
+    }
+
+    function bindClickEvent(){
         $("#tblItems>tr").click(function () {
             $("#txtItemCode").val($(this).children(":eq(0)").text());
+            $("#txtItemName").val($(this).children(":eq(1)").text());
+            $("#txtItemPrice").val($(this).children(":eq(2)").text());
+            $("#txtItemQuantity").val($(this).children(":eq(3)").text());
         });
     }
+
 
     $("#txtItemCode").on("keyup",function (event) {
         let regExp = /^(I)[0-9]{3}$/;
