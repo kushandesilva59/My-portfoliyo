@@ -17,6 +17,7 @@
 
         div>div>section>form>div>h5{
             font-size: 15px;
+            color: red;
         }
     </style>
 
@@ -177,14 +178,18 @@
     })
 
     $("#txtCustomerID").on("keyup",function (event) {
-        if(event.key=="Enter"){
+        let regEx = /^(C)[0-9]{3}$/;
+        let ifCorrect = regEx.test($("#txtCustomerID").val());
+
+        if(!ifCorrect){
+            $("#txtCustomerID").css("border","1px solid red");
             $("#idH5").text("Cus Id is a required field : Pattern C001");
+        }else {
+            $("#txtCustomerID").css("border","1px solid green");
+            $("#idH5").text("");
+        }
 
-            let regEx = /^(C)[0-9]{3}$/;
-            let ifCorrect = regEx.test($("#txtCustomerID").val());
-
-            alert(ifCorrect);
-
+        if(event.key=="Enter"){
             $("#txtCustomerName").focus();
         }
 
