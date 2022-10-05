@@ -266,6 +266,15 @@
          }
      })
 
+ function bindClickEvent(){
+     $("#tblCustomers>tr").click(function () {
+         $("#txtCustomerID").val($(this).children(":eq(0)").text());
+         $("#txtCustomerName").val($(this).children(":eq(1)").text());
+         $("#txtCustomerAddress").val($(this).children(":eq(2)").text());
+         $("#txtCustomerSalary").val($(this).children(":eq(3)").text());
+     });
+ }
+
 
 
     $("#btnGetAll").click(function () {
@@ -276,12 +285,11 @@
         $("#tblCustomers").empty();
 
         for (let customer of customers) {
-
             let row = "<tr><td>"+customer.id+"</td> <td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>";
-
             $("#tblCustomers").append(row);
-
         }
+
+        bindClickEvent();
     }
 
     function clearTextFields() {
