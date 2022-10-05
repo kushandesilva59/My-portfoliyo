@@ -199,7 +199,7 @@
     })
 
     $("#txtCustomerName").on("keyup",function (event) {
-        let regEx =  /^[A-z]{4,}$/;
+        let regEx =  /^[A-z ]{4,}$/;
         let ifCorrect = regEx.test($("#txtCustomerName").val());
 
         if(!ifCorrect){
@@ -217,7 +217,7 @@
     })
 
     $("#txtCustomerAddress").on("keyup",function (event) {
-        let regEx = /^[A-z,-/0-9]{7,}$/;
+        let regEx = /^[A-z,-/0-9 ]{7,}$/;
         let ifCorrect = regEx.test($("#txtCustomerAddress").val());
 
         if(!ifCorrect){

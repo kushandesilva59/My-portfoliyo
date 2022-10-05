@@ -61,21 +61,25 @@
                     <div class="mb-3" >
                           <label for="txtItemCode" class="form-label"><b>Item Code:</b></label>
                         <input type="text" class="form-control" id="txtItemCode" aria-describedby="ID">
+                        <h5 id="itemCodeH5"></h5>
                     </div>
 
                     <div class="mb-3 ">
                           <label for="txtItemName" class="form-label"><b>Item Name:</b></label>
                         <input type="text" class="form-control" id="txtItemName">
+                        <h5 id="itemNameH5"></h5>
                     </div>
 
                     <div class="mb-3">
                         <label for="txtItemPrice" class="form-label"><b>Item Price:</b></label>
                         <input type="number" class="form-control" id="txtItemPrice" aria-describedby="ID">
+                        <h5 id="itemPriceH5"></h5>
                     </div>
 
                     <div class="mb-3">
                         <label for="txtItemQuantity" class="form-label"><b>Item Quantity:</b></label>
                         <input type="number" class="form-control" id="txtItemQuantity" aria-describedby="ID">
+                        <h5 id="itemQuantityH5"></h5>
                     </div>
 
                 </form>
@@ -186,12 +190,16 @@
     }
 
     $("#txtItemCode").on("keyup",function (event) {
+        let regExp = /^(I)[0-9]{3}$/;
+        let ifCorrect = regExp.test($("#txtItemCode").val());
+
+        if(!ifCorrect){
+
+        }
+
 
         if(event.key=="Enter"){
-            let regExp = /^(I)[0-9]{3}$/;
-            let ifCorrect = regExp.test($("#txtItemCode").val());
 
-            alert(ifCorrect);
 
             $("#txtItemName").focus();
         }
