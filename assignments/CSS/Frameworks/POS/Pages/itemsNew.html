@@ -170,6 +170,8 @@
             itemQuantity : itemQuantity
         }
 
+        alert("Do you really need to add this Item...?");
+
         items.push(item);
 
         clearTextFields();
@@ -283,6 +285,8 @@
                 itemPrice: $("#txtItemPrice").val(),
                 itemQuantity: $("#txtItemQuantity").val()
             }
+
+            alert("Do you really need to add this Item...?");
 
             items.push(item);
             getAllItems();
