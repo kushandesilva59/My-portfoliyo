@@ -14,6 +14,11 @@
         body{
             background-color: lightgrey;
         }
+
+        div>div>section>form>div>h5{
+            font-size: 15px;
+            color: red;
+        }
     </style>
 
 </head>
@@ -175,9 +180,7 @@
 
     })
 
-    $("#tblItems>tr").click(function () {
-        console.log($(this).children().eq(0))
-    })
+
 
     function getAllItems() {
         $("#tblItems").empty();
@@ -187,6 +190,10 @@
 
             $("#tblItems").append(row);
         }
+
+        $("#tblItems>tr").click(function () {
+            $("#txtItemCode").val($(this).children(":eq(0)").text());
+        });
     }
 
     $("#txtItemCode").on("keyup",function (event) {
@@ -194,13 +201,15 @@
         let ifCorrect = regExp.test($("#txtItemCode").val());
 
         if(!ifCorrect){
-
+            $("#txtItemCode").css("border","1px solid red");
+            $("#itemCodeH5").text("Item Code is a required field : Pattern I001");
+        }else {
+            $("#txtItemCode").css("border","1px solid green");
+            $("#itemCodeH5").text("");
         }
 
 
         if(event.key=="Enter"){
-
-
             $("#txtItemName").focus();
         }
     })
