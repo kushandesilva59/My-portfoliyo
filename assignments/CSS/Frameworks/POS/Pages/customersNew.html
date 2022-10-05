@@ -14,6 +14,10 @@
         body{
             background-color: lightgrey;
         }
+
+        div>div>section>form>div>h5{
+            font-size: 15px;
+        }
     </style>
 
 </head>
@@ -61,21 +65,25 @@
                     <div class="mb-3" >
                           <label for="txtCustomerID" class="form-label"><b>Customer ID:</b></label>
                         <input type="text" class="form-control" id="txtCustomerID" aria-describedby="ID">
+                        <h5 id="idH5"></h5>
                     </div>
 
                     <div class="mb-3 ">
                           <label for="txtCustomerName" class="form-label"><b>Customer Name:</b></label>
                         <input type="text" class="form-control" id="txtCustomerName">
+                        <h5 id="nameH5"></h5>
                     </div>
 
                     <div class="mb-3">
-                                        <label for="txtCustomerAddress" class="form-label"><b>Customer Address:</b></label>
+                        <label for="txtCustomerAddress" class="form-label"><b>Customer Address:</b></label>
                         <input type="text" class="form-control" id="txtCustomerAddress" aria-describedby="ID">
+                        <h5 id="addressH5"></h5>
                     </div>
 
                     <div class="mb-3">
-                                        <label for="txtCustomerSalary" class="form-label"><b>Customer Salary:</b></label>
+                        <label for="txtCustomerSalary" class="form-label"><b>Customer Salary:</b></label>
                         <input type="number" class="form-control" id="txtCustomerSalary" aria-describedby="ID">
+                        <h5 id="salaryH5"></h5>
                     </div>
 
                 </form>
@@ -170,6 +178,8 @@
 
     $("#txtCustomerID").on("keyup",function (event) {
         if(event.key=="Enter"){
+            $("#idH5").text("Cus Id is a required field : Pattern C001");
+
             let regEx = /^(C)[0-9]{3}$/;
             let ifCorrect = regEx.test($("#txtCustomerID").val());
 
