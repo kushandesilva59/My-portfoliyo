@@ -167,6 +167,8 @@
             salary: $("#txtCustomerSalary").val()
         }
 
+        alert("Do you really need to add this customer...?");
+
         customers.push(customer);
 
         clearTextFields();
@@ -197,7 +199,7 @@
     })
 
     $("#txtCustomerName").on("keyup",function (event) {
-        let regEx =  /^[A-z]{4}/;
+        let regEx =  /^[A-z]{4,}$/;
         let ifCorrect = regEx.test($("#txtCustomerName").val());
 
         if(!ifCorrect){
@@ -215,6 +217,17 @@
     })
 
     $("#txtCustomerAddress").on("keyup",function (event) {
+        let regEx = /^[A-z,-/0-9]{7,}$/;
+        let ifCorrect = regEx.test($("#txtCustomerAddress").val());
+
+        if(!ifCorrect){
+            $("#txtCustomerAddress").css("border","1px solid red");
+            $("#addressH5").text("Cus address is a required field : Minimum 7");
+        }else {
+            $("#txtCustomerAddress").css("border","1px solid green");
+            $("#addressH5").text("");
+        }
+
         if(event.key=="Enter"){
             $("#txtCustomerSalary").focus();
 
@@ -222,6 +235,17 @@
     })
 
      $("#txtCustomerSalary").on("keyup",function (event) {
+         let regEx = /^[.0-9]{3,}$/;
+         let ifCorrect = regEx.test($("#txtCustomerSalary").val());
+
+         if(!ifCorrect){
+             $("#txtCustomerSalary").css("border","1px solid red");
+             $("#salaryH5").text("Cus salary is a required field : Pattern 100.00 or 100");
+         }else {
+             $("#txtCustomerSalary").css("border","1px solid green");
+             $("#salaryH5").text("");
+         }
+
          if(event.key=="Enter"){
              var customer = {
                  id : $("#txtCustomerID").val(),
@@ -229,6 +253,8 @@
                  address : $("#txtCustomerAddress").val(),
                  salary: $("#txtCustomerSalary").val()
              }
+
+             alert("Do you really need to add this customer...?");
 
              customers.push(customer);
              getAllCustomers();
