@@ -197,13 +197,19 @@
     })
 
     $("#txtCustomerName").on("keyup",function (event) {
+        let regEx =  /^[A-z]{4}/;
+        let ifCorrect = regEx.test($("#txtCustomerName").val());
+
+        if(!ifCorrect){
+            $("#txtCustomerName").css("border","1px solid red");
+            $("#nameH5").text("Cus name is a required field : Minimum 4, Max 20 Spaces allowed");
+        }else {
+            $("#txtCustomerName").css("border","1px solid green");
+            $("#nameH5").text("");
+        }
+
+
         if(event.key=="Enter"){
-
-           let regEx =  /^[A-z]{4}/;
-           let ifCorrect = regEx.test($("#txtCustomerName").val());
-
-           alert(ifCorrect);
-
             $("#txtCustomerAddress").focus();
         }
     })
