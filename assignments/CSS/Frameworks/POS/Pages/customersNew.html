@@ -192,7 +192,17 @@
             $("#idH5").text("");
 
             if(event.key=="Enter"){
-                $("#txtCustomerName").focus();
+
+                let searchCustomer1 = searchCustomer($("#txtCustomerID").val());
+
+
+                if(searchCustomer1!=null){
+                    alert(searchCustomer1.id);
+                }else {
+                    $("#txtCustomerName").focus();
+                }
+
+
             }
 
         }
@@ -337,6 +347,16 @@
         $("#txtCustomerName").css("border","1px solid #ced4da");
         $("#txtCustomerAddress").css("border","1px solid #ced4da");
         $("#txtCustomerSalary").css("border","1px solid #ced4da");
+    }
+
+    function searchCustomer(id) {
+        for (let customer of customers) {
+            if(customer.id==id){
+                return customer;
+            }else {
+                return null;
+            }
+        }
     }
 </script>
 </body>
