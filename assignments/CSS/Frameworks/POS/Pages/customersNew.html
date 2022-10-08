@@ -222,8 +222,10 @@
     function buttonDisable(){
        if($("#txtCustomerID").val()=="" || $("#txtCustomerName").val()=="" || $("#txtCustomerAddress").val()=="" || $("#txtCustomerSalary").val()=="" || $("#idH5").text()!="" || $("#nameH5").text()!="" || $("#addressH5").text()!="" || $("#salaryH5").text()!=""){
            $("#btnAdd").attr("disabled",true);
+           return true;
        }else{
            $("#btnAdd").attr("disabled",false);
+           return false;
        }
     }
 
@@ -264,24 +266,28 @@
              count = 0;
          }
 
-         buttonDisable();
+         let correct = buttonDisable();
 
-         if(event.key=="Enter"){
-             var customer = {
-                 id : $("#txtCustomerID").val(),
-                 name : $("#txtCustomerName").val(),
-                 address : $("#txtCustomerAddress").val(),
-                 salary: $("#txtCustomerSalary").val()
+         if(event.key=="Enter") {
+             if (!correct) {
+                 var customer = {
+                     id: $("#txtCustomerID").val(),
+                     name: $("#txtCustomerName").val(),
+                     address: $("#txtCustomerAddress").val(),
+                     salary: $("#txtCustomerSalary").val()
+                 }
+
+                 alert("Do you really need to add this customer...?");
+
+                 customers.push(customer);
+                 getAllCustomers();
+
+                 clearTextFields();
+
+                 $("#txtCustomerID").focus();
+             } else {
+                 alert("Something went wrong!..");
              }
-
-             alert("Do you really need to add this customer...?");
-
-             customers.push(customer);
-             getAllCustomers();
-
-             clearTextFields();
-
-             $("#txtCustomerID").focus();
 
          }
      });
