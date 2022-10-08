@@ -183,18 +183,23 @@
         if(!ifCorrect){
             $("#txtCustomerID").css("border","1px solid red");
             $("#idH5").text("Cus Id is a required field : Pattern C001");
-            count = 1;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerID").focus();
+            }
         }else {
             $("#txtCustomerID").css("border","1px solid green");
             $("#idH5").text("");
-            count =0;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerName").focus();
+            }
+
         }
 
         buttonDisable();
 
-        if(event.key=="Enter"){
-            $("#txtCustomerName").focus();
-        }
+
     });
 
     $("#txtCustomerName").on("keyup",function (event) {
@@ -204,19 +209,21 @@
         if(!ifCorrect){
             $("#txtCustomerName").css("border","1px solid red");
             $("#nameH5").text("Cus name is a required field : Minimum 4, Max 20 Spaces allowed");
-            count = 1;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerName").focus();
+            }
         }else {
             $("#txtCustomerName").css("border","1px solid green");
             $("#nameH5").text("");
-            count = 0;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerAddress").focus();
+            }
         }
 
         buttonDisable();
 
-
-        if(event.key=="Enter"){
-            $("#txtCustomerAddress").focus();
-        }
     });
 
     function buttonDisable(){
@@ -236,19 +243,24 @@
         if(!ifCorrect){
             $("#txtCustomerAddress").css("border","1px solid red");
             $("#addressH5").text("Cus address is a required field : Minimum 7");
-            count = 1;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerAddress").focus();
+
+            }
         }else {
             $("#txtCustomerAddress").css("border","1px solid green");
             $("#addressH5").text("");
-            count = 0;
+
+            if(event.key=="Enter"){
+                $("#txtCustomerSalary").focus();
+
+            }
         }
 
         buttonDisable();
 
-        if(event.key=="Enter"){
-            $("#txtCustomerSalary").focus();
 
-        }
     });
 
      $("#txtCustomerSalary").on("keyup",function (event) {
@@ -258,12 +270,9 @@
          if(!ifCorrect){
              $("#txtCustomerSalary").css("border","1px solid red");
              $("#salaryH5").text("Cus salary is a required field : Pattern 100.00 or 100");
-             count = 1;
-
          }else {
              $("#txtCustomerSalary").css("border","1px solid green");
              $("#salaryH5").text("");
-             count = 0;
          }
 
          let correct = buttonDisable();
