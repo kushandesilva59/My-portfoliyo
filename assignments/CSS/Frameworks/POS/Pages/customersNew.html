@@ -155,11 +155,8 @@
 <script src="../asserts/js/jquery-3.6.1.min.js"></script>
 <script>
  var customers = [];
-
-
+ 
     $("#btnAdd").click(function () {
-
-
         var customer = {
             id : $("#txtCustomerID").val(),
             name : $("#txtCustomerName").val(),
@@ -177,7 +174,7 @@
 
          $("#txtCustomerID").focus();
 
-    })
+    });
 
     $("#txtCustomerID").on("keyup",function (event) {
         let regEx = /^(C)[0-9]{3}$/;
@@ -186,17 +183,19 @@
         if(!ifCorrect){
             $("#txtCustomerID").css("border","1px solid red");
             $("#idH5").text("Cus Id is a required field : Pattern C001");
+            count = 1;
         }else {
             $("#txtCustomerID").css("border","1px solid green");
             $("#idH5").text("");
+            count =0;
         }
+
+        buttonDisable();
 
         if(event.key=="Enter"){
             $("#txtCustomerName").focus();
         }
-
-
-    })
+    });
 
     $("#txtCustomerName").on("keyup",function (event) {
         let regEx =  /^[A-z ]{4,}$/;
@@ -205,16 +204,28 @@
         if(!ifCorrect){
             $("#txtCustomerName").css("border","1px solid red");
             $("#nameH5").text("Cus name is a required field : Minimum 4, Max 20 Spaces allowed");
+            count = 1;
         }else {
             $("#txtCustomerName").css("border","1px solid green");
             $("#nameH5").text("");
+            count = 0;
         }
+
+        buttonDisable();
 
 
         if(event.key=="Enter"){
             $("#txtCustomerAddress").focus();
         }
-    })
+    });
+
+    function buttonDisable(){
+       if($("#txtCustomerID").val()=="" || $("#txtCustomerName").val()=="" || $("#txtCustomerAddress").val()=="" || $("#txtCustomerSalary").val()=="" || $("#idH5").text()!="" || $("#nameH5").text()!="" || $("#addressH5").text()!="" || $("#salaryH5").text()!=""){
+           $("#btnAdd").attr("disabled",true);
+       }else{
+           $("#btnAdd").attr("disabled",false);
+       }
+    }
 
     $("#txtCustomerAddress").on("keyup",function (event) {
         let regEx = /^[A-z,-/0-9 ]{7,}$/;
@@ -223,16 +234,20 @@
         if(!ifCorrect){
             $("#txtCustomerAddress").css("border","1px solid red");
             $("#addressH5").text("Cus address is a required field : Minimum 7");
+            count = 1;
         }else {
             $("#txtCustomerAddress").css("border","1px solid green");
             $("#addressH5").text("");
+            count = 0;
         }
+
+        buttonDisable();
 
         if(event.key=="Enter"){
             $("#txtCustomerSalary").focus();
 
         }
-    })
+    });
 
      $("#txtCustomerSalary").on("keyup",function (event) {
          let regEx = /^[.0-9]{3,}$/;
@@ -241,10 +256,15 @@
          if(!ifCorrect){
              $("#txtCustomerSalary").css("border","1px solid red");
              $("#salaryH5").text("Cus salary is a required field : Pattern 100.00 or 100");
+             count = 1;
+
          }else {
              $("#txtCustomerSalary").css("border","1px solid green");
              $("#salaryH5").text("");
+             count = 0;
          }
+
+         buttonDisable();
 
          if(event.key=="Enter"){
              var customer = {
@@ -264,9 +284,9 @@
              $("#txtCustomerID").focus();
 
          }
-     })
+     });
 
- function bindClickEvent(){
+    function bindClickEvent(){
      $("#tblCustomers>tr").click(function () {
          $("#txtCustomerID").val($(this).children(":eq(0)").text());
          $("#txtCustomerName").val($(this).children(":eq(1)").text());
@@ -279,7 +299,7 @@
 
     $("#btnGetAll").click(function () {
         getAllCustomers()
-    })
+    });
 
     function getAllCustomers() {
         $("#tblCustomers").empty();
