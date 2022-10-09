@@ -123,7 +123,7 @@
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
             <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
-            <button type="button" class="btn btn-info">Delete</button>
+            <button type="button" class="btn btn-info" id="btnDelete">Delete</button>
             <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
             <button type="button" class="btn btn-success">Clear</button>
         </div>
@@ -253,12 +253,29 @@
             alert("Updated!..");
             clearTextFields();
         }else {
-            alert(ifUpdated);
             alert("Something went wrong!..")
-
-
         }
     });
+
+ $("#btnDelete").click(function () {
+
+     let id = $("#txtCustomerID").val();
+    let yesToDelete = confirm("Are you sure ?");
+
+    if(yesToDelete){
+        let ifDeleted = deleteCustomer(id);
+        if(ifDeleted){
+            alert("Deleted!..");
+            clearTextFields();
+        }else {
+            alert("Something went wrong!..")
+        }
+    }else {
+
+    }
+
+
+ });
 
     function updateCustomer(cusId){
         let cus = searchCustomer(cusId);
@@ -276,6 +293,19 @@
             return false;
         }
     }
+
+ function deleteCustomer(cusId){
+     let cus = searchCustomer(cusId);
+
+     if (cus != null) {
+         let indexNumber = customers.indexOf(cus);
+         customers.splice(indexNumber, 1);
+         getAllCustomers();
+         return true;
+     } else {
+         return false;
+     }
+ }
 
     $("#txtCustomerAddress").on("keyup",function (event) {
         let regEx = /^[A-z,-/0-9 ]{7,}$/;
