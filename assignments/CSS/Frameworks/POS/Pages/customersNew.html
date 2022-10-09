@@ -122,7 +122,7 @@
     <section class="col-7 mt-4 mx-2" >
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
-            <button type="button" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
             <button type="button" class="btn btn-info">Delete</button>
             <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
             <button type="button" class="btn btn-success">Clear</button>
@@ -197,14 +197,13 @@
 
 
                 if(searchCustomer1!=null){
-                    alert(searchCustomer1.id);
+                    $("#txtCustomerName").val(searchCustomer1.name);
+                    $("#txtCustomerAddress").val(searchCustomer1.address);
+                    $("#txtCustomerSalary").val(searchCustomer1.salary);
                 }else {
                     $("#txtCustomerName").focus();
                 }
-
-
             }
-
         }
 
         buttonDisable();
@@ -244,6 +243,38 @@
            $("#btnAdd").attr("disabled",false);
            return false;
        }
+    }
+
+    $("#btnUpdate").click(function () {
+
+        let ifUpdated = updateCustomer($("#txtCustomerID").val());
+
+        if(ifUpdated){
+            alert("Updated!..");
+            clearTextFields();
+        }else {
+            alert(ifUpdated);
+            alert("Something went wrong!..")
+
+
+        }
+    });
+
+    function updateCustomer(cusId){
+        let cus = searchCustomer(cusId);
+
+        if(cus != null){
+
+            cus.id = $("#txtCustomerID").val();
+            cus.name = $("#txtCustomerName").val();
+            cus.address = $("#txtCustomerAddress").val();
+            cus.salary = $("#txtCustomerSalary").val();
+
+            getAllCustomers();
+            return true;
+        }else {
+            return false;
+        }
     }
 
     $("#txtCustomerAddress").on("keyup",function (event) {
@@ -349,14 +380,14 @@
         $("#txtCustomerSalary").css("border","1px solid #ced4da");
     }
 
-    function searchCustomer(id) {
+    function searchCustomer(cusID) {
         for (let customer of customers) {
-            if(customer.id==id){
+            if (customer.id == cusID) {
                 return customer;
-            }else {
-                return null;
             }
         }
+        return null;
+
     }
 </script>
 </body>
