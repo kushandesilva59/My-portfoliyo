@@ -253,14 +253,14 @@
             alert("Updated!..");
             clearTextFields();
         }else {
-            alert("Something went wrong!..")
+            alert("Something went wrong!..");
         }
     });
 
  $("#btnDelete").click(function () {
 
      let id = $("#txtCustomerID").val();
-    let yesToDelete = confirm("Are you sure ?");
+     let yesToDelete = confirm("Are you sure ?");
 
     if(yesToDelete){
         let ifDeleted = deleteCustomer(id);

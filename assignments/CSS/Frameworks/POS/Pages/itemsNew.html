@@ -122,8 +122,8 @@
     <section class="col-7 mt-4 mx-2" >
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
-            <button type="button" class="btn btn-warning">Update</button>
-            <button type="button" class="btn btn-info">Delete</button>
+            <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
+            <button type="button" class="btn btn-info" id="btnDelete">Delete</button>
             <button type="button" class="btn btn-success">Get All</button>
             <button type="button" class="btn btn-success">Clear</button>
         </div>
@@ -180,7 +180,44 @@
 
         $("#txtItemCode").focus();
 
-    })
+    });
+
+    $("#btnUpdate").click(function () {
+        let ifUpdated = updateItem($("#txtItemCode").val());
+
+        if(ifUpdated){
+            alert("Updated!..");
+            clearTextFields();
+        }else {
+            alert("Something went wrong!..");
+        }
+    });
+
+    function updateItem(itemCode) {
+        let item = searchItem(itemCode);
+
+        if(item != null){
+
+            item.itemCode = $("#txtItemCode").val();
+            item.itemName = $("#txtItemName").val();
+            item.itemPrice = $("#txtItemPrice").val();
+            item.itemQuantity = $("#txtItemQuantity").val();
+
+            getAllItems();
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    function searchItem(itemCode) {
+        for (let item of items) {
+            if (item.itemCode == itemCode) {
+                return item;
+            }
+        }
+        return null;
+    }
 
 
 
