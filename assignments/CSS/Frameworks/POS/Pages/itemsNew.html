@@ -170,15 +170,16 @@
             itemQuantity : itemQuantity
         }
 
-        alert("Do you really need to add this Item...?");
 
-        items.push(item);
+            alert("Do you really need to add this Item...?");
 
-        clearTextFields();
+            items.push(item);
 
-        getAllItems();
+            clearTextFields();
 
-        $("#txtItemCode").focus();
+            getAllItems();
+
+            $("#txtItemCode").focus();
 
     });
 
@@ -250,16 +251,31 @@
         if(!ifCorrect){
             $("#txtItemCode").css("border","1px solid red");
             $("#itemCodeH5").text("Item Code is a required field : Pattern I001");
+
+            if(event.key=="Enter"){
+                $("#txtItemCode").focus();
+            }
         }else {
-            $("#txtItemCode").css("border","1px solid green");
+            $("#txtItemCode").css("border", "1px solid green");
             $("#itemCodeH5").text("");
+
+            if (event.key == "Enter") {
+
+                let searchItem1 = searchItem($("#txtItemCode").val());
+
+
+                if (searchItem1 != null) {
+                    $("#txtItemName").val(searchItem1.itemName);
+                    $("#txtItemPrice").val(searchItem1.itemPrice);
+                    $("#txtItemQuantity").val(searchItem1.itemQuantity);
+                } else {
+                    $("#txtItemName").focus();
+                }
+            }
         }
 
 
-        if(event.key=="Enter"){
-            $("#txtItemName").focus();
-        }
-    })
+    });
 
     $("#txtItemName").on("keyup",function (event) {
         let regExp = /^[A-z]{3,}$/;
@@ -295,12 +311,8 @@
         if(event.key=="Enter"){
             $("#txtItemQuantity").focus();
       }
-       /* if($("#txtItemPrice").val()==""){
-            alert("Null");
-        }else{
-            alert("Not null");
-        }*/
-    })
+
+    });
 
     $("#txtItemQuantity").on("keyup",function (event) {
         let regExp = /^[0-9]{1,}$/;
@@ -350,6 +362,35 @@
 
     }
 
+    $("#btnDelete").click(function () {
+        let id = $("#txtItemCode").val();
+        let yesToDelete = confirm("Are you sure ?");
+
+        if(yesToDelete){
+            let ifDeleted = deleteItem(id);
+            if(ifDeleted){
+                alert("Deleted!..");
+                clearTextFields();
+            }else {
+                alert("Something went wrong!..")
+            }
+        }else {
+
+        }
+    });
+
+    function deleteItem(itemCode) {
+        let item = searchItem(itemCode);
+
+        if (item != null) {
+            let indexNumber = items.indexOf(item);
+            items.splice(indexNumber, 1);
+            getAllItems();
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 </script>
 </body>
