@@ -6,6 +6,51 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../../CSS/Boostrap/css/bootstrap.min.css">
 
+    <style>
+        body>main>section:nth-child(4)>section>section:first-child>div:first-child{
+            background-color: greenyellow;
+        }
+
+        body>main>section:nth-child(4)>section>section:first-child>div:first-child>h1{
+            text-align: center;
+        }
+
+        body>main>section:nth-child(4)>section>section:nth-child(2)>div:first-child{
+            background-color: greenyellow;
+        }
+
+        body>main>section:nth-child(4)>section>section:nth-child(2)>div:first-child>h1{
+            text-align: center
+        }
+
+        body>main>section:nth-child(4)>section{
+            margin-top: 7vh;
+        }
+
+        body>main>section:nth-child(4)>section:first-child{
+            margin-top: 0;
+            margin-bottom: 2vh;
+        }
+
+        body>main>section:nth-child(4)>section>section>div{
+            margin: 5vh 2vh;
+        }
+
+        body>main>section:nth-child(4)>section>section>div>div{
+            margin: 5vh 2vh;
+        }
+
+        body>main>section:nth-child(4){
+            background-color: lightgrey;
+        }
+
+        body>main>section:nth-child(4)>section>section{
+            background-color: white;
+            border: 2px solid black;
+            margin: 1vh;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -42,17 +87,17 @@
       <section class="row mt-4" >
           <div class="col" >
               <div><h5 style="text-align: center">Customers</h5></div>
-              <a href="#" id="customerImage"><img class="img-fluid" src="asserts/Customers.jpeg" alt=""></a>
+              <a href="#" id="customerImage"><img class="img-fluid" src="asserts/customer-feedback.png" alt=""></a>
               <div><h2></h2></div>
           </div>
           <div class="col">
               <div><h5 style="text-align: center">Items</h5></div>
-              <a href="#" id="itemImage"><img class="img-fluid" src="asserts/Items.jpeg" alt=""></a>
+              <a href="#" id="itemImage"><img class="img-fluid" src="asserts/order.png" alt=""></a>
               <div><h2></h2></div>
           </div>
           <div class="col">
               <div><h5 style="text-align: center">My Orders</h5></div>
-              <a href="#" id="ordersImage"><img class="img-fluid" src="asserts/Orders.jpeg" alt=""></a>
+              <a href="#" id="ordersImage"><img class="img-fluid" src="asserts/shopping-cart.png" alt=""></a>
               <div><h2></h2></div>
           </div>
       </section>
@@ -61,119 +106,170 @@
 
     <!--Items start-->
     <section id="itemsContent">
-        <!--Form Start-->
-        <section class="col-5 mx-3 row" style="background-color: white" >
-            <div style="background-color: green"><h3 style="color: white; text-align: center">Item search</h3></div>
+        <div class="row">
+            <div class="col-8 justify-content-center">
+                <!--Item form start-->
+                <section class="col-6">
+                    <form >
+                        <div class="mb-3" >
+                            <label for="txtItemCode" class="form-label"><b>Item Code:</b></label>
+                            <input type="text" class="form-control" id="txtItemCode" aria-describedby="ID">
+                            <h5 id="itemCodeH5"></h5>
+                        </div>
 
-            <div class="row g-3">
-                <div class="col-11 mx-4 ">
-                    <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
-                </div>
+                        <div class="mb-3 ">
+                            <label for="txtItemName" class="form-label"><b>Item Name:</b></label>
+                            <input type="text" class="form-control" id="txtItemName">
+                            <h5 id="itemNameH5"></h5>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtItemPrice" class="form-label"><b>Item Price:</b></label>
+                            <input type="number" class="form-control" id="txtItemPrice" aria-describedby="ID">
+                            <h5 id="itemPriceH5"></h5>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtItemQuantity" class="form-label"><b>Item Quantity:</b></label>
+                            <input type="number" class="form-control" id="txtItemQuantity" aria-describedby="ID">
+                            <h5 id="itemQuantityH5"></h5>
+                        </div>
+
+                    </form>
+                </section>
+                <!--Item form end-->
             </div>
 
-            <div class="m-4 col-2">
-                <button type="button" class="btn btn-success">Search</button>
-            </div>
+            <div class="col justify-content-end" >
+                <!--Form Start-->
+                <section class="col mx-3 row rounded " style="background-color: white" >
 
-            <div class="col-6 mt-4">
-                <select class="form-select" aria-label="Default select example" id="dropdownSearch">
-                    <option selected="">Name</option>
-                    <option value="Item Code">Item Code</option>
-                    <option value="NIC">NIC</option>
-                </select>
-            </div>
-        </section>
-        <!--Form end-->
-
-        <!--Two button start-->
-        <section class="col-6">
-            <div class="row justify-content-end">
-                <div class="col-4">
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-info">New Item</button>
-                        <button type="button" class="btn btn-warning">View All Items</button>
+                    <div class="row g-3">
+                        <div class="col-11 mx-4 ">
+                            <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
+                        </div>
                     </div>
-                </div>
+
+                    <div class="m-4 col-2">
+                        <button type="button" class="btn btn-success">Search</button>
+                    </div>
+
+                    <div class="col-6 mt-4">
+                        <select class="form-select" aria-label="Default select example" id="dropdownSearch">
+                            <option selected="">Name</option>
+                            <option value="Item Code">Item Code</option>
+                            <option value="NIC">NIC</option>
+                        </select>
+                    </div>
+                </section>
+                <!--Form end-->
             </div>
+        </div>
 
-        </section>
-        <!--Two button end-->
-
-        <!--Four button start-->
+        <!--Five button start-->
         <section class="col-7 mt-4 mx-2" >
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-danger">Delete</button>
-                <button type="button" class="btn btn-warning">Update</button>
-                <button type="button" class="btn btn-info">Details</button>
-                <button type="button" class="btn btn-success">Clear</button>
+                <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
+                <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
+                <button type="button" class="btn btn-info" id="btnDelete">Delete</button>
+                <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
+                <button type="button" class="btn btn-success" id="btnClear">Clear</button>
             </div>
         </section>
-        <!--Four button end-->
+        <!--Five button end-->
 
         <!--Table start-->
         <section>
-            <table class="table table-success table-striped mt-4">
+            <table class="table table-success table-striped mt-4 r text-center" >
                 <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Salary</th>
+                <tr >
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Quantity</th>
                 </tr>
                 </thead>
+
+                <tbody id="tblItems">
+
+                </tbody>
             </table>
         </section>
         <!--Table end-->
+
     </section>
     <!--Items end-->
 
 
     <!--Customers star-->
     <section id="customersContent">
-        <!--Form Start-->
-        <section class="col-5 mx-3 row" style="background-color: white" >
-            <div style="background-color: green"><h3 style="color: white; text-align: center">Customer search</h3></div>
+        <div class="row">
+            <div class="col-8 justify-content-center">
+                <!--Customer form start-->
+                <section class="col-6">
+                    <form >
+                        <div class="mb-3" >
+                            <label for="txtCustomerID" class="form-label"><b>Customer ID:</b></label>
+                            <input type="text" class="form-control" id="txtCustomerID" aria-describedby="ID">
+                            <h5 id="idH5"></h5>
+                        </div>
 
-            <div class="row g-3">
-                <div class="col-11 mx-4 ">
-                    <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
-                </div>
+                        <div class="mb-3 ">
+                            <label for="txtCustomerName" class="form-label"><b>Customer Name:</b></label>
+                            <input type="text" class="form-control" id="txtCustomerName">
+                            <h5 id="nameH5"></h5>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtCustomerAddress" class="form-label"><b>Customer Address:</b></label>
+                            <input type="text" class="form-control" id="txtCustomerAddress" aria-describedby="ID">
+                            <h5 id="addressH5"></h5>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtCustomerSalary" class="form-label"><b>Customer Salary:</b></label>
+                            <input type="number" class="form-control" id="txtCustomerSalary" aria-describedby="ID">
+                            <h5 id="salaryH5"></h5>
+                        </div>
+
+                    </form>
+                </section>
+                <!--Customer form end-->
             </div>
 
-            <div class="m-4 col-2">
-                <button type="button" class="btn btn-success">Search</button>
-            </div>
+            <div class="col justify-content-end" >
+                <!--Form Start-->
+                <section class="col mx-3 row rounded " style="background-color: white" >
 
-            <div class="col-6 mt-4">
-                <select class="form-select" aria-label="Default select example" id="dropdownSearch2">
-                    <option selected="">Name</option>
-                    <option value="Item Code">Item Code</option>
-                    <option value="NIC">NIC</option>
-                </select>
-            </div>
-        </section>
-        <!--Form end-->
-
-        <!--Two button start-->
-        <section class="col-6">
-            <div class="row justify-content-end">
-                <div class="col-6">
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-info">New Customer</button>
-                        <button type="button" class="btn btn-warning">View All Customers</button>
+                    <div class="row g-3">
+                        <div class="col-11 mx-4 ">
+                            <input type="text" class="form-control" placeholder="Input Name/NIC/Tp here" aria-label="First name">
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </section>
-        <!--Two button end-->
+                    <div class="m-4 col-2">
+                        <button type="button" class="btn btn-success">Search</button>
+                    </div>
+
+                    <div class="col-6 mt-4">
+                        <select class="form-select" aria-label="Default select example" id="dropdownSearch">
+                            <option selected="">Name</option>
+                            <option value="Item Code">Item Code</option>
+                            <option value="NIC">NIC</option>
+                        </select>
+                    </div>
+                </section>
+                <!--Form end-->
+            </div>
+        </div>
 
         <!--Four button start-->
         <section class="col-7 mt-4 mx-2" >
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-danger">Delete</button>
-                <button type="button" class="btn btn-warning">Update</button>
-                <button type="button" class="btn btn-info">Details</button>
+                <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
+                <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
+                <button type="button" class="btn btn-info" id="btnDelete">Delete</button>
+                <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
                 <button type="button" class="btn btn-success">Clear</button>
             </div>
         </section>
@@ -181,7 +277,7 @@
 
         <!--Table start-->
         <section>
-            <table class="table table-success table-striped mt-4">
+            <table class="table table-success table-striped mt-4 text-center" >
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -190,6 +286,9 @@
                     <th>Salary</th>
                 </tr>
                 </thead>
+                <tbody id="tblCustomers">
+
+                </tbody>
             </table>
         </section>
         <!--Table end-->
@@ -197,6 +296,7 @@
     <!--Customers end-->
 
     <section id="ordersContent">
+
         <section class="row">
 
             <!--Invoice details start-->
@@ -235,7 +335,7 @@
                     <!--Customer start-->
                     <div class="col">
                         <label for="txtCustomerId"><b>Customer :</b></label>
-                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtCustomerId">
+                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtCustomerIdOrderForm">
                     </div>
                     <!--customer end-->
                 </div>
@@ -291,7 +391,7 @@
                     <!--Customer start-->
                     <div class="col">
                         <label for="txtItemCode"><b>Item Code :</b></label>
-                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCode">
+                        <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCodeOrderForm">
                     </div>
                     <!--customer end-->
 
@@ -304,7 +404,7 @@
                     <!--Item Name start-->
                     <div class="col-5">
                         <label for="txtItemName"><b>Item Name :</b></label>
-                        <input type="text" class="form-control" placeholder="Malitha" aria-label="First name" id="txtItemName">
+                        <input type="text" class="form-control" placeholder="Malitha" aria-label="First name" id="txtItemNameOrderForm">
                     </div>
                     <!--Item Name end-->
 
@@ -421,14 +521,14 @@
         $("#homeContent").css("display","inline");
 
 
-    })
+    });
 
     $("#items").click(function () {
         $("#homeContent").css("display","none");
         $("#customersContent").css("display","none");
         $("#ordersContent").css("display","none");
         $("#itemsContent").css("display","inline");
-    })
+    });
 
     $("#customers").click(function () {
         $("#itemsContent").css("display","none");
@@ -436,26 +536,26 @@
         $("#ordersContent").css("display","none");
         $("#customersContent").css("display","inline");
 
-    })
+    });
 
     $("#orders").click(function () {
         $("#itemsContent").css("display","none");
         $("#homeContent").css("display","none");
         $("#customersContent").css("display","none");
         $("#ordersContent").css("display","inline");
-    })
+    });
 
     $("#customerImage").click(function () {
 
-    })
+    });
 
     $("#itemImage").click(function () {
 
-    })
+    });
 
     $("#ordersImage").click(function () {
 
-    })
+    });
 </script>
 </body>
 </html>
