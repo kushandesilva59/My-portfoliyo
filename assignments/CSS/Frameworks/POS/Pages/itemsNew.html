@@ -124,8 +124,8 @@
             <button type="button" class="btn btn-danger" id="btnAdd">Add</button>
             <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
             <button type="button" class="btn btn-info" id="btnDelete">Delete</button>
-            <button type="button" class="btn btn-success">Get All</button>
-            <button type="button" class="btn btn-success">Clear</button>
+            <button type="button" class="btn btn-success" id="btnGetAll">Get All</button>
+            <button type="button" class="btn btn-success" id="btnClear">Clear</button>
         </div>
     </section>
     <!--Five button end-->
@@ -181,6 +181,14 @@
 
             $("#txtItemCode").focus();
 
+    });
+
+    $("#btnGetAll").click(function () {
+        getAllItems();
+    });
+
+    $("#btnClear").click(function () {
+        clearTextFields();
     });
 
     $("#btnUpdate").click(function () {
@@ -279,7 +287,7 @@
     });
 
     $("#txtItemName").on("keyup",function (event) {
-        let regExp = /^[A-z]{3,}$/;
+        let regExp = /^[A-z ]{3,}$/;
         let ifCorrect = regExp.test($("#txtItemName").val());
 
         if(!ifCorrect){
@@ -366,8 +374,15 @@
         $("#txtItemPrice").css("border","1px solid #ced4da");
         $("#txtItemQuantity").css("border","1px solid #ced4da");
 
+        $("#itemCodeH5").text("");
+        $("#itemNameH5").text("");
+        $("#itemPriceH5").text("");
+        $("#itemQuantityH5").text("");
+
 
     }
+
+
 
     $("#btnDelete").click(function () {
         let id = $("#txtItemCode").val();
