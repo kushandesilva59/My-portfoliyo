@@ -399,15 +399,10 @@
     }
 
     function clearTextFields() {
-        $("#txtCustomerID").val("");
-        $("#txtCustomerName").val("");
-        $("#txtCustomerAddress").val("");
-        $("#txtCustomerSalary").val("");
-
-        $("#txtCustomerID").css("border","1px solid #ced4da");
-        $("#txtCustomerName").css("border","1px solid #ced4da");
-        $("#txtCustomerAddress").css("border","1px solid #ced4da");
-        $("#txtCustomerSalary").css("border","1px solid #ced4da");
+        $("#txtCustomerID").val("").css("border","1px solid #ced4da");
+        $("#txtCustomerName").val("").css("border","1px solid #ced4da");
+        $("#txtCustomerAddress").val("").css("border","1px solid #ced4da");
+        $("#txtCustomerSalary").val("").css("border","1px solid #ced4da");
 
         $("#idH5").text("");
         $("#nameH5").text("");

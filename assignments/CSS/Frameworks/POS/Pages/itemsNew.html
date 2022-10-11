@@ -364,15 +364,10 @@
     })
 
     function clearTextFields() {
-        $("#txtItemCode").val("");
-        $("#txtItemName").val("");
-        $("#txtItemPrice").val("");
-        $("#txtItemQuantity").val("");
-
-        $("#txtItemCode").css("border","1px solid #ced4da");
-        $("#txtItemName").css("border","1px solid #ced4da");
-        $("#txtItemPrice").css("border","1px solid #ced4da");
-        $("#txtItemQuantity").css("border","1px solid #ced4da");
+        $("#txtItemCode").val("").css("border","1px solid #ced4da");
+        $("#txtItemName").val("").css("border","1px solid #ced4da");
+        $("#txtItemPrice").val("").css("border","1px solid #ced4da");
+        $("#txtItemQuantity").val("").css("border","1px solid #ced4da");
 
         $("#itemCodeH5").text("");
         $("#itemNameH5").text("");
