@@ -233,7 +233,7 @@
 
         bindClickEvent();
     }
-
+    
     function bindClickEvent(){
         $("#tblItems>tr").click(function () {
             $("#txtItemCode").val($(this).children(":eq(0)").text());
@@ -274,6 +274,7 @@
             }
         }
 
+        buttonDisable();
 
     });
 
@@ -293,6 +294,8 @@
         if(event.key=="Enter"){
             $("#txtItemPrice").focus();
         }
+
+        buttonDisable();
     })
 
     $("#txtItemPrice").on("keyup",function (event) {
@@ -311,6 +314,8 @@
         if(event.key=="Enter"){
             $("#txtItemQuantity").focus();
       }
+
+        buttonDisable();
 
     });
 
@@ -345,6 +350,8 @@
 
             $("#txtItemCode").focus();
         }
+
+        buttonDisable();
 
     })
 
@@ -388,6 +395,16 @@
             getAllItems();
             return true;
         } else {
+            return false;
+        }
+    }
+
+    function buttonDisable(){
+        if($("#txtItemCode").val()=="" || $("#txtItemName").val()=="" || $("#txtItemPrice").val()=="" || $("#txtItemQuantity").val()=="" || $("#idH5").text()!="" || $("#nameH5").text()!="" || $("#addressH5").text()!="" || $("#salaryH5").text()!=""){
+            $("#btnAdd").attr("disabled",true);
+            return true;
+        }else{
+            $("#btnAdd").attr("disabled",false);
             return false;
         }
     }
