@@ -4415,6 +4415,10 @@
             }
         }
 
+        html{
+            scroll-behavior: smooth;
+        }
+
     </style>
 
 </head>
@@ -4428,37 +4432,37 @@
         <nav>
             <div>
                 <ul>
-                    <li><a href="#services"><i class="fa-solid fa-earth-europe"></i>Services</a></li>
+                    <li onclick="document.getElementById('services').scrollIntoView();"><i class="fa-solid fa-earth-europe"></i>Services</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-award"></i>Skills</li>
+                    <li onclick="document.getElementById('skills').scrollIntoView();"><i class="fa-solid fa-award"></i>Skills</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-laptop-code"></i>Projects</li>
+                    <li onclick="document.getElementById('projects').scrollIntoView();"><i class="fa-solid fa-laptop-code"></i>Projects</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-road"></i>Journey</li>
+                    <li onclick="document.getElementById('journey').scrollIntoView();"><i class="fa-solid fa-road"></i>Journey</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-music"></i>Hobbies</li>
+                    <li onclick="document.getElementById('hobbies').scrollIntoView();"><i class="fa-solid fa-music"></i>Hobbies</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-paper-plane"></i>Contact</li>
+                    <li onclick="document.getElementById('contact').scrollIntoView();"><i class="fa-solid fa-paper-plane"></i>Contact</li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li><i class="fa-solid fa-link"></i>Links</li>
+                    <li onclick="document.getElementById('links').scrollIntoView();"><i class="fa-solid fa-link"></i>Links</li>
                 </ul>
             </div>
         </nav>
@@ -4504,13 +4508,12 @@
          </section>
      </section>
 
-    <section>
+    <section id="services">
             <section>
                 <h2>My</h2>
                 <h2>Services</h2>
                 <h1>What I Do</h1>
             </section>
-
 
             <section>
                 <div>
@@ -4540,7 +4543,7 @@
             </section>
         </section>
 
-    <section>
+    <section id="projects">
         <div>
             <h3>Recent <span>Projects</span></h3>
             <h3>Here are some projects I've been working on.</h3>
@@ -4552,14 +4555,14 @@
             <div><a href="https://github.com/kushandesilva59/Farm-shop" target="_blank"><img src="asserts/images/Portfolio/Thoda-kade-Image.png" alt=""></a></div>
         </div>
         <div>
-           <!-- <button>Prev</button>
-            <button>Next</button>-->
+            <!-- <button>Prev</button>
+             <button>Next</button>-->
 
             <button>View more</button>
         </div>
     </section>
 
-    <section>
+    <section id="skills">
         <div>
             <h3>Skills</h3>
             <h3>Here are some Languages and tools I’m Experienced with</h3>
@@ -4622,7 +4625,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="journey">
         <div>
             <h2>My journey so far</h2>
             <h3>Journey</h3>
@@ -4671,7 +4674,7 @@
         </div><!--right-->
     </section>
 
-    <section>
+    <section id="hobbies">
         <div>
             <h3>Hobbies</h3>
             <p>I devote my leisure time for travelling ,Hiking,Trekking,site seeing & exploring hidden<br>
@@ -4731,7 +4734,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <div>
             <h3>Contact</h3>
             <h3>Contact me through mail.</h3>
@@ -4808,7 +4811,7 @@
 </main>
 
 <footer>
-    <section>
+    <section id="links">
         <div>
             <h3>Links</h3>
             <h3>More info from below links.</h3>
@@ -4849,6 +4852,10 @@
         $("#divLeft").click(function () {
 
         });
+
+        $("#skills").click(function () {
+          $("#skills").scrollIntoView();
+        })
     </script>
 </body>
 </html>
