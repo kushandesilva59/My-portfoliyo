@@ -546,15 +546,25 @@
     });
 
     $("#customerImage").click(function () {
+        $("#itemsContent").css("display","none");
+        $("#homeContent").css("display","none");
+        $("#ordersContent").css("display","none");
+        $("#customersContent").css("display","inline");
 
     });
 
     $("#itemImage").click(function () {
-
+        $("#homeContent").css("display","none");
+        $("#customersContent").css("display","none");
+        $("#ordersContent").css("display","none");
+        $("#itemsContent").css("display","inline");
     });
 
     $("#ordersImage").click(function () {
-
+        $("#itemsContent").css("display","none");
+        $("#homeContent").css("display","none");
+        $("#customersContent").css("display","none");
+        $("#ordersContent").css("display","inline");
     });
 </script>
 </body>
