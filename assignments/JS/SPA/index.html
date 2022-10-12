@@ -49,6 +49,17 @@
             border: 2px solid black;
             margin: 1vh;
         }
+
+        body>main>section:nth-child(2)>div:first-child>div:first-child>section>form>div>h5{
+            font-size: 15px;
+            color: red;
+        }
+
+        body>main>section:nth-child(3)>div:first-child>div:first-child>section>form>div>h5{
+            font-size: 15px;
+            color: red;
+        }
+
     </style>
 
 </head>
@@ -199,7 +210,6 @@
 
     </section>
     <!--Items end-->
-
 
     <!--Customers star-->
     <section id="customersContent">
@@ -509,6 +519,7 @@
 
 
 <script src="../../CSS/Frameworks/POS/asserts/js/jquery-3.6.1.min.js"></script>
+<script src="controllers/ItemController.js"></script>
 <script>
     $("#itemsContent").css("display","none");
     $("#customersContent").css("display","none");
@@ -566,6 +577,8 @@
         $("#customersContent").css("display","none");
         $("#ordersContent").css("display","inline");
     });
+
+
 </script>
 </body>
 </html>
