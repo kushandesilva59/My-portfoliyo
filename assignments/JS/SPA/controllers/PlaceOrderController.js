@@ -1,35 +1,7 @@
-/*
-$("#txtCustomer").change(function () {
-   let id = $(this);
 
-    for (const customer of customers) {
-        if(id == customer.id){
-            $("#txtCustomerIdOrderForm").val(customer.id);
-            $("#txtName").val(customer.name);
-            $("#txtSalary").val(customer.salary);
-            $("#txtAddress").val(customer.address);
-        }
-    }
-});*/
-
-/*$(function () {
-    $("#txtCustomer").change(function (){
-        let element = $(this).find('option:selected');
-
-
-       /!* for (const customer of customers) {
-            if(id == customer.id){
-                $("#txtCustomerIdOrderForm").val(customer.id);
-                $("#txtName").val(customer.name);
-                $("#txtSalary").val(customer.salary);
-                $("#txtAddress").val(customer.address);
-            }
-        }*!/
-    });
-});*/
 
 $("#txtCustomer").change(function () {
-    var id = $("#txtCustomer").val();
+    let id = $("#txtCustomer").val();
 
     for (const customer of customers) {
         if(customer.id == id){
@@ -42,8 +14,17 @@ $("#txtCustomer").change(function () {
 });
 
 
-/*
-$("#txtCustomerIdOrderForm").val("p");
-$("#txtName").val("k");
-$("#txtSalary").val("10");
-$("#txtAddress").val("a");*/
+$("#txtItem").change(function () {
+    let itemCode = $("#txtItem").val();
+
+    for (const item of items) {
+        if(item.itemCode == itemCode){
+            $("#txtItemCodeOrderForm").val(item.itemCode);
+            $("#txtItemNameOrderForm").val(item.itemName);
+            $("#txtPrice").val(item.itemPrice);
+            $("#txtOrderQty").val(item.itemQuantity);
+        }
+    }
+});
+
+
