@@ -234,9 +234,15 @@ $("#btnGetAllC").click(function () {
 function getAllCustomers() {
     $("#tblCustomers").empty();
 
+    $("#txtCustomer").empty();
+
     for (let customer of customers) {
         let row = "<tr><td>"+customer.id+"</td> <td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>";
         $("#tblCustomers").append(row);
+
+
+        let option = "<option value="+customer.id+">"+customer.id+"</option>>"
+        $("#txtCustomer").append(option);
     }
 
     bindClickEvent();
