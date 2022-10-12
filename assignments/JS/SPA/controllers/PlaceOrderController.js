@@ -27,8 +27,20 @@ $("#txtItem").change(function () {
     }
 });
 
+function checkValidity() {
+    if($("#txtCustomer").selected() && $("#txtItem").selected() && $("#txtOrderId").val() != "" && $("#dateDate").val() != ""){
+        $("#btnAdd").attr("disabled",false);
+    }else {
+        $("#btnAdd").attr("disabled",true);
+    }
+}
+
 $("#btnAdd").click(function () {
-    disableTextFields();
+   /* disableTextFields();
+
+    checkValidity();*/
+
+    alert($("#dateDate").val());
 });
 
 function disableTextFields() {
@@ -50,5 +62,10 @@ function enableTextFields() {
     $("#txtSalary").attr("disabled",false);
     $("#txtAddress").attr("disabled",false);
 }
+
+$(document).ready(function () {
+    $("#btnAdd").attr("disabled",true);
+
+})
 
 
