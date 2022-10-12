@@ -75,11 +75,14 @@ function searchItem(itemCode) {
 
 function getAllItems() {
     $("#tblItems").empty();
+    $("#txtItem").empty();
 
     for (let item of items) {
         let row = "<tr><td>"+item.itemCode+"</td> <td>"+item.itemName+"</td><td>"+item.itemPrice+"</td><td>"+item.itemQuantity+"</td></tr>";
-
         $("#tblItems").append(row);
+
+        let option = "<option value="+item.itemCode+">"+item.itemCode+"</option>>"
+        $("#txtItem").append(option);
     }
 
     bindClickEvent();
