@@ -27,4 +27,28 @@ $("#txtItem").change(function () {
     }
 });
 
+$("#btnAdd").click(function () {
+    disableTextFields();
+});
+
+function disableTextFields() {
+    $("#dateDate").attr("disabled",true);
+    $("#txtOrderId").attr("disabled",true);
+    $("#txtCustomer").attr("disabled",true);
+    $("#txtCustomerIdOrderForm").attr("disabled",true);
+    $("#txtName").attr("disabled",true);
+    $("#txtSalary").attr("disabled",true);
+    $("#txtAddress").attr("disabled",true);
+}
+
+function enableTextFields() {
+    $("#dateDate").attr("disabled",false);
+    $("#txtOrderId").attr("disabled",false);
+    $("#txtCustomer").attr("disabled",false);
+    $("#txtCustomerIdOrderForm").attr("disabled",false);
+    $("#txtName").attr("disabled",false);
+    $("#txtSalary").attr("disabled",false);
+    $("#txtAddress").attr("disabled",false);
+}
+
 
