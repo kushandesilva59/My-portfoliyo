@@ -1,4 +1,8 @@
-
+var itemSelected = false;
+var customerSelected = false;
+var dateSelected = false;
+var insertOrderId = false;
+var insertOrderQty = false;
 
 $("#txtCustomer").change(function () {
     let id = $("#txtCustomer").val();
@@ -32,31 +36,35 @@ $("#txtItem").change(function () {
 });
 
 function checkValidity() {
-    if($("#txtCustomer").selected() && $("#txtItem").selected() && $("#txtOrderId").val() != "" && $("#dateDate").val() != ""){
+    let selected = $("#txtCustomer").selected;
+    let selected1 = $("#txtItem").selected;
+
+    if(selected){
         $("#btnAdd").attr("disabled",false);
+        alert("disable button");
     }else {
-        $("#btnAdd").attr("disabled",true);
+        $("#btnAdd").attr("disabled",false);
+        alert("enable button");
     }
 }
 
 $("#txtOrderQty").on("keyup",function () {
-    checkValidity();
+   /* checkValidity();*/
 })
 
 $("#btnAdd").click(function () {
-    disableTextFields();
+   /* disableTextFields();*/
 
     checkValidity();
 
-    alert($("#dateDate").val());
 });
 
 $("#txtOrderId").on("keyup",function () {
-    checkValidity();
+  /*  checkValidity();*/
 });
 
 $("#dateDate").change(function () {
-    checkValidity();
+    /*checkValidity();*/
 })
 
 function disableTextFields() {
@@ -79,9 +87,11 @@ function enableTextFields() {
     $("#txtAddress").attr("disabled",false);
 }
 
+/*
 $(document).ready(function () {
     $("#btnAdd").attr("disabled",true);
     $("#btnPurchase").attr("disabled",true);
 })
+*/
 
 
