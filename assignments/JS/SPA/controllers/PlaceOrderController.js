@@ -56,7 +56,11 @@ $("#txtOrderQty").on("keyup",function () {
 $("#btnAdd").click(function () {
     disableTextFields();
 
-    checkValidity();
+    let price = $("#txtPrice").val() * $("#txtOrderQty").val();
+
+    let row = "<td><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
+
+    $("#itemTable").append(row);
 
 });
 
