@@ -11,6 +11,8 @@ $("#txtCustomer").change(function () {
             $("#txtAddress").val(customer.address);
         }
     }
+
+    checkValidity();
 });
 
 
@@ -22,9 +24,11 @@ $("#txtItem").change(function () {
             $("#txtItemCodeOrderForm").val(item.itemCode);
             $("#txtItemNameOrderForm").val(item.itemName);
             $("#txtPrice").val(item.itemPrice);
-            $("#txtOrderQty").val(item.itemQuantity);
+            $("#txtQtyOnH").val(item.itemQuantity);
         }
     }
+
+    checkValidity();
 });
 
 function checkValidity() {
@@ -35,13 +39,25 @@ function checkValidity() {
     }
 }
 
-$("#btnAdd").click(function () {
-   /* disableTextFields();
+$("#txtOrderQty").on("keyup",function () {
+    checkValidity();
+})
 
-    checkValidity();*/
+$("#btnAdd").click(function () {
+    disableTextFields();
+
+    checkValidity();
 
     alert($("#dateDate").val());
 });
+
+$("#txtOrderId").on("keyup",function () {
+    checkValidity();
+});
+
+$("#dateDate").change(function () {
+    checkValidity();
+})
 
 function disableTextFields() {
     $("#dateDate").attr("disabled",true);
@@ -65,7 +81,7 @@ function enableTextFields() {
 
 $(document).ready(function () {
     $("#btnAdd").attr("disabled",true);
-
+    $("#btnPurchase").attr("disabled",true);
 })
 
 
