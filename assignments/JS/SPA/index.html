@@ -123,26 +123,26 @@
                 <section class="col-6">
                     <form >
                         <div class="mb-3" >
-                            <label for="txtItemCode" class="form-label"><b>Item Code:</b></label>
-                            <input type="text" class="form-control" id="txtItemCode" aria-describedby="ID">
+                            <label for="txtItemCodeItem" class="form-label"><b>Item Code:</b></label>
+                            <input type="text" class="form-control" id="txtItemCodeItem" aria-describedby="ID">
                             <h5 id="itemCodeH5"></h5>
                         </div>
 
                         <div class="mb-3 ">
-                            <label for="txtItemName" class="form-label"><b>Item Name:</b></label>
-                            <input type="text" class="form-control" id="txtItemName">
+                            <label for="txtItemNameItem" class="form-label"><b>Item Name:</b></label>
+                            <input type="text" class="form-control" id="txtItemNameItem">
                             <h5 id="itemNameH5"></h5>
                         </div>
 
                         <div class="mb-3">
-                            <label for="txtItemPrice" class="form-label"><b>Item Price:</b></label>
-                            <input type="number" class="form-control" id="txtItemPrice" aria-describedby="ID">
+                            <label for="txtItemPriceItem" class="form-label"><b>Item Price:</b></label>
+                            <input type="number" class="form-control" id="txtItemPriceItem" aria-describedby="ID">
                             <h5 id="itemPriceH5"></h5>
                         </div>
 
                         <div class="mb-3">
-                            <label for="txtItemQuantity" class="form-label"><b>Item Quantity:</b></label>
-                            <input type="number" class="form-control" id="txtItemQuantity" aria-describedby="ID">
+                            <label for="txtItemQuantityItem" class="form-label"><b>Item Quantity:</b></label>
+                            <input type="number" class="form-control" id="txtItemQuantityItem" aria-describedby="ID">
                             <h5 id="itemQuantityH5"></h5>
                         </div>
 
@@ -395,7 +395,7 @@
 
                     <!--itemCode  start-->
                     <div class="col">
-                        <label for="txtItemCode"><b>Item Code :</b></label>
+                        <label for="txtItemCodeOrderForm"><b>Item Code :</b></label>
                         <input type="text" class="form-control" placeholder="C001" aria-label="Last name" id="txtItemCodeOrderForm">
                     </div>
                     <!--itemCode end-->
@@ -408,7 +408,7 @@
                 <div class="row">
                     <!--Item Name start-->
                     <div class="col-5">
-                        <label for="txtItemName"><b>Item Name :</b></label>
+                        <label for="txtItemNameOrderForm"><b>Item Name :</b></label>
                         <input type="text" class="form-control" placeholder="Kiri samba" aria-label="First name" id="txtItemNameOrderForm">
                     </div>
                     <!--Item Name end-->
@@ -515,65 +515,6 @@
 <script src="controllers/ItemController.js"></script>
 <script src="controllers/CustomerController.js"></script>
 <script src="controllers/PlaceOrderController.js"></script>
-<script>
-    $("#itemsContent").css("display","none");
-    $("#customersContent").css("display","none");
-    $("#ordersContent").css("display","none");
-
-    $("#home").click(function () {
-        $("#itemsContent").css("display","none");
-        $("#customersContent").css("display","none");
-        $("#ordersContent").css("display","none");
-        $("#homeContent").css("display","inline");
-
-
-    });
-
-    $("#items").click(function () {
-        $("#homeContent").css("display","none");
-        $("#customersContent").css("display","none");
-        $("#ordersContent").css("display","none");
-        $("#itemsContent").css("display","inline");
-    });
-
-    $("#customers").click(function () {
-        $("#itemsContent").css("display","none");
-        $("#homeContent").css("display","none");
-        $("#ordersContent").css("display","none");
-        $("#customersContent").css("display","inline");
-
-    });
-
-    $("#orders").click(function () {
-        $("#itemsContent").css("display","none");
-        $("#homeContent").css("display","none");
-        $("#customersContent").css("display","none");
-        $("#ordersContent").css("display","inline");
-    });
-
-    $("#customerImage").click(function () {
-        $("#itemsContent").css("display","none");
-        $("#homeContent").css("display","none");
-        $("#ordersContent").css("display","none");
-        $("#customersContent").css("display","inline");
-
-    });
-
-    $("#itemImage").click(function () {
-        $("#homeContent").css("display","none");
-        $("#customersContent").css("display","none");
-        $("#ordersContent").css("display","none");
-        $("#itemsContent").css("display","inline");
-    });
-
-    $("#ordersImage").click(function () {
-        $("#itemsContent").css("display","none");
-        $("#homeContent").css("display","none");
-        $("#customersContent").css("display","none");
-        $("#ordersContent").css("display","inline");
-    });
-
-
-</script>
+<script src="controllers/Home.js"></script>
 </body>
 </html>

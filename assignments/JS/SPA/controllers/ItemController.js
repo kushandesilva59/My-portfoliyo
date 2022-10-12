@@ -1,10 +1,14 @@
-var items = [];
+let items = [];
+let itemCodeFilled = false;
+let itemNameFilled = false;
+let itemPriceFilled = false;
+let itemQuantityFilled = false;
 
 $("#btnAddI").click(function () {
-    let itemCode = $("#txtItemCode").val();
-    let itemName = $("#txtItemName").val();
-    let itemPrice = $("#txtItemPrice").val();
-    let itemQuantity = $("#txtItemQuantity").val();
+    let itemCode = $("#txtItemCodeItem").val();
+    let itemName = $("#txtItemNameItem").val();
+    let itemPrice = $("#txtItemPriceItem").val();
+    let itemQuantity = $("#txtItemQuantityItem").val();
 
     var item = {
         itemCode : itemCode,
@@ -22,7 +26,7 @@ $("#btnAddI").click(function () {
 
     getAllItems();
 
-    $("#txtItemCode").focus();
+    $("#txtItemCodeItem").focus();
 
 });
 
@@ -35,7 +39,7 @@ $("#btnClearI").click(function () {
 });
 
 $("#btnUpdateI").click(function () {
-    let ifUpdated = updateItem($("#txtItemCode").val());
+    let ifUpdated = updateItem($("#txtItemCodeItem").val());
 
     if(ifUpdated){
         alert("Updated!..");
@@ -50,10 +54,10 @@ function updateItem(itemCode) {
 
     if(item != null){
 
-        item.itemCode = $("#txtItemCode").val();
-        item.itemName = $("#txtItemName").val();
-        item.itemPrice = $("#txtItemPrice").val();
-        item.itemQuantity = $("#txtItemQuantity").val();
+        item.itemCode = $("#txtItemCodeItem").val();
+        item.itemName = $("#txtItemNameItem").val();
+        item.itemPrice = $("#txtItemPriceItem").val();
+        item.itemQuantity = $("#txtItemQuantityItem").val();
 
         getAllItems();
         return true;
@@ -90,40 +94,41 @@ function getAllItems() {
 
 function bindClickEvent(){
     $("#tblItems>tr").click(function () {
-        $("#txtItemCode").val($(this).children(":eq(0)").text());
-        $("#txtItemName").val($(this).children(":eq(1)").text());
-        $("#txtItemPrice").val($(this).children(":eq(2)").text());
-        $("#txtItemQuantity").val($(this).children(":eq(3)").text());
+        $("#txtItemCodeItem").val($(this).children(":eq(0)").text());
+        $("#txtItemNameItem").val($(this).children(":eq(1)").text());
+        $("#txtItemPriceItem").val($(this).children(":eq(2)").text());
+        $("#txtItemQuantityItem").val($(this).children(":eq(3)").text());
     });
 }
 
 
-$("#txtItemCode").on("keyup",function (event) {
+$("#txtItemCodeItem").on("keyup",function (event) {
     let regExp = /^(I)[0-9]{3}$/;
-    let ifCorrect = regExp.test($("#txtItemCode").val());
+    let ifCorrect = regExp.test($("#txtItemCodeItem").val());
 
     if(!ifCorrect){
-        $("#txtItemCode").css("border","1px solid red");
+        $("#txtItemCodeItem").css("border","2px solid red");
         $("#itemCodeH5").text("Item Code is a required field : Pattern I001");
 
         if(event.key=="Enter"){
-            $("#txtItemCode").focus();
+            $("#txtItemCodeItem").focus();
         }
     }else {
-        $("#txtItemCode").css("border", "1px solid green");
+        $("#txtItemCodeItem").css("border", "2px solid green");
         $("#itemCodeH5").text("");
 
         if (event.key == "Enter") {
 
-            let searchItem1 = searchItem($("#txtItemCode").val());
+            let searchItem1 = searchItem($("#txtItemCodeItem").val());
 
 
             if (searchItem1 != null) {
-                $("#txtItemName").val(searchItem1.itemName);
-                $("#txtItemPrice").val(searchItem1.itemPrice);
-                $("#txtItemQuantity").val(searchItem1.itemQuantity);
+                $("#txtItemNameItem").val(searchItem1.itemName);
+                $("#txtItemPriceItem").val(searchItem1.itemPrice);
+                $("#txtItemQuantityItem").val(searchItem1.itemQuantity);
             } else {
-                $("#txtItemName").focus();
+                itemCodeFilled = true;
+                $("#txtItemNameItem").focus();
             }
         }
     }
@@ -132,89 +137,129 @@ $("#txtItemCode").on("keyup",function (event) {
 
 });
 
-$("#txtItemName").on("keyup",function (event) {
+$("#txtItemNameItem").on("keyup",function (event) {
     let regExp = /^[A-z ]{3,}$/;
-    let ifCorrect = regExp.test($("#txtItemName").val());
+    let ifCorrect = regExp.test($("#txtItemNameItem").val());
 
     if(!ifCorrect){
-        $("#txtItemName").css("border","1px solid red");
+        $("#txtItemNameItem").css("border","2px solid red");
         $("#itemNameH5").text("Item Name is a required field : Minimum 3");
     }else {
-        $("#txtItemName").css("border","1px solid green");
+        $("#txtItemNameItem").css("border","2px solid green");
         $("#itemNameH5").text("");
     }
 
 
     if(event.key=="Enter"){
-        $("#txtItemPrice").focus();
+        itemNameFilled = true;
+        $("#txtItemPriceItem").focus();
     }
 
     buttonDisable();
 })
 
-$("#txtItemPrice").on("keyup",function (event) {
+$("#txtItemPriceItem").on("keyup",function (event) {
     let regExp = /^[0-9.]{2,}$/;
-    let ifCorrect = regExp.test($("#txtItemPrice").val());
+    let ifCorrect = regExp.test($("#txtItemPriceItem").val());
 
     if(!ifCorrect){
-        $("#txtItemPrice").css("border","1px solid red");
+        $("#txtItemPriceItem").css("border","1px solid red");
         $("#itemPriceH5").text("Item Price is a required field : 10.00 or 10");
     }else {
-        $("#txtItemPrice").css("border","1px solid green");
+        $("#txtItemPriceItem").css("border","1px solid green");
         $("#itemPriceH5").text("");
     }
 
 
     if(event.key=="Enter"){
-        $("#txtItemQuantity").focus();
+        itemPriceFilled = true;
+        $("#txtItemQuantityItem").focus();
     }
 
     buttonDisable();
 
 });
 
-$("#txtItemQuantity").on("keyup",function (event) {
+$("#txtItemQuantityItem").on("keyup",function (event) {
     let regExp = /^[0-9]{1,}$/;
-    let ifCorrect = regExp.test($("#txtItemQuantity").val());
+    let ifCorrect = regExp.test($("#txtItemQuantityItem").val());
 
     if(!ifCorrect){
-        $("#txtItemQuantity").css("border","1px solid red");
+        $("#txtItemQuantityItem").css("border","2px solid red");
         $("#itemQuantityH5").text("Item Quantity is a required field");
     }else {
-        $("#txtItemQuantity").css("border","1px solid green");
+        $("#txtItemQuantityItem").css("border","2px solid green");
         $("#itemQuantityH5").text("");
     }
 
+    itemQuantityFilled = true;
 
-    if(event.key=="Enter"){
-        var item = {
-            itemCode: $("#txtItemCode").val(),
-            itemName: $("#txtItemName").val(),
-            itemPrice: $("#txtItemPrice").val(),
-            itemQuantity: $("#txtItemQuantity").val()
+    let correct = buttonDisable();
+
+    if(event.key=="Enter") {
+        if (correct) {
+            var item = {
+                itemCode: $("#txtItemCodeItem").val(),
+                itemName: $("#txtItemNameItem").val(),
+                itemPrice: $("#txtItemPriceItem").val(),
+                itemQuantity: $("#txtItemQuantityItem").val()
+            }
+
+            alert("Do you really need to add this customer...?");
+
+            items.push(item);
+            getAllItems();
+
+            clearTextFields();
+
+            $("#txtItemCodeItem").focus();
+        } else {
+            alert("Something went wrong!..");
         }
 
-        alert("Do you really need to add this Item...?");
-
-        items.push(item);
-        getAllItems();
-
-        //clear text fields
-        clearTextFields();
-
-        $("#txtItemCode").focus();
     }
 
-    buttonDisable();
+    /*if(event.key=="Enter"){
+        var item = {
+            itemCode: $("#txtItemCodeItem").val(),
+            itemName: $("#txtItemNameItem").val(),
+            itemPrice: $("#txtItemPriceItem").val(),
+            itemQuantity: $("#txtItemQuantityItem").val()
+        }
+
+        let confirmation = confirm("Do you really need to add this Item...?");
+
+       if (confirmation){
+           items.push(item);
+           getAllItems();
+
+           //clear text fields
+           clearTextFields();
+       }
+
+        $("#txtItemCodeItem").focus();
+    }
+
+    buttonDisable();*/
 
 })
 
 function clearTextFields() {
-    $("#txtItemCode").val("").css("border","1px solid #ced4da");
-    $("#txtItemName").val("").css("border","1px solid #ced4da");
-    $("#txtItemPrice").val("").css("border","1px solid #ced4da");
-    $("#txtItemQuantity").val("").css("border","1px solid #ced4da");
+    $("#txtItemCodeItem").css("border","1px solid #ced4da");
+    $("#txtItemNameItem").css("border","1px solid #ced4da");
+    $("#txtItemPriceItem").css("border","1px solid #ced4da");
+    $("#txtItemQuantityItem").css("border","1px solid #ced4da");
 
+    $("#txtItemCodeItem").val("");
+    $("#txtItemNameItem").val("");
+    $("#txtItemPriceItem").val("");
+    $("#txtItemQuantityItem").val("");
+
+   /* $("#txtItemCodeItem").val("").css("border","1px solid #ced4da");
+    $("#txtItemNameItem").val("").css("border","1px solid #ced4da");
+    $("#txtItemPriceItem").val("").css("border","1px solid #ced4da");
+    $("#txtItemQuantityItem").val("").css("border","1px solid #ced4da");
+*/
     $("#itemCodeH5").text("");
     $("#itemNameH5").text("");
     $("#itemPriceH5").text("");
@@ -255,11 +300,11 @@ function deleteItem(itemCode) {
 }
 
 function buttonDisable(){
-    if($("#txtItemCode").val()=="" || $("#txtItemName").val()=="" || $("#txtItemPrice").val()=="" || $("#txtItemQuantity").val()=="" || $("#idH5").text()!="" || $("#nameH5").text()!="" || $("#addressH5").text()!="" || $("#salaryH5").text()!=""){
-        $("#btnAddI").attr("disabled",true);
+    if(itemCodeFilled && itemNameFilled && itemPriceFilled && itemQuantityFilled){
+        $("#btnAddI").attr("disabled",false);
         return true;
     }else{
-        $("#btnAddI").attr("disabled",false);
+        $("#btnAddI").attr("disabled",true);
         return false;
     }
 }
