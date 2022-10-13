@@ -199,11 +199,11 @@ function clearAll(){
     $("#txtQtyOnH").val("");
     $("#txtOrderQty").val("");
 
-    var itemSelected = false;
-    var customerSelected = false;
-    var dateSelected = false;
-    var insertOrderId = false;
-    var insertOrderQty = false;
+    itemSelected = false;
+    customerSelected = false;
+    dateSelected = false;
+    insertOrderId = false;
+    insertOrderQty = false;
 
     $("#btnPurchase").attr("disabled",false);
 
