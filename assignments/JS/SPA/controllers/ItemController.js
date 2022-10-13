@@ -210,7 +210,18 @@ $("#txtItemQuantityItem").on("keyup",function (event) {
             items.push(item);
             getAllItems();
 
-            clearTextFields();
+            /*clearTextFields();*/
+            $("#txtItemCodeItem").css("border","1px solid #ced4da");
+            $("#txtItemNameItem").css("border","1px solid #ced4da");
+            $("#txtItemPriceItem").css("border","1px solid #ced4da");
+            $("#txtItemQuantityItem").css("border","1px solid #ced4da");
+
+            $("#txtItemCodeItem").val("");
+            $("#txtItemNameItem").val("");
+            $("#txtItemPriceItem").val("");
+            $("#txtItemQuantityItem").val("");
+
+
 
             $("#txtItemCodeItem").focus();
         } else {
