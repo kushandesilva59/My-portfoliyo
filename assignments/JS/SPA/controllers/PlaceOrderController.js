@@ -145,6 +145,8 @@ $("#txtOrderQty").on("keyup",function (event) {
         $("#orderQTYH5").text("");
 
         if(event.key == "Enter"){
+
+
             let price = $("#txtPrice").val() * $("#txtOrderQty").val();
 
             let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
@@ -193,6 +195,7 @@ function clearAll(){
     disableTextFields();
 
 
+
     $("#txtItemCodeOrderForm").val("");
     $("#txtItemNameOrderForm").val("");
     $("#txtPrice").val("");
@@ -210,6 +213,13 @@ function clearAll(){
     $("#txtItem").focus()
 
 }
+
+$("#txtCash").on("keyup",function () {
+    let total = $("#txtTotal").val();
+    let number = total.match(/\d/g);
+    number = number.join("");
+    alert(total);
+})
 
 
 
