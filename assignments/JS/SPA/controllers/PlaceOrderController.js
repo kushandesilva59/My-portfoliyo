@@ -56,13 +56,15 @@ $("#txtOrderQty").on("keyup",function () {
 })
 
 $("#btnAdd").click(function () {
-    disableTextFields();
+
 
     let price = $("#txtPrice").val() * $("#txtOrderQty").val();
 
     let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
 
     $("#itemTable").append(row);
+
+    clearAll();
 
 });
 
@@ -148,6 +150,8 @@ $("#txtOrderQty").on("keyup",function (event) {
             let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
 
             $("#itemTable").append(row);
+
+            clearAll();
         }
     }
 
@@ -179,6 +183,33 @@ $(document).ready(function () {
     $("#btnAdd").attr("disabled",true);
     $("#btnPurchase").attr("disabled",true);
 });
+
+function clearAll(){
+  /*  $("#txtOrderId").val("");
+    $("#txtCustomerIdOrderForm").val("");
+    $("#txtName").val("");
+    $("#txtSalary").val("");*/
+
+    disableTextFields();
+
+
+    $("#txtItemCodeOrderForm").val("");
+    $("#txtItemNameOrderForm").val("");
+    $("#txtPrice").val("");
+    $("#txtQtyOnH").val("");
+    $("#txtOrderQty").val("");
+
+    var itemSelected = false;
+    var customerSelected = false;
+    var dateSelected = false;
+    var insertOrderId = false;
+    var insertOrderQty = false;
+
+    $("#btnPurchase").attr("disabled",false);
+
+    $("#txtItem").focus()
+
+}
 
 
 
