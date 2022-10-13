@@ -17,6 +17,7 @@ $("#txtCustomer").change(function () {
     }
     customerSelected = true;
     checkValidity();
+    $("#txtItem").focus();
 });
 
 
@@ -34,6 +35,7 @@ $("#txtItem").change(function () {
 
     itemSelected = true;
     checkValidity();
+    $("#txtOrderQty").focus();
 });
 
 function checkValidity() {
@@ -58,22 +60,98 @@ $("#btnAdd").click(function () {
 
     let price = $("#txtPrice").val() * $("#txtOrderQty").val();
 
-    let row = "<td><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
+    let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
 
     $("#itemTable").append(row);
 
 });
 
-$("#txtOrderId").on("keyup",function () {
-    checkValidity();
+$("#txtOrderId").on("keyup",function (event) {
+    /*coloredTextField("orderId");*/
 
-    insertOrderId = true;
+    let regExp = /^(OD)[0-9]{3}$/;
+    let correct = regExp.test($("#txtOrderId").val());
+    if(!correct){
+        $("#txtOrderId").css("border","2px solid red");
+        $("#orderIdH5").text("OrderId is a required field : Pattern OD001");
+
+        if(event.key == "Enter"){
+            $("#txtOrderId").focus();
+        }
+    }else{
+        $("#txtOrderId").css("border","2px solid green");
+        $("#orderIdH5").text("");
+
+        checkValidity();
+
+        insertOrderId = true;
+
+        if(event.key == "Enter"){
+            $("#dateDate").focus();
+        }
+    }
+
+
 });
 
-$("#dateDate").change(function () {
+$("#dateDate").change(function (event) {
     checkValidity();
 
     dateSelected = true;
+
+    $("#txtCustomer").focus();
+
+});
+/*
+function coloredTextField(textField,type){
+    switch (type) {
+       case "orderId" :
+           let regExp = /^(OD)[0-9]{3}$/;
+           let correct = regExp.test($("#txtOrderId").val());
+           if(!correct){
+               $("#txtOrderId").css("border","2px solid red");
+               $("#orderIdH5").text("OrderId is a required field : Pattern OD001");
+           }else{
+               $("#txtOrderId").css("border","2px solid green");
+               $("#orderIdH5").text("");
+           }
+           break;
+        case "orderQuantity" :
+            let regEx = /^[0-9]{1,}$/;
+            let ok = regEx.test($("#txtOrderQty").val());
+            if(!ok){
+                $("#txtOrderQty").css("border","2px solid red");
+                $("#orderQTYH5").text("Order Quantity is a required field ");
+            }else{
+                $("#txtOrderQty").css("border","2px solid green");
+                $("#orderQTYH5").text("");
+            }
+            break;
+    }
+}*/
+
+$("#txtOrderQty").on("keyup",function (event) {
+
+
+    let regEx = /^[0-9]{1,}$/;
+    let ok = regEx.test($("#txtOrderQty").val());
+    if(!ok){
+        $("#txtOrderQty").css("border","2px solid red");
+        $("#orderQTYH5").text("Order Quantity is a required field ");
+    }else{
+        $("#txtOrderQty").css("border","2px solid green");
+        $("#orderQTYH5").text("");
+
+        if(event.key == "Enter"){
+            let price = $("#txtPrice").val() * $("#txtOrderQty").val();
+
+            let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
+
+            $("#itemTable").append(row);
+        }
+    }
+
+
 });
 
 
