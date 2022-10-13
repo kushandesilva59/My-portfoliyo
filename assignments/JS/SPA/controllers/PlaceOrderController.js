@@ -4,6 +4,9 @@ var dateSelected = false;
 var insertOrderId = false;
 var insertOrderQty = false;
 
+let amount = 0;
+let orders = [];
+
 $("#txtCustomer").change(function () {
     let id = $("#txtCustomer").val();
 
@@ -58,13 +61,44 @@ $("#txtOrderQty").on("keyup",function () {
 $("#btnAdd").click(function () {
 
 
-    let price = $("#txtPrice").val() * $("#txtOrderQty").val();
+    let qtyOnH = $("#txtQtyOnH").val();
+
+    let orderQty = $("#txtOrderQty").val();
+
+    if(qtyOnH<orderQty){
+        alert("Not enough Quantity : (");
+    }else{
+        let price = $("#txtPrice").val() * $("#txtOrderQty").val();
+
+        let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
+
+        $("#itemTable").append(row);
+
+        var order = {
+            itemCode : $("#txtItemCodeOrderForm").val(),
+            itemName : $("#txtItemNameOrderForm").val(),
+            itemPrice : $("#txtPrice").val(),
+            orderQuantity : $("#txtOrderQty").val(),
+            total : price
+        }
+
+        orders.push(order);
+
+        viewFullAmount(orders);
+
+        setQuantity($("#txtItemCodeOrderForm").val(),$("#txtOrderQty").val())
+
+        clearAll();
+    }
+
+
+   /* let price = $("#txtPrice").val() * $("#txtOrderQty").val();
 
     let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
 
     $("#itemTable").append(row);
 
-    clearAll();
+    clearAll();*/
 
 });
 
@@ -132,6 +166,18 @@ function coloredTextField(textField,type){
     }
 }*/
 
+function setQuantity(codeItem, orderQty) {
+    for (const item of items) {
+        if(item.itemCode == codeItem){
+            item.itemQuantity = item.itemQuantity-orderQty;
+            break;
+        }else{
+            alert(item.itemCode + orderQty);
+            alert("Something went wrong : (");
+        }
+    }
+}
+
 $("#txtOrderQty").on("keyup",function (event) {
 
 
@@ -146,14 +192,35 @@ $("#txtOrderQty").on("keyup",function (event) {
 
         if(event.key == "Enter"){
 
+            let qtyOnH = $("#txtQtyOnH").val();
 
-            let price = $("#txtPrice").val() * $("#txtOrderQty").val();
+            let orderQty = $("#txtOrderQty").val();
 
-            let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
+            if(qtyOnH<orderQty){
+                alert("Not enough Quantity : (");
+            }else{
+                let price = $("#txtPrice").val() * $("#txtOrderQty").val();
 
-            $("#itemTable").append(row);
+                let row = "<tr><td>"+$("#txtItemCodeOrderForm").val()+"</td>"+"<td>"+$("#txtItemNameOrderForm").val()+"</td>"+"<td>"+$("#txtPrice").val()+"</td>"+"<td>"+$("#txtOrderQty").val()+"</td>"+"<td>"+price+"</td></tr>";
 
-            clearAll();
+                $("#itemTable").append(row);
+
+                var order = {
+                    itemCode : $("#txtItemCodeOrderForm").val(),
+                    itemName : $("#txtItemNameOrderForm").val(),
+                    itemPrice : $("#txtPrice").val(),
+                    orderQuantity : $("#txtOrderQty").val(),
+                    total : price
+                }
+
+                orders.push(order);
+
+                viewFullAmount(orders);
+
+                setQuantity($("#txtItemCodeOrderForm").val(),$("#txtOrderQty").val())
+
+                clearAll();
+            }
         }
     }
 
@@ -186,6 +253,15 @@ $(document).ready(function () {
     $("#btnPurchase").attr("disabled",true);
 });
 
+function viewFullAmount(orders) {
+    let amount = 0;
+    for (const order of orders) {
+       amount += parseInt(order.total);
+    }
+
+    $("#txtTotal").text(amount);
+}
+
 function clearAll(){
   /*  $("#txtOrderId").val("");
     $("#txtCustomerIdOrderForm").val("");
@@ -194,8 +270,6 @@ function clearAll(){
 
     disableTextFields();
 
-
-
     $("#txtItemCodeOrderForm").val("");
     $("#txtItemNameOrderForm").val("");
     $("#txtPrice").val("");
@@ -203,9 +277,6 @@ function clearAll(){
     $("#txtOrderQty").val("");
 
     itemSelected = false;
-    customerSelected = false;
-    dateSelected = false;
-    insertOrderId = false;
     insertOrderQty = false;
 
     $("#btnPurchase").attr("disabled",false);
@@ -214,12 +285,7 @@ function clearAll(){
 
 }
 
-$("#txtCash").on("keyup",function () {
-    let total = $("#txtTotal").val();
-    let number = total.match(/\d/g);
-    number = number.join("");
-    alert(total);
-})
+
 
 
 
