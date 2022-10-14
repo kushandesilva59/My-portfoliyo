@@ -171,9 +171,6 @@ function setQuantity(codeItem, orderQty) {
         if(item.itemCode == codeItem){
             item.itemQuantity = item.itemQuantity-orderQty;
             break;
-        }else{
-            alert(item.itemCode + orderQty);
-            alert("Something went wrong : (");
         }
     }
 }
