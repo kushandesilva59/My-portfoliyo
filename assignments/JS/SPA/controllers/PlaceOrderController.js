@@ -253,7 +253,6 @@ $(document).ready(function () {
 });
 
 function viewFullAmount(orders) {
-    let amount = 0;
     for (const order of orders) {
        amount += parseInt(order.total);
     }
@@ -312,13 +311,15 @@ $("#txtCash").on("keyup",function (event) {
 });
 
 function clearFullPage() {
+    amount = 0;
+
+    orders = [];
+
     $("#txtOrderId").val("");
-    $("#txtCustomer").val("");
     $("#txtCustomerIdOrderForm").val("");
     $("#txtName").val("");
     $("#txtSalary").val("");
     $("#txtAddress").val("");
-    $("#txtItem").val("");
     $("#txtItemCodeOrderForm").val("");
     $("#txtItemNameOrderForm").val("");
     $("#txtPrice").val("");
@@ -333,6 +334,8 @@ function clearFullPage() {
     $("#txtBalance").text("");
 
     $("#itemTable").empty();
+
+    $("#txtOrderId").focus();
 
 }
 
