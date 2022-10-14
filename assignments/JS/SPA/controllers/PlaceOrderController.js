@@ -8,6 +8,7 @@ let amount = 0;
 let orders = [];
 let orderDetails = [];
 
+
 $("#txtCustomer").change(function () {
     let id = $("#txtCustomer").val();
 
@@ -310,6 +311,31 @@ $("#txtCash").on("keyup",function (event) {
     }
 });
 
+function clearFullPage() {
+    $("#txtOrderId").val("");
+    $("#txtCustomer").val("");
+    $("#txtCustomerIdOrderForm").val("");
+    $("#txtName").val("");
+    $("#txtSalary").val("");
+    $("#txtAddress").val("");
+    $("#txtItem").val("");
+    $("#txtItemCodeOrderForm").val("");
+    $("#txtItemNameOrderForm").val("");
+    $("#txtPrice").val("");
+    $("#txtQtyOnH").val("");
+    $("#txtOrderQty").val("");
+    $("#txtDiscount").val("");
+    $("#txtCash").val("");
+
+
+    $("#txtTotal").text("");
+    $("#txtFullAmount").text("");
+    $("#txtBalance").text("");
+
+    $("#itemTable").empty();
+
+}
+
 $("#btnPurchase").click(function () {
     let orderId = $("#txtOrderId").val();
     let orderDate = $("#dateDate").val();
@@ -334,6 +360,10 @@ $("#btnPurchase").click(function () {
     $("#orderTable").append(row);
 
     alert("Purchase successful..!");
+
+    enableTextFields();
+
+    clearFullPage();
 });
 
 
