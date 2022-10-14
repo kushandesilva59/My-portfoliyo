@@ -332,6 +332,8 @@ $("#btnPurchase").click(function () {
     let row = "<tr><td>"+orderId+"</td>"+"<td>"+orderDate+"</td>"+"<td>"+cusId+"</td>"+"<td>"+total+"</td>"+"</td>"+"<td>"+discount+"</td>"+"</td>"+"<td>"+fullAmount+"</td>";
 
     $("#orderTable").append(row);
+
+    alert("Purchase successful..!");
 });
 
 

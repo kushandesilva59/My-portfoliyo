@@ -190,44 +190,43 @@ $("#txtItemQuantityItem").on("keyup",function (event) {
     }else {
         $("#txtItemQuantityItem").css("border","2px solid green");
         $("#itemQuantityH5").text("");
-    }
 
-    itemQuantityFilled = true;
+        itemQuantityFilled = true;
 
-    let correct = buttonDisable();
+        let correct = buttonDisable();
 
-    if(event.key=="Enter") {
-        if (correct) {
-            var item = {
-                itemCode: $("#txtItemCodeItem").val(),
-                itemName: $("#txtItemNameItem").val(),
-                itemPrice: $("#txtItemPriceItem").val(),
-                itemQuantity: $("#txtItemQuantityItem").val()
+        if(event.key=="Enter") {
+            if (correct) {
+                var item = {
+                    itemCode: $("#txtItemCodeItem").val(),
+                    itemName: $("#txtItemNameItem").val(),
+                    itemPrice: $("#txtItemPriceItem").val(),
+                    itemQuantity: $("#txtItemQuantityItem").val()
+                }
+
+                alert("Do you really need to add this customer...?");
+
+                items.push(item);
+                getAllItems();
+
+                /*clearTextFields();*/
+                $("#txtItemCodeItem").css("border","1px solid #ced4da");
+                $("#txtItemNameItem").css("border","1px solid #ced4da");
+                $("#txtItemPriceItem").css("border","1px solid #ced4da");
+                $("#txtItemQuantityItem").css("border","1px solid #ced4da");
+
+                $("#txtItemCodeItem").val("");
+                $("#txtItemNameItem").val("");
+                $("#txtItemPriceItem").val("");
+                $("#txtItemQuantityItem").val("");
+
+
+
+                $("#txtItemCodeItem").focus();
+            } else {
+                alert("Something went wrong!..");
             }
-
-            alert("Do you really need to add this customer...?");
-
-            items.push(item);
-            getAllItems();
-
-            /*clearTextFields();*/
-            $("#txtItemCodeItem").css("border","1px solid #ced4da");
-            $("#txtItemNameItem").css("border","1px solid #ced4da");
-            $("#txtItemPriceItem").css("border","1px solid #ced4da");
-            $("#txtItemQuantityItem").css("border","1px solid #ced4da");
-
-            $("#txtItemCodeItem").val("");
-            $("#txtItemNameItem").val("");
-            $("#txtItemPriceItem").val("");
-            $("#txtItemQuantityItem").val("");
-
-
-
-            $("#txtItemCodeItem").focus();
-        } else {
-            alert("Something went wrong!..");
         }
-
     }
 
     /*if(event.key=="Enter"){
