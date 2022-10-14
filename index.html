@@ -555,7 +555,7 @@
             width: 100%;
         }
 
-        main>section:nth-child(3)>div:nth-child(3)>button:first-child{
+        main>section:nth-child(3)>div:nth-child(3)>a>button:first-child{
             position: absolute;
             left: 0;
             right: 0;
@@ -1169,7 +1169,7 @@
             width: 90px;
             margin: auto;
         }
-        main>section:nth-child(7)>div:nth-child(3)>button{
+        main>section:nth-child(7)>div:nth-child(3)>a>button{
            background-color: #00BFFF;
             color: white;
             border :2px solid #00BFFF;
@@ -1562,6 +1562,15 @@
             height: 100px;
         }
 
+
+        main>section:nth-child(7)>div:nth-child(3)>a>button:hover{
+            cursor: pointer;
+        }
+
+        main>section:nth-child(3)>div:nth-child(3)>a>button:hover{
+            cursor: pointer;
+        }
+
         /*Tablet*/
         @media all and (min-width: 768px) and (max-width: 1023px){
             header>nav>div{
@@ -1707,13 +1716,13 @@
                 height: 80px;
             }
 
-            main>section:nth-child(3)>div:nth-child(3)>button:first-child{
+            main>section:nth-child(3)>div:nth-child(3)>a>button:first-child{
                 font-size: 20px;
             }
 
-            main>section:nth-child(3)>div:nth-child(3)>button:nth-child(2){
+          /*  main>section:nth-child(3)>div:nth-child(3)>button:nth-child(2){
                 font-size: 20px;
-            }
+            }*/
 
             main>section:nth-child(4){
                 height: 385px;
@@ -1898,7 +1907,7 @@
                 height: 30px;
             }
 
-            main>section:nth-child(7)>div:nth-child(3)>button{
+            main>section:nth-child(7)>div:nth-child(3)>a>button{
                 font-size: 12px;
 
                 position: absolute;
@@ -1910,6 +1919,7 @@
                 margin: auto;
                 height: max-content;
             }
+
 
             main>section:nth-child(8){
                 height: 545px;
@@ -2343,7 +2353,7 @@
                 width: 300px;
             }
 
-            main>section:nth-child(3)>div:nth-child(3)>button:first-child {
+            main>section:nth-child(3)>div:nth-child(3)>a>button:first-child {
                 font-size: 20px;
             }
         /*    main>section:nth-child(3)>div:nth-child(3)>button:nth-child(2) {
@@ -3036,7 +3046,7 @@
             main>section:nth-child(3)>div:nth-child(3)>button:first-child {
                 font-size: 20px;
             }
-            main>section:nth-child(3)>div:nth-child(3)>button:nth-child(2) {
+            main>section:nth-child(3)>div:nth-child(3)>a>button:nth-child(2) {
                 right: 28%;
                 font-size: 20px;
             }
@@ -3757,7 +3767,7 @@
                 width: 280px;
             }
 
-            main>section:nth-child(3)>div:nth-child(3)>button:first-child {
+            main>section:nth-child(3)>div:nth-child(3)>a>button:first-child {
                 font-size: 20px;
             }
 
@@ -4419,6 +4429,9 @@
             scroll-behavior: smooth;
         }
 
+        body{
+            overflow-x: hidden;
+        }
     </style>
 
 </head>
@@ -4558,7 +4571,7 @@
             <!-- <button>Prev</button>
              <button>Next</button>-->
 
-            <button>View more</button>
+            <a href="https://github.com/kushandesilva59?tab=repositories" target="_blank"><button>View more</button></a>
         </div>
     </section>
 
@@ -4730,7 +4743,7 @@
         </div>
 
         <div>
-            <button>View More</button>
+            <a href="https://github.com/kushandesilva59?tab=repositories" target="_blank"><button>View more</button></a>
         </div>
     </section>
 
