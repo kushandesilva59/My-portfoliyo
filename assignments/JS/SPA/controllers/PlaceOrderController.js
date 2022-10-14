@@ -61,9 +61,9 @@ $("#txtOrderQty").on("keyup",function () {
 $("#btnAdd").click(function () {
 
 
-    let qtyOnH = $("#txtQtyOnH").val();
+    let qtyOnH = parseInt($("#txtQtyOnH").val());
 
-    let orderQty = $("#txtOrderQty").val();
+    let orderQty = parseInt($("#txtOrderQty").val());
 
     if(qtyOnH<orderQty){
         alert("Not enough Quantity : (");
@@ -192,9 +192,9 @@ $("#txtOrderQty").on("keyup",function (event) {
 
         if(event.key == "Enter"){
 
-            let qtyOnH = $("#txtQtyOnH").val();
+            let qtyOnH = parseInt($("#txtQtyOnH").val());
 
-            let orderQty = $("#txtOrderQty").val();
+            let orderQty = parseInt($("#txtOrderQty").val());
 
             if(qtyOnH<orderQty){
                 alert("Not enough Quantity : (");
@@ -284,6 +284,33 @@ function clearAll(){
     $("#txtItem").focus()
 
 }
+
+$("#txtDiscount").on("keyup",function (event) {
+    if(event.key == "Enter"){
+        let discount = parseInt($("#txtDiscount").val());
+        let total = parseInt($("#txtTotal").text());
+
+        let fullAmount = total - discount;
+
+        $("#txtFullAmount").text(fullAmount);
+
+        $("#txtCash").focus();
+    }
+});
+
+$("#txtCash").on("keyup",function (event) {
+    if(event.key == "Enter"){
+        let fullAmount = parseInt($("#txtFullAmount").text());
+        let cash = parseInt($("#txtCash").val());
+
+        let balance = cash - fullAmount;
+
+        $("#txtBalance").text(balance);
+
+        $("#btnPurchase").focus();
+
+    }
+})
 
 
 
