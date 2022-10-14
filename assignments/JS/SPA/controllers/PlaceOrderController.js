@@ -6,6 +6,7 @@ var insertOrderQty = false;
 
 let amount = 0;
 let orders = [];
+let orderDetails = [];
 
 $("#txtCustomer").change(function () {
     let id = $("#txtCustomer").val();
@@ -307,7 +308,31 @@ $("#txtCash").on("keyup",function (event) {
         $("#btnPurchase").focus();
 
     }
-})
+});
+
+$("#btnPurchase").click(function () {
+    let orderId = $("#txtOrderId").val();
+    let orderDate = $("#dateDate").val();
+    let cusId = $("#txtCustomerIdOrderForm").val();
+    let discount = $("#txtDiscount").val();
+    let total = $("#txtTotal").text();
+    let fullAmount = $("#txtFullAmount").text();
+
+    let orderDetail = {
+        orderId : orderId,
+        orderDate : orderDate,
+        cusId : cusId,
+        total : total,
+        discount : discount,
+        fullAmount : fullAmount
+    }
+
+    orderDetails.push(orderDetail);
+
+    let row = "<tr><td>"+orderId+"</td>"+"<td>"+orderDate+"</td>"+"<td>"+cusId+"</td>"+"<td>"+total+"</td>"+"</td>"+"<td>"+discount+"</td>"+"</td>"+"<td>"+fullAmount+"</td>";
+
+    $("#orderTable").append(row);
+});
 
 
 
