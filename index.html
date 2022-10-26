@@ -49,7 +49,7 @@
         }
 
         header>div:first-child{
-          /*  background-color: black;*/
+            /*background-color: black;*/
             position: absolute;
             height: 60px;
             width: 60px;
@@ -60,10 +60,11 @@
        body>header>nav>div>ul>li{
           display: inline-block;
            padding-top: 0.4em ;
+           font-family: Ubuntu,sans-serif;
        }
 
        body>header>nav>div>ul{
-          padding: 0;
+           padding: 0;
            margin: 0;
        }
 
@@ -74,12 +75,13 @@
 
        body>header>nav>div{
            color: white;
-           width: 5.6vw;
+           width: 6vw;
            height: 2.2vw;
            position: absolute;
            border-radius: 12px;
            top: 20px;
            cursor: pointer;
+           background-color: #bb2d3b;
        }
 
        body>header>nav>div:hover{
@@ -981,12 +983,12 @@
         }
 
         main>section:nth-child(6)>div:nth-child(2)>div:nth-child(2){
-            height: 500px;
+            height: 620px;
             position: absolute;
             left: 0;
             right: 0;
             margin: auto;
-            width: 700%;
+            /*width: 700%;*/
         }
 
         main>section:nth-child(6)>div:nth-child(2)>div:nth-child(3){
@@ -1067,9 +1069,10 @@
             left: 2753px;
         }
 
+
         main>section:nth-child(6)>div:nth-child(2)>div:nth-child(4){
             height: 100px;
-            width: 600px;
+            width: 250px;
             position: absolute;
             bottom: -30px;
             right: 0;
@@ -1081,8 +1084,8 @@
         }
 
         main>section:nth-child(6)>div:nth-child(2)>div:nth-child(4)>div{
-            height: 50px;
-            width: 50px;
+            height: 15px;
+            width: 15px;
             border-radius: 100%;
             background-color: #00BFFF;
 
@@ -1561,6 +1564,7 @@
             width: 100px;
             height: 100px;
         }
+
 
 
         main>section:nth-child(7)>div:nth-child(3)>a>button:hover{
@@ -4432,12 +4436,20 @@
         body{
             overflow-x: hidden;
         }
+
+        #divLeft:hover{
+            box-shadow: 1px 1px 4px 3px #00BFFF ;
+        }
+
+        #divRight:hover{
+            box-shadow: 1px 1px 4px 3px #00BFFF ;
+        }
     </style>
 
 </head>
 
 <body>
-    <header>
+    <header style="z-index: 3">
         <div>
             <i class="fa-solid fa-house-chimney"></i>
         </div>
@@ -4697,8 +4709,10 @@
         </div>
 
         <div>
-            <div id="divLeft">
-                <div><i class="fa-solid fa-angle-left"></i></div>
+            <div>
+                <div id="divLeft" style="z-index: 2;">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
             </div>
 
             <div>
@@ -4707,8 +4721,10 @@
                 <div></div>
             </div>
 
-            <div id="divRight">
-                <div><i class="fa-solid fa-angle-right"></i></div>
+            <div>
+                <div id="divRight">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
             </div>
 
             <div>
@@ -4861,14 +4877,27 @@
 </footer>
 
 
-    <script>
-        $("#divLeft").click(function () {
+    <script src="asserts/js/jquery-3.6.1.min.js"></script>
 
+    <script>
+        var pictures = [];
+        pictures.push("asserts/images/Portfolio/Cricket.jpeg");
+        pictures.push("asserts/images/Portfolio/Travel.jpeg");
+        pictures.push("asserts/images/Portfolio/Beach-camping.jpeg");
+
+
+        $("#divLeft").on("click",function () {
+            alert("left");
+        });
+
+        $("#divRight").on("click",function () {
+            alert("right");
         });
 
         $("#skills").click(function () {
           $("#skills").scrollIntoView();
         })
     </script>
+
 </body>
 </html>
