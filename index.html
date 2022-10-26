@@ -1054,6 +1054,8 @@
             background-size: cover;
             left: 167px;
             margin: auto;
+
+
         }
 
         main>section:nth-child(6)>div:nth-child(2)>div:nth-child(2)>div:nth-child(2){
@@ -4716,9 +4718,9 @@
             </div>
 
             <div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="display"></div>
+               <!-- <div></div>
+                <div></div>-->
             </div>
 
             <div>
@@ -4881,17 +4883,35 @@
 
     <script>
         var pictures = [];
-        pictures.push("asserts/images/Portfolio/Cricket.jpeg");
-        pictures.push("asserts/images/Portfolio/Travel.jpeg");
-        pictures.push("asserts/images/Portfolio/Beach-camping.jpeg");
+        pictures.push("url(asserts/images/Portfolio/Cricket.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/Travel.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/Beach-camping.jpeg)");
+
+        let count = 0;
 
 
         $("#divLeft").on("click",function () {
-            alert("left");
+           count--;
+
+           if(count<0){
+               count = 2;
+           }
+
+           $("#display").css("background-image",pictures[count]);
+
+
         });
 
         $("#divRight").on("click",function () {
-            alert("right");
+            count++;
+
+            if(count>2){
+                count=0;
+            }
+
+
+            $("#display").css("background-image",pictures[count]);
+
         });
 
         $("#skills").click(function () {
