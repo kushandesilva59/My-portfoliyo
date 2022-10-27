@@ -238,14 +238,14 @@
        }
 
         main>section:first-child>section:nth-child(4){
-            border:5px solid white;
+            border:5px solid black;
             height: 64vh;
             position: absolute;
             top: 2vh;
             width: 64vh;
             border-radius: 100%;
             right: 3vw;
-            box-shadow: 0 0 5px 3px aqua;
+            box-shadow: 0 0 10px 3px aqua;
         }
 
        main>section:first-child>section:nth-child(4)>img{
@@ -1090,6 +1090,14 @@
             width: 15px;
             border-radius: 100%;
             background-color: #00BFFF;
+
+        }
+
+        main>section:nth-child(6)>div:nth-child(2)>div:nth-child(4)>div:first-child{
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            background-color: royalblue;
 
         }
 
@@ -4505,8 +4513,10 @@
              <h2>Full Stack Developer</h2>
          </section>
 
+
+
          <nav>
-             <button>Let's Talk</button>
+             <button id="btnLetsTalk" onclick="document.getElementById('links').scrollIntoView()">Let's Talk</button>
          </nav>
 
          <section>
@@ -4732,13 +4742,13 @@
             <div>
 
                 <!--7 dots start-->
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="dot0"></div>
+                <div id="dot1"></div>
+                <div id="dot2"></div>
+                <div id="dot3"></div>
+                <div id="dot4"></div>
+                <div id="dot5"></div>
+                <div id="dot6"></div>
                 <!--7 dots end-->
             </div>
         </div>
@@ -4886,29 +4896,46 @@
         pictures.push("url(asserts/images/Portfolio/Cricket.jpeg)");
         pictures.push("url(asserts/images/Portfolio/Travel.jpeg)");
         pictures.push("url(asserts/images/Portfolio/Beach-camping.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/Pool.JPG)");
 
         let count = 0;
 
 
         $("#divLeft").on("click",function () {
+            $("#dot"+count).css("width","15px");
+            $("#dot"+count).css("height","15px");
+            $("#dot"+count).css("background-color","#00BFFF");
+
+
            count--;
 
            if(count<0){
-               count = 2;
+               count = 3;
            }
 
            $("#display").css("background-image",pictures[count]);
+            
+            $("#dot"+count).css("width","20px");
+            $("#dot"+count).css("height","20px");
+            $("#dot"+count).css("background-color","royalblue");
 
 
         });
 
         $("#divRight").on("click",function () {
+            $("#dot"+count).css("width","15px");
+            $("#dot"+count).css("height","15px");
+            $("#dot"+count).css("background-color","#00BFFF");
             count++;
 
-            if(count>2){
+
+            if(count>3){
                 count=0;
             }
 
+            $("#dot"+count).css("width","20px");
+            $("#dot"+count).css("height","20px");
+            $("#dot"+count).css("background-color","royalblue");
 
             $("#display").css("background-image",pictures[count]);
 
@@ -4916,7 +4943,11 @@
 
         $("#skills").click(function () {
           $("#skills").scrollIntoView();
-        })
+        });
+
+        $("#btnLetsTalk").on("click",function () {
+
+        });
     </script>
 
 </body>
