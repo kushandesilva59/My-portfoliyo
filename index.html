@@ -21,21 +21,36 @@
             position: fixed;
             width: 100%;
             z-index: 1;
+            background-color: #003153;
         }
 
         body>header>nav{
             /*background-color: #002244;*/
-            background-color: #003153;
+            background-color: #6f42c1;
             height: 80px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            right: 0;
+            left: 0;
+            margin: auto;
         }
 
-       header>div{
+        /*home icon*/
+       header>section:first-child{
            position: absolute;
            z-index: 1;
            color: white;
+           height: 60px;
+           width: 60px;
+           top: 5px;
+           left: 30px;
        }
 
-        header>div:first-child>i{
+
+        header>section:first-child>i{
             font-size: 40px;
             position: relative;
             /*left: 30px;
@@ -44,22 +59,14 @@
             left: 7px;
         }
 
-        header>div:first-child>i:hover{
+        header>section:first-child>i:hover{
             color: darkgray;
         }
 
-        header>div:first-child{
-            /*background-color: black;*/
-            position: absolute;
-            height: 60px;
-            width: 60px;
-            top: 5px;
-            left: 30px;
-        }
 
        body>header>nav>div>ul>li{
-          display: inline-block;
-           padding-top: 0.4em ;
+           display: inline-block;
+           padding: 0.4em ;
            font-family: Ubuntu,sans-serif;
        }
 
@@ -75,11 +82,13 @@
 
        body>header>nav>div{
            color: white;
-           width: 6vw;
+           width: max-content;
            height: 2.2vw;
-           position: absolute;
+           position: relative;
            border-radius: 12px;
-           top: 20px;
+           top: 0;
+           bottom : 0;
+           margin: auto;
            cursor: pointer;
            background-color: #bb2d3b;
        }
@@ -94,12 +103,12 @@
            position: relative;
        }
 
-       body>header>nav>div:first-child{
+      /* body>header>nav>div:first-child{
            right: 38vw;
        }
 
        body>header>nav>div:nth-child(2){
-           width: 5.1vw /*!important*/;
+           width: 5.1vw !*!important*!;
            right: 32vw;
        }
 
@@ -121,7 +130,7 @@
 
        body>header>nav>div:nth-child(7){
            right: 2vw;
-       }
+       }*/
 
         main>section:first-child{
             background-color: #002244;
@@ -241,7 +250,7 @@
             border:5px solid black;
             height: 64vh;
             position: absolute;
-            top: 2vh;
+            top: 6vh;
             width: 64vh;
             border-radius: 100%;
             right: 3vw;
@@ -4460,9 +4469,9 @@
 
 <body>
     <header style="z-index: 3">
-        <div>
+        <section>
             <i class="fa-solid fa-house-chimney"></i>
-        </div>
+        </section>
 
         <nav>
             <div>
@@ -4470,36 +4479,43 @@
                     <li onclick="document.getElementById('services').scrollIntoView();"><i class="fa-solid fa-earth-europe"></i>Services</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('skills').scrollIntoView();"><i class="fa-solid fa-award"></i>Skills</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('projects').scrollIntoView();"><i class="fa-solid fa-laptop-code"></i>Projects</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('journey').scrollIntoView();"><i class="fa-solid fa-road"></i>Journey</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('hobbies').scrollIntoView();"><i class="fa-solid fa-music"></i>Hobbies</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('contact').scrollIntoView();"><i class="fa-solid fa-paper-plane"></i>Contact</li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li onclick="document.getElementById('links').scrollIntoView();"><i class="fa-solid fa-link"></i>Links</li>
                 </ul>
             </div>
+
         </nav>
 
 </header>
