@@ -26,14 +26,14 @@
         section>div:last-child{
             background-image: url("asserts/house.gif");
             background-size: cover;
-            width: 800px;
-            height: 600px;
+            width: 500px;
+            height: 330px;
             display: inline-block;
         }
     </style>
 </head>
 <body>
-    <section>
+    <section id="container">
         <div>
             <div></div>
             <h1>A</h1>
@@ -72,6 +72,22 @@
 
     <script>
         var letters = ["A","B","C","D","E","F"];
+
+        function changeLetter() {
+            $("#container").empty();
+
+            let s = letters.pop();
+            letters.unshift(s);
+
+
+            for (let i = 0; i < letters.length; i++) {
+                $("#container").append(`<div><div></div><h1>${letters[i]}</h1></div>`);
+            }
+        }
+
+        setInterval(changeLetter,800);
+
+
     </script>
 </body>
 </html>
