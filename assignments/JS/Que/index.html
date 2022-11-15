@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <title>Que</title>
     <style>
-        section>section{
+        #displaySection > div:first-child {
+            transform: translateY(-175px);
+        }
+
+        #displaySection > div:last-child {
+            transform: translateY(200px);
+        }
+
+        section:nth-child(2){
             border-top: 2px solid black;
             border-bottom: 2px solid black;
             height: 200px;
             width: 1000px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            position: absolute;
 
         }
 
@@ -20,30 +26,38 @@
             height: 150px;
             border-radius: 20px;
             display: inline-block;
+            top: 170px;
+            position: relative;
+        }
+
+       /* #firstDiv{
+            position: relative;
+            left: 0;
+            top: 0;
         }
 
         #lastDiv{
             position: relative;
-            left: 754px;
-            top: 10px;
+            top: 370px;
+            right: 0;
         }
-
+*/
     </style>
 </head>
 <body>
-    <section>
-        <div style="background-color: pink"></div>
+    <section id="displaySection">
+        <div style="background-color: pink" id="firstDiv"></div>
 
-       <section>
-           <div style="background-color: purple"></div>
-           <div style="background-color: yellow"></div>
-           <div style="background-color: blue"></div>
-           <div style="background-color: red"></div>
-       </section>
+        <div style="background-color: purple"></div>
+        <div style="background-color: yellow"></div>
+        <div style="background-color: blue"></div>
+        <div style="background-color: red"></div>
 
         <div style="background-color: green" id="lastDiv"></div>
 
     </section>
+
+    <section></section>
 
     <script>
         var colors = [];
@@ -54,7 +68,23 @@
         colors.push("red");
         colors.push("green");
 
+        function changeColor() {
+            $("#displaySection").empty();
+
+            let shift = colors.pop();
+            colors.unshift(shift);
+
+            for (let i = 0; i < colors.length; i++) {
+                $("#displaySection").append(`<div style="background-color: ${colors[i]}"></div>`);
+            }
+
+        }
+
+        setInterval(changeColor,450);
+
 
     </script>
+
+    <script src="../../../asserts/js/jquery-3.6.1.min.js"></script>
 </body>
 </html>
