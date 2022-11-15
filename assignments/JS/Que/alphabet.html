@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        section{
+            display: flex;
+        }
+
+        section>div{
+            border: 2px solid red;
+            height:max-content;
+        }
+
+        section>div>div{
+            background-image: url("asserts/men.gif");
+            background-size: contain;
+            width: 155px;
+            height: 100px;
+            position: relative;
+            display: inline-block;
+        }
+
+        section>div:last-child{
+            background-image: url("asserts/house.gif");
+            background-size: cover;
+            width: 800px;
+            height: 600px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div></div>
+            <h1>A</h1>
+        </div>
+
+        <div>
+            <div></div>
+            <h1>B</h1>
+        </div>
+
+        <div>
+            <div></div>
+            <h1>C</h1>
+        </div>
+
+        <div>
+            <div></div>
+            <h1>D</h1>
+        </div>
+
+        <div>
+            <div></div>
+            <h1>E</h1>
+        </div>
+
+        <div>
+            <div></div>
+            <h1>F</h1>
+        </div>
+
+        <div></div>
+
+    </section>
+
+    <script src="../../../asserts/js/jquery-3.6.1.min.js"></script>
+
+    <script>
+        var letters = ["A","B","C","D","E","F"];
+    </script>
+</body>
+</html>
