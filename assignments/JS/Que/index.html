@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que</title>
+    <style>
+        section>section{
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            height: 200px;
+            width: 1000px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        section>div{
+            width: 230px;
+            height: 150px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        #lastDiv{
+            position: relative;
+            left: 754px;
+            top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div style="background-color: pink"></div>
+
+       <section>
+           <div style="background-color: purple"></div>
+           <div style="background-color: yellow"></div>
+           <div style="background-color: blue"></div>
+           <div style="background-color: red"></div>
+       </section>
+
+        <div style="background-color: green" id="lastDiv"></div>
+
+    </section>
+
+    <script>
+        var colors = [];
+        colors.push("pink");
+        colors.push("purple");
+        colors.push("yellow");
+        colors.push("blue");
+        colors.push("red");
+        colors.push("green");
+
+
+    </script>
+</body>
+</html>
