@@ -17,6 +17,10 @@
     <meta name="theme-color" content="03203C">
     
     <style>
+        button:hover{
+            cursor: pointer;
+        }
+
         body>header{
             position: fixed;
             width: 100%;
@@ -68,7 +72,7 @@
            display: inline-block;
            padding: 0.4em ;
            font-family: Ubuntu,sans-serif;
-           font-size: 25px;
+           font-size: 17px;
        }
 
        body>header>nav>div>ul{
@@ -145,7 +149,7 @@
             position: relative;
             left: 3vw;
             top: 7.5vh;
-            font-size: 4em;
+            font-size: 3em;
             display: inline-block;
             margin: 0;
             color: white;
@@ -160,27 +164,28 @@
            position: relative;
            left: 4vw;
            top: 7.5vh;
-           font-size: 4em;
+           font-size: 3em;
            display: inline-block;
            margin: 0;
-           color: #00BFFF;
+           /*color: #00BFFF;*/
+           color: white;
        }
 
        main>section:first-child>section>h1:nth-child(3){
            position: absolute;
            top: 20vh;
-           font-size: 6em;
+           font-size: 4.5em;
            margin: 0;
            left: 3vw;
-           color: #00BFFF;
+           color: #3dd5f3;
            display: inline-block;
        }
 
        main>section:first-child>section>h2:nth-child(4){
            position: absolute;
-           top: 37.5vh;
+           top: 36.5vh;
            left: 3vw;
-           font-size: 4em;
+           font-size: 3em;
            display: inline-block;
            margin: 0;
            color: white;
@@ -573,10 +578,14 @@
             right: 0;
             width: max-content;
             border-radius: 5px;
-            background-color: #00BFFF;
-            border-color: #00BFFF;
+            /*background-color: #00BFFF;*/
+
+            background-color: black;
+           /* border-color: #00BFFF;*/
+
+            border-color: black;
             color: white;
-            font-size: 30px;
+            font-size: 25px;
 
             top: 0;
             bottom: 0;
@@ -1157,6 +1166,7 @@
             width: 20px;
             border-radius: 100%;
             background-color: royalblue;
+            box-shadow: 0 0 18px 5px;
 
         }
 
@@ -1242,10 +1252,13 @@
             margin: auto;
         }
         main>section:nth-child(7)>div:nth-child(3)>a>button{
-           background-color: #00BFFF;
+            background-color: black;
             color: white;
-            border :2px solid #00BFFF;
+            border :2px solid black;
             border-radius: 5px;
+            font-size: 25px;
+            width: max-content;
+            margin: auto;
         }
 
 
@@ -4556,13 +4569,14 @@
 
             <div>
                 <ul>
-                    <li onclick="document.getElementById('contact').scrollIntoView();"><i class="fa-solid fa-paper-plane"></i>Contact</li>
+                    <li onclick="document.getElementById('assignments').scrollIntoView();"><i class="fa-solid fa-link"></i>Assignments</li>
                 </ul>
             </div>
 
             <div>
                 <ul>
-                    <li onclick="document.getElementById('links').scrollIntoView();"><i class="fa-solid fa-link"></i>Links</li>
+                    <li onclick="document.getElementById('contact').scrollIntoView();"><i class="fa-solid fa-paper-plane"></i>Contact</li>
+
                 </ul>
             </div>
 
@@ -4571,6 +4585,7 @@
 </header>
 
 <main>
+    <!--Hello i'm kushan-->
     <section>
          <section>
              <h2>Hello,</h2>
@@ -4589,25 +4604,25 @@
              <h3>Check Out My</h3>
 
              <a href="https://www.linkedin.com/in/kushan-kumuditha-5b343a246/" target="_blank">
-                 <img src="asserts/images/Portfolio/LinkedIn-Image.png" alt="LinkedIn-Image" >
+                 <img src="asserts/images/Portfolio/Linkedin-Image1.png" alt="LinkedIn-Image" style="background-color: #00BFFF;border-radius :10px;">
              </a>
 
              <a href="https://www.facebook.com/kushan.kumuditha.1" target="_blank">
-                 <img src="asserts/images/Portfolio/Facebook-Image.png" alt="Facebook-Image" >
+                 <img src="asserts/images/Portfolio/Facebook-Image2.png" alt="Facebook-Image" style="background-color: #0b5ed7;border-radius :10px;">
              </a>
 
              <a href="https://github.com/kushandesilva59" target="_blank">
-                 <img src="asserts/images/Portfolio/Git-hub-Image.png" alt="Github-Image" >
+                 <img src="asserts/images/Portfolio/Git-hub-Image.png" alt="Github-Image" style="background-color: white;border-radius :10px;">
              </a>
 
              <a href="https://www.instagram.com/kush__________________/" target="_blank">
-                 <img src="asserts/images/Portfolio/Instagram-Image.png" alt="Instagram-Image">
+                 <img src="asserts/images/Portfolio/Insta-Image.png" alt="Instagram-Image" style="background-color: #bb2d3b;border-radius :10px;" >
              </a>
 
          </section>
 
          <section>
-             <img src="asserts/images/Portfolio/Pic.jpeg" alt="Kushan-Image">
+             <img src="asserts/images/Portfolio/Pic2.JPG" alt="Kushan-Image">
          </section>
      </section>
 
@@ -4820,7 +4835,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="assignments">
         <div>
             <h3>Assignments</h3>
             <h3>Here are some Assignments I’ve done</h3>
@@ -4971,7 +4986,7 @@
             $("#dot"+count).css("width","15px");
             $("#dot"+count).css("height","15px");
             $("#dot"+count).css("background-color","#00BFFF");
-
+            $("#dot"+count).css("box-shadow","0 0 0 0");
 
            count--;
 
@@ -4984,6 +4999,7 @@
             $("#dot"+count).css("width","20px");
             $("#dot"+count).css("height","20px");
             $("#dot"+count).css("background-color","royalblue");
+            $("#dot"+count).css("box-shadow","0 0 18px 5px");
 
 
         });
@@ -4992,6 +5008,7 @@
             $("#dot"+count).css("width","15px");
             $("#dot"+count).css("height","15px");
             $("#dot"+count).css("background-color","#00BFFF");
+            $("#dot"+count).css("box-shadow","0 0 0 0");
             count++;
 
 
@@ -5002,14 +5019,12 @@
             $("#dot"+count).css("width","20px");
             $("#dot"+count).css("height","20px");
             $("#dot"+count).css("background-color","royalblue");
+            $("#dot"+count).css("box-shadow","0 0 18px 5px");
 
             $("#display").css("background-image",pictures[count]);
 
         });
 
-        $("#skills").click(function () {
-          $("#skills").scrollIntoView();
-        });
 
         $("#btnLetsTalk").on("click",function () {
 
