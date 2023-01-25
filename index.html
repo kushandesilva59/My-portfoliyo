@@ -6,6 +6,7 @@
     <link rel="icon" href="asserts/images/man.webp">
     <link rel="stylesheet" href="asserts/fonts/css/all.min.css">
     <link rel="stylesheet" href="../My-Portfoliyo/assignments/CSS/normalize.css">
+    <link rel="stylesheet" href="style.css">
 
     <base href="this site url">
 
@@ -17,11 +18,21 @@
     <meta name="theme-color" content="03203C">
     
     <style>
+
+        body{
+            padding:0;
+            font-family:"Yu Gothic Medium",serif;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+
         button:hover{
             cursor: pointer;
         }
 
-        body>header{
+
+/*        body>header{
             position: fixed;
             width: 100%;
             z-index: 1;
@@ -30,7 +41,7 @@
 
         body>header>nav{
 
-           /* background-color: #6f42c1;*/
+           !* background-color: #6f42c1;*!
             height: 80px;
             width: 90%;
             display: flex;
@@ -42,7 +53,7 @@
             margin: auto;
         }
 
-        /*home icon*/
+        home icon
        header>section:first-child{
            position: absolute;
            z-index: 1;
@@ -53,12 +64,11 @@
            left: 30px;
        }
 
-
         header>section:first-child>i{
             font-size: 40px;
             position: relative;
-            /*left: 30px;
-            top: 20px;*/
+            !*left: 30px;
+            top: 20px;*!
             top: 7px;
             left: 7px;
         }
@@ -80,66 +90,14 @@
            margin: 0;
        }
 
-       body>header>nav>div>ul>li>i{
-           padding-right: 0.4em ;
-           padding-left: 0.4em;
-       }
 
-       body>header>nav>div{
-           color: white;
-           width: max-content;
-           height: max-content;
-           position: relative;
-           border-radius: 12px;
-           top: 0;
-           bottom : 0;
-           margin: auto;
-           cursor: pointer;
-           background-color: black;
-       }
 
-       body>header>nav>div:hover{
-           background-color: cornflowerblue;
-           transition-property: background-color;
-           transition-duration: 50ms;
-       }
 
-       body>header>nav{
-           position: relative;
-       }
 
-      /* body>header>nav>div:first-child{
-           right: 38vw;
-       }
-
-       body>header>nav>div:nth-child(2){
-           width: 5.1vw !*!important*!;
-           right: 32vw;
-       }
-
-       body>header>nav>div:nth-child(3){
-           right: 26vw;
-       }
-
-       body>header>nav>div:nth-child(4){
-           right: 20vw;
-       }
-
-       body>header>nav>div:nth-child(5){
-           right: 14vw;
-       }
-
-       body>header>nav>div:nth-child(6){
-           right: 8vw;
-       }
-
-       body>header>nav>div:nth-child(7){
-           right: 2vw;
-       }*/
 
         main>section:first-child{
             background-color: #002244;
-            /*height: 570px;*/
+            !*height: 570px;*!
             height: 80vh;
             position: relative;
             top: 80px;
@@ -154,11 +112,10 @@
             margin: 0;
             color: white;
         }
-
         main>section:first-child>section:first-child{
             height: 320px;
             position: relative;
-        }
+        }*/
 
        main>section:first-child>section>h2:nth-child(2){
            position: relative;
@@ -4536,68 +4493,30 @@
 </head>
 
 <body>
-    <header style="z-index: 3">
-        <section>
-            <i class="fa-solid fa-house-chimney"></i>
-        </section>
-
-        <nav>
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('services').scrollIntoView();"><i class="fa-solid fa-earth-europe"></i>Services</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('skills').scrollIntoView();"><i class="fa-solid fa-award"></i>Skills</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('projects').scrollIntoView();"><i class="fa-solid fa-laptop-code"></i>Projects</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('journey').scrollIntoView();"><i class="fa-solid fa-road"></i>Journey</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('hobbies').scrollIntoView();"><i class="fa-solid fa-music"></i>Hobbies</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('assignments').scrollIntoView();"><i class="fa-solid fa-link"></i>Assignments</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li onclick="document.getElementById('contact').scrollIntoView();"><i class="fa-solid fa-paper-plane"></i>Contact</li>
-
-                </ul>
-            </div>
-
-        </nav>
-
-</header>
 
 <main>
     <!--Hello i'm kushan-->
-    <section>
-         <section>
+    <section class="hero">
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+
+            <ul>
+                <li>Services</li>
+                <li>projects</li>
+                <li>Skills</li>
+                <li>Journey</li>
+                <li>Hobbies</li>
+                <li>Assignments</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+       <!--  <section>
              <h2>Hello,</h2>
              <h2>I'm</h2>
              <h1>Kushan De Silva</h1>
              <h2>Full Stack Developer</h2>
-         </section>
+         </section>-->
 
 
 
