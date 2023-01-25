@@ -45,3 +45,13 @@ nav ul li a:hover{
     color: #0d6efd;
     transition: .4s;
 }
+
+.btn{
+    background-color: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
