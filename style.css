@@ -4,7 +4,7 @@
 .hero{
     height: 100vh;
     width: 100%;
-    background-image: url("asserts/images/Portfolio/Pic2.JPG");
+    background-image: url("asserts/images/Portfolio/Man.JPG");
     background-size: cover;
     background-position: center;
 }
@@ -91,7 +91,7 @@ h3{
 }
 
 h4{
-    color: #3dd5f3;
+    color: #18dcff;
     letter-spacing: 2px;
     font-size: 20px;
 }
