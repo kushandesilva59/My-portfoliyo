@@ -1,4 +1,5 @@
-/*use this color-->#3dc1d3*/
+/*use this color-->#0652DD  span eke thyena ekai ganna*/
+
 
 .hero{
     height: 100vh;
@@ -25,7 +26,8 @@ nav{
 }
 
 span{
-    color: #0d6efd;
+   /* color: #0d6efd;*/
+    color: #0652DD;
 }
 
 nav ul li{
@@ -152,4 +154,20 @@ h4{
     font-size: 75px;
     text-transform: capitalize;
     margin-bottom: 20px;
+}
+
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p{
+    color: #18dcff;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
 }
