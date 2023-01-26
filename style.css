@@ -306,3 +306,18 @@ footer{
     flex-direction: column;
     background: #101010;
 }
+
+footer p:first-child{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    width: 500px;
+    line-height: 26px;
+}
