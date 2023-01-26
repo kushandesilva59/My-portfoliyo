@@ -4502,23 +4502,16 @@
             <h2 class="logo">Portfo<span>lio</span></h2>
 
             <ul>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Journey</a></li>
-                <li><a href="#">Hobbies</a></li>
-                <li><a href="#">Assignments</a></li>
-                <li><a href="#">Contact</a></li>
+                <li onclick="document.getElementById('services').scrollIntoView();">Services<!--<a href="#">Services</a>--></li>
+                <li onclick="document.getElementById('projects').scrollIntoView();">Projects<!--<a href="#">projects</a>--></li>
+                <li onclick="document.getElementById('skills').scrollIntoView();">Skills<!--<a href="#">Skills</a>--></li>
+                <li onclick="document.getElementById('journey').scrollIntoView();">Journey<!--<a href="#">Journey</a>--></li>
+                <li onclick="document.getElementById('hobbies').scrollIntoView();">Hobbies<!--<a href="#">Hobbies</a>--></li>
+                <li onclick="document.getElementById('assignments').scrollIntoView();">Assignments<!--<a href="#">Assignments</a>--></li>
+                <li onclick="document.getElementById('contact').scrollIntoView();">Contact<!--<a href="#">Contact</a>--></li>
             </ul>
-            <a href="#" class="btn">Let's Talk</a>
+            <button id="btnLetsTalk" onclick="document.getElementById('links').scrollIntoView()" class="btn">Let's Talk</button>
         </nav>
-
-       <!--  <section>
-             <h2>Hello,</h2>
-             <h2>I'm</h2>
-             <h1>Kushan De Silva</h1>
-             <h2>Full Stack Developer</h2>
-         </section>-->
 
         <div class="content">
             <h4>Hello, my name is</h4>
@@ -4531,11 +4524,6 @@
                 </form>
             </div>
         </div>
-
-
-      <!--   <nav>
-             <button id="btnLetsTalk" onclick="document.getElementById('links').scrollIntoView()">Let's Talk</button>
-         </nav>-->
 
      <!--    <section>
              <h3>Check Out My</h3>
@@ -4563,7 +4551,7 @@
          </section>-->
      </section>
 
-    <section id="services">
+    <section id="services" class="services">
             <section>
                 <h2>My</h2>
                 <h2>Services</h2>

@@ -1,4 +1,4 @@
-
+/*use this color-->#3dc1d3*/
 
 .hero{
     height: 100vh;
@@ -19,7 +19,7 @@ nav{
 
 .logo{
     font-size: 35px;
-    color: #198754;
+    color: white;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -32,18 +32,26 @@ nav ul li{
     list-style-type: none;
     display: inline-block;
     padding: 10px 33px;
-}
 
-nav ul li a{
     color: white;
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-nav ul li a:hover{
+/*
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+*/
+
+nav ul li:hover{
     color: #0d6efd;
     transition: .4s;
+    cursor: pointer;
 }
 
 .btn{
