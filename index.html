@@ -4502,13 +4502,13 @@
             <h2 class="logo">Portfo<span>lio</span></h2>
 
             <ul>
+                <li onclick="document.getElementById('about').scrollIntoView();">About me</li>
                 <li onclick="document.getElementById('services').scrollIntoView();">Services<!--<a href="#">Services</a>--></li>
                 <li onclick="document.getElementById('projects').scrollIntoView();">Projects<!--<a href="#">projects</a>--></li>
                 <li onclick="document.getElementById('skills').scrollIntoView();">Skills<!--<a href="#">Skills</a>--></li>
                 <li onclick="document.getElementById('journey').scrollIntoView();">Journey<!--<a href="#">Journey</a>--></li>
                 <li onclick="document.getElementById('hobbies').scrollIntoView();">Hobbies<!--<a href="#">Hobbies</a>--></li>
                 <li onclick="document.getElementById('assignments').scrollIntoView();">Assignments<!--<a href="#">Assignments</a>--></li>
-                <li onclick="document.getElementById('contact').scrollIntoView();">Contact<!--<a href="#">Contact</a>--></li>
             </ul>
             <button id="btnLetsTalk" onclick="document.getElementById('links').scrollIntoView()" class="btn">Let's Talk</button>
         </nav>
@@ -4853,7 +4853,7 @@
 
     </section>-->
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="main">
             <img src="asserts/images/Portfolio/Travel.jpeg" alt="Man standing with travel equipments">
             <div class="about-text">
@@ -4864,9 +4864,9 @@
                 <button type="button">Let's Talk</button>
             </div>
         </div>
-    </section>
+    </section >
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="title">
             <h2>Our Services</h2>
         </div>
