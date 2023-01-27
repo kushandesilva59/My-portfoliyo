@@ -393,5 +393,37 @@ footer p:nth-child(2){
         transform: rotate(-45deg);
     }
 
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks{
+        position: absolute;
+        top: 110px;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0;
+    }
+
+    nav .navlinks li{
+        display: block;
+    }
+
+    nav .navlinks.open{
+        right: 0;
+    }
+
 
 }
