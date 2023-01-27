@@ -1,5 +1,8 @@
 /*use this color-->#0652DD  span eke thyena ekai ganna*/
 
+html{
+    scroll-behavior: smooth;
+}
 
 .hero{
     height: 100vh;
@@ -23,7 +26,7 @@ nav{
     width: 35px;
     height: 35px;
     top: 80px;
-    right: 2%;
+    right: 3%;
     z-index: 10;
     cursor: pointer;
     /*background-color: #0652DD;*/
@@ -32,7 +35,7 @@ nav{
 
 .hero nav .togglebtn span{
     display: block;
-    background-color: red;
+    background-color:  #0652DD;
     margin: 5px 0;
     width: 100%;
     height: 3px;
@@ -376,9 +379,9 @@ footer p:nth-child(2){
 }
 
 @media(max-width: 930px) {
-    nav .togglebtn{
+   /* nav .togglebtn{
         display: initial;
-    }
+    }*/
 
     /*For toggle button*/
     .click{
@@ -407,7 +410,7 @@ footer p:nth-child(2){
     nav .navlinks{
         position: absolute;
         top: 110px;
-        right: 0;
+        right: 100%;
         bottom: 0;
         width: 60%;
         height: 100vh;
@@ -445,5 +448,9 @@ footer p:nth-child(2){
 
     .hero nav .togglebtn{
         display: initial;
+    }
+
+    h1{
+        font-size: 60px;
     }
 }
