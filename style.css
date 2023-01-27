@@ -22,9 +22,9 @@ nav{
     position: absolute;
     width: 35px;
     height: 35px;
-    top: 45px;
-    right: 3%;
-    z-index: 5;
+    top: 80px;
+    right: 2%;
+    z-index: 10;
     cursor: pointer;
     /*background-color: #0652DD;*/
     display: none;
@@ -32,7 +32,7 @@ nav{
 
 .hero nav .togglebtn span{
     display: block;
-    background-color: #0652DD;
+    background-color: red;
     margin: 5px 0;
     width: 100%;
     height: 3px;
@@ -79,6 +79,7 @@ nav ul li:hover{
 }
 
 .btn{
+    display: initial;
     background-color: #0d6efd;
     color: white;
     text-decoration: none;
@@ -436,5 +437,13 @@ footer p:nth-child(2){
 
     .main .about-text{
         padding: 40px 0;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .hero nav .togglebtn{
+        display: initial;
     }
 }
