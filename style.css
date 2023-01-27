@@ -373,3 +373,25 @@ footer p:nth-child(2){
     font-size: 14px;
     color: #0652DD;
 }
+
+@media(max-width: 930px) {
+    nav .togglebtn{
+        display: initial;
+    }
+
+    /*For toggle button*/
+    .click{
+        top: 45px;
+    }
+
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child{
+        transform: rotate(-45deg);
+    }
+
+
+}
