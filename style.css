@@ -176,10 +176,13 @@ h4{
 }
 
 .about-text h2{
+    display: flex;
     color: white;
     font-size: 75px;
     text-transform: capitalize;
     margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
 }
 
 .about-text h5{
@@ -224,7 +227,8 @@ h4{
 .title h2{
     color: white;
     font-size: 75px;
-    width: 1130px;
+   /* width: 1130px;*/
+    width: 100%;
     margin: 30px auto;
     text-align: center;
 }
@@ -271,7 +275,13 @@ h5{
     margin-bottom: 25px;
 }
 
-.card .button{
+.card .button {
+    position: absolute;
+    width: max-content;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    margin: auto;
     background-color: #0652DD;
     color: white;
     text-decoration: none;
@@ -426,11 +436,14 @@ footer p:nth-child(2){
         display: inline-block;
 
      }
-/*
-     nav ul .click{
-        right: 100px;
-     }*/
+    /* nav .navlinks .open{
+        background-color: yellow;
+     }
+*/
 
+    .card{
+        height: max-content;
+    }
 
 }
 
