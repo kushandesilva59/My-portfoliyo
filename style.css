@@ -459,6 +459,13 @@ section .desc h5{
     cursor: pointer;
 }
 
+.skills{
+    background-color: #101010;
+    width: 100%;
+    padding: 100px 0;
+
+}
+
 footer{
     position: relative;
     width: 100%;
