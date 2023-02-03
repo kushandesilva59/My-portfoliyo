@@ -443,6 +443,7 @@ section .skill{
     grid-gap: 16px;
     padding: 16px;
     max-width: 1024px;
+    margin-inline: auto;
 }
 
 .skill .set{
@@ -466,6 +467,27 @@ section .skill{
     background-color: #0652DD;
     color: white;
     border-radius: 35%;
+    margin-inline: auto;
+}
+
+.set > header{
+    padding: 24px;
+    font-size: 24px;
+    color: #0652DD;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.set .list{
+    display: grid;
+    padding: 8px;
+    grid-template-columns: 1fr 28px;
+    color: #0652DD;
+    text-transform: uppercase;
+}
+
+.set:hover .list{
+    color: red;
 }
 
 .contact-me{
