@@ -422,7 +422,28 @@ section .desc h5{
     cursor: pointer;
 }
 
+.skills{
+   /* background-color: #101010;*/
+    height: 800px;
+    width: 100%;
+    padding: 100px 0;
 
+}
+
+/*section header{
+    font-size: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 24px;
+    color: #0652DD;
+}*/
+
+section .skill{
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    max-width: 1024px;
+}
 
 .contact-me{
     width: 100%;
@@ -457,13 +478,6 @@ section .desc h5{
     background-color: transparent;
     border: 2px solid #0652DD;
     cursor: pointer;
-}
-
-.skills{
-    background-color: #101010;
-    width: 100%;
-    padding: 100px 0;
-
 }
 
 footer{
@@ -601,5 +615,17 @@ footer p:nth-child(2){
 
     h1{
         font-size: 60px;
+    }
+}
+
+@media (min-width: 600px) {
+    .skill{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skill{
+        grid-template-columns: 1fr;
     }
 }
