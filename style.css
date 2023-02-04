@@ -423,7 +423,7 @@ section .desc h5{
 }
 
 .skills{
-   /* background-color: #101010;*/
+    background-color: #101010;
     height: 800px;
     width: 100%;
     padding: 100px 0;
@@ -440,7 +440,7 @@ section .desc h5{
 
 section .skill{
     display: grid;
-    grid-gap: 16px;
+    grid-gap: 75px;
     padding: 16px;
     max-width: 1024px;
     margin-inline: auto;
@@ -448,7 +448,7 @@ section .skill{
 
 .skill .set{
     background-color: white;
-    padding: 16px;
+    padding: 40px;
     border-radius: 16px;
     cursor: pointer;
 }
@@ -487,8 +487,13 @@ section .skill{
 }
 
 .set:hover .list{
-    color: red;
+    color: #18dcff;
+   /* font-size: 25px;*/
 }
+
+/*.set:hover{
+    box-shadow: 0 12px 14px #36363624;
+}*/
 
 .contact-me{
     width: 100%;
@@ -672,5 +677,9 @@ footer p:nth-child(2){
 @media (max-width: 600px) {
     .skill{
         grid-template-columns: 1fr;
+    }
+
+    .skills{
+        height: 1230px;
     }
 }
