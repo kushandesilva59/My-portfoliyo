@@ -495,6 +495,15 @@ section .skill{
     box-shadow: 0 12px 14px #36363624;
 }*/
 
+.hobbies{
+    padding: 100px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background: #222;
+}
+
 .contact-me{
     width: 100%;
     height: 290px;/*
@@ -583,6 +592,10 @@ footer p:nth-child(2){
     position: absolute;
     bottom: 35px;
     font-size: 14px;
+    color: white;
+}
+
+.end span{
     color: #0652DD;
 }
 
