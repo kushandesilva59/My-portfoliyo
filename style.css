@@ -511,7 +511,7 @@ section .skill{
     position: relative;
 }
 
-.hobbies .container img{
+.hobbies .container #display{
     width: 100%;
     height: 95vh;
 }
