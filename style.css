@@ -673,19 +673,21 @@ section .skill{
 .assignments .container .box .box-text{
     display: flex;
     padding: 30px;
-     flex-direction: column;
+    flex-direction: column;
     align-items: center;
 
 }
 
-.assignments .container .box:hover{
+.assignments .container .box .box-text a:hover{
     cursor: pointer;
+    color: red;
+    transition: ease;
 }
 
 
-.assignments .container .box .box-text span{
+.assignments .container .box .box-text a{
     color: #0652DD;
-
+    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: 2.5px;
