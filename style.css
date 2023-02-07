@@ -611,6 +611,8 @@ section .skill{
 .assignments{
     margin: 0;
     padding: 0;
+    background-color: #101010;
+    height: 1000px;
 }
 .heading{
     display: flex;
@@ -622,7 +624,7 @@ section .skill{
 }
 
 .heading h2{
-    color: red;
+    color: white;
     font-size: 75px;
     width: 100%;
     margin: 30px auto;
@@ -650,7 +652,7 @@ section .skill{
 .assignments .container .box{
     width: 350px;
     background-color: white;
-    border: 1px solid red;
+    border: 1px solid #18dcff;
     margin: 20px;
     position: relative;
 }
@@ -681,7 +683,7 @@ section .skill{
 .assignments .container .box .box-text a:hover{
     cursor: pointer;
     color: red;
-    transition: ease;
+    transition: all ease 0.3s;
 }
 
 
@@ -693,6 +695,10 @@ section .skill{
     letter-spacing: 2.5px;
 }
 
+.assignments .button{
+    bottom: -135px;
+    position: relative;
+}
 
 .contact-me{
     width: 100%;
