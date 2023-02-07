@@ -857,6 +857,8 @@ footer p:nth-child(2){
 }
 
 @media (max-width: 768px) {
+
+
     .main{
         flex-direction: column;
         padding-top: 2rem;
@@ -877,6 +879,8 @@ footer p:nth-child(2){
     h1{
         font-size: 60px;
     }
+
+
 }
 
 @media (min-width: 600px) {
