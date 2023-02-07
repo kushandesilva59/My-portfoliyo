@@ -5020,6 +5020,7 @@
        </div>
     </section>
 
+
     <section class="skills">
         <div class="title">
             <h2>Skills</h2>
@@ -5122,21 +5123,54 @@
 
         <div class="container">
             <!--<img src="asserts/images/Portfolio/Pic2.JPG" alt="pic of hobbies" id="display">-->
-            <div id="display"></div>
+            <div id="display" ></div>
 
             <div class="arrowButtons">
-                <div id="divLeft">
+                <div id="divRight">
+
+                    <i class="fa-solid fa-angle-right"></i>
 
                 </div>
 
-                <div id="divRight">
-
+                <div id="divLeft">
+                    <i class="fa-solid fa-angle-left"></i>
                 </div>
             </div>
         </div>
 
+        <div class="dots">
+            <div id="dot0" class="dot"></div>
+            <div id="dot1" class="dot"></div>
+            <div id="dot2" class="dot"></div>
+            <div id="dot3" class="dot"></div>
+            <div id="dot4" class="dot"></div>
+            <div id="dot5" class="dot"></div>
+            <div id="dot6" class="dot"></div>
+        </div>
 
 
+
+    </section>
+
+    <section class="assignments">
+        <div class="heading">
+            <h2>Assignments</h2>
+            <span>Here are some Assignments I’ve done</span>
+        </div>
+
+       <div class="container">
+           <div class="box">
+               <div class="box-image">
+                   <img src="asserts/images/Portfolio/Pic.jpeg" alt="">
+               </div>
+
+               <div class="box-text">
+                   <span>View Assignment</span>
+               </div>
+           </div>
+
+
+       </div>
     </section>
 
 
@@ -5236,33 +5270,26 @@
         let count = 0;
 
 
+
         $("#divLeft").on("click",function () {
-            $("#dot"+count).css("width","15px");
-            $("#dot"+count).css("height","15px");
-            $("#dot"+count).css("background-color","#00BFFF");
-            $("#dot"+count).css("box-shadow","0 0 0 0");
+            $("#dot"+count).css("background-color","white");
 
-           count--;
+            count--;
 
-           if(count<0){
-               count = 3;
-           }
+            if(count<0){
+                count = 3;
+            }
 
-           $("#display").css("background-image",pictures[count]);
-            
-            $("#dot"+count).css("width","20px");
-            $("#dot"+count).css("height","20px");
-            $("#dot"+count).css("background-color","royalblue");
-            $("#dot"+count).css("box-shadow","0 0 18px 5px");
+            $("#display").css("background-image",pictures[count]);
 
+            $("#dot"+count).css("background-color","#0652DD");
+            $("#dot"+count).css("height","6px");
+            $("#dot"+count).css("width","36px");
 
-        });
+        })
 
         $("#divRight").on("click",function () {
-            $("#dot"+count).css("width","15px");
-            $("#dot"+count).css("height","15px");
-            $("#dot"+count).css("background-color","#00BFFF");
-            $("#dot"+count).css("box-shadow","0 0 0 0");
+            $("#dot"+count).css("background-color","white");
             count++;
 
 
@@ -5270,10 +5297,9 @@
                 count=0;
             }
 
-            $("#dot"+count).css("width","20px");
-            $("#dot"+count).css("height","20px");
-            $("#dot"+count).css("background-color","royalblue");
-            $("#dot"+count).css("box-shadow","0 0 18px 5px");
+            $("#dot"+count).css("background-color","#0652DD");
+            $("#dot"+count).css("height","6px");
+            $("#dot"+count).css("width","36px");
 
             $("#display").css("background-image",pictures[count]);
 

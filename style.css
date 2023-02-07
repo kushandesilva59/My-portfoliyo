@@ -503,17 +503,27 @@ section .skill{
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    height: 300vh;
+    height: 180vh;
     background: #222;
 }
 
 .hobbies .container{
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
     position: relative;
+}
+#display{
+    background-image: url("asserts/images/Portfolio/Travel.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
 .hobbies .container #display{
     width: 100%;
-    height: 95vh;
+    height: 80vh;
+    border-radius: 20px;
 }
 
 .hobbies .paragraph{
@@ -521,7 +531,7 @@ section .skill{
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 1.5em;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
 }
 
 .arrowButtons{
@@ -534,30 +544,144 @@ section .skill{
     margin: auto;
 }
 
-#divRight{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    z-index: 5;
-    background: #6a1a21;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
 
-#divLeft{
+
+#divRight{
+    display: flex;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     z-index: 5;
-    background: #6a1a21;
+    background: rgba(255,255,255,0.3);
     top: 0;
     bottom: 0;
     right: 0;
     margin: auto;
 }
+
+#divLeft{
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    z-index: 5;
+    background: rgba(255,255,255,0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#divLeft,#divRight i{
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#divRight,#divLeft i{
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#divRight,#divLeft:hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.5);
+}
+
+.dots{
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
+
+.dot{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+}
+.assignments{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.heading h2{
+    color: red;
+    font-size: 75px;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.heading span{
+    /* color: white; */
+    letter-spacing: 4px;
+    font-size: 22px;
+    /* margin-bottom: 25px; */
+    text-transform: capitalize;
+    text-align: center;
+    color: #0652DD;
+}
+
+.assignments .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.assignments .container .box{
+    width: 350px;
+    background-color: white;
+    border: 1px solid white;
+    margin: 20px;
+}
+
+.assignments .container .box .box-image{
+   width: 100%;
+    height: auto;
+}
+
+
+
+.assignments .container .box .box-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.assignments .container .box .box-text{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.assignments .container .box .box-text span{
+   color: #0652DD;
+    font-size: 0.9rem;
+}
+
 
 .contact-me{
     width: 100%;
@@ -587,6 +711,8 @@ section .skill{
     border-radius: 30px;
     transition: .4s;
 }
+
+
 
 .contact-me .button-two:hover{
     background-color: transparent;
