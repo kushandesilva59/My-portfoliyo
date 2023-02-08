@@ -108,6 +108,7 @@ h1{
     color: white;
     margin: 20px 0px 20px;
     font-size: 75px;
+    letter-spacing: 5px;
 }
 
 h3{
@@ -866,9 +867,9 @@ footer p:nth-child(2){
         padding: 40px 0;
     }
 
-    .btn{
+   /* .btn{
         display: none;
-    }
+    }*/
 
     .hero nav .togglebtn{
         display: initial;
@@ -908,4 +909,126 @@ footer p:nth-child(2){
     .assignments .container .box{
         width: 70%;
     }
+}
+
+
+/*---------------------------------------Responsive Start*/
+
+
+/*Lap small*/
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    nav{
+        padding-left: 4%;
+        padding-right: 2%;
+    }
+}
+
+
+/*Tablet*/
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .skill .set{
+        padding: 5px;
+    }
+
+    .assignments .container .box{
+        width: 25%;
+    }
+
+
+}
+
+
+
+/*Mobile large*/
+@media all and (min-width: 375px) and (max-width: 767px){
+    h1{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    h2{
+        font-size: 55px;
+    }
+
+    .newslatter form input:first-child{
+        width: 50%;
+    }
+
+    .newslatter form input:last-child{
+        right: 50px;
+    }
+
+    .about-text{
+        width: 325px;
+    }
+
+    .about img{
+        width: 340px;
+    }
+
+    .services .box{
+        flex-direction: column;
+    }
+
+    .card{
+        margin: 50px;
+        width: 290px;
+    }
+
+    .projects{
+        height: 1500px;
+    }
+
+
+    .projects .imageSet{
+        height: 1270px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .imageSet a{
+        width: 90%;
+    }
+
+    .skills{
+        height: 1515px;
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies{
+        padding: 5px;
+    }
+
+    .hobbies .container{
+        width: 90%;
+    }
+
+    .dot{
+        width: 20px;
+        height: 2px;
+    }
+
+    .assignments{
+        height: 1300px;
+    }
+
+    .heading h2{
+        font-size: 55px;
+    }
+
+    .contact-me p{
+        font-size: 23px;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 15px;
+    }
+
 }
