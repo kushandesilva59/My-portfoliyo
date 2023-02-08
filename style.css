@@ -80,7 +80,7 @@ nav ul li:hover{
     transition: .4s;
     cursor: pointer;
 }
-
+/*
 .btn{
     display: initial;
     background-color: #0d6efd;
@@ -91,7 +91,7 @@ nav ul li:hover{
     padding: 10px 25px;
     border-radius: 30px;
     transition: tranform .4s;
-}
+}*/
 
 .btn:hover{
     transform: scale(1.2);
@@ -163,6 +163,7 @@ h4{
     border-radius: 5%;
     height: auto;
     width: 430px;
+    opacity: 0.6;
 }
 
 .about-text{
