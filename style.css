@@ -1025,7 +1025,7 @@ footer p:nth-child(2){
 
 @media (max-width: 1100px) {
     .assignments .container .box{
-        width: 70%;
+        /*width: 70%;*/
     }
 }
 
@@ -1036,8 +1036,24 @@ footer p:nth-child(2){
 /*Lap small*/
 @media all and (min-width: 1024px) and (max-width: 1439px){
     nav{
-        padding-left: 4%;
-        padding-right: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    nav ul li{
+        letter-spacing: 0;
+    }
+
+    .main{
+        max-width: 100%;
+    }
+
+    .card{
+        height : 430px;
+    }
+
+    .assignments{
+        height: 1055px;
     }
 }
 
@@ -1083,6 +1099,10 @@ footer p:nth-child(2){
         right: 50px;
     }
 
+    .btn{
+        bottom: 40px;
+    }
+
     .about-text{
         width: 325px;
     }
@@ -1101,8 +1121,15 @@ footer p:nth-child(2){
     }
 
     .projects{
-        height: 1500px;
+        height: 1590px;
     }
+
+
+    .sample{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
 
 
     .projects .imageSet{
@@ -1134,7 +1161,7 @@ footer p:nth-child(2){
     }
 
     .assignments{
-        height: 1300px;
+        height: 1345px;
     }
 
     .heading h2{
