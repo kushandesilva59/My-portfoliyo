@@ -1071,10 +1071,38 @@ footer p:nth-child(2){
 
 }
 
+/*Mobile Medium*/
+@media all and (min-width: 375px)and (max-width: 400px){
+    .name{
+        font-size: 40px !important;
+    }
+
+    .location{
+        font-size: 15px !important;
+        letter-spacing: 3px !important;
+    }
+
+    .newslatter form input:first-child{
+        width: 50%;
+
+    }
+
+    .newslatter form input:last-child{
+        right: 50px;
+    }
+
+    .about img{
+        width: 325px;
+    }
+
+    .main .about-text{
+        width: 100%;
+    }
+}
 
 
 /*Mobile large*/
-@media all and (min-width: 375px) and (max-width: 767px){
+@media all and (min-width: 400px) and (max-width: 600px){
     h1{
         font-size: 30px;
     }
@@ -1099,8 +1127,17 @@ footer p:nth-child(2){
         right: 50px;
     }
 
+    .name{
+        font-size: 45px !important;
+    }
+
+    .location{
+        font-size: 15px !important;
+        letter-spacing: 3px !important;
+    }
+
     .btn{
-        bottom: 40px;
+        bottom: 15px;
     }
 
     .about-text{
@@ -1177,3 +1214,6 @@ footer p:nth-child(2){
     }
 
 }
+
+
+
