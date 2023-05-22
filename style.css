@@ -4,6 +4,20 @@ html{
     scroll-behavior: smooth;
 }
 
+
+a{
+    text-decoration: none;
+}
+
+::selection{
+    background-color: white;
+    color: deepskyblue;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
 .hero{
     height: 100vh;
     width: 100%;
@@ -62,8 +76,9 @@ nav ul li{
 
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 200;
     text-transform: capitalize;
+    letter-spacing: 2px;
 }
 
 /*
@@ -97,7 +112,7 @@ nav ul li:hover{
     transform: scale(1.2);
 }
 
-.content{
+.hero .content{
     position: absolute;
     top: 50%;
     left: 8%;
@@ -300,6 +315,95 @@ h5{
     background-color: transparent;
     border: 2px solid #0652DD;
     cursor: pointer;
+}
+
+.sample{
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    font-family: "Times New Roman",Times,serif;
+}
+
+.sample-main{
+    width: 100%;
+    max-width: 1112px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2{
+    background-color: #0dcaf0;
+    background-image: url("asserts/images/Portfolio/Beach-camping.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    margin: 1rem;
+    border-radius: 15px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.body{
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    position: absolute;
+    height: 30px;
+    transition: 1s;
+}
+
+.body::before{
+    content: "See more...";
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: white;
+    width: 30%;
+    height: 30px;
+    padding: 0 0 0 8px;
+    transition: 1s;
+    border-radius: 0 0 15px 0;
+    background-color: #0652DD;
+}
+
+.card2:hover .body{
+    height: 70%;
+}
+.sample .content{
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+}
+
+.card2:hover .body::before{
+    width: 80%;
+}
+
+.sample-button{
+    background-color: #0652DD;
+    color: #002333;
+    border:0;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    margin-top: 6px;
+}
+
+.sample h2{
+    color: #fff;
+    margin-top: 10px;
+    text-decoration: underline #159a9c ;
+}
+
+.sample p{
+    color: #fff;
+    margin-top: 7px;
 }
 
 .projects{
@@ -855,6 +959,7 @@ footer p:nth-child(2){
 
      nav .navlinks li{
         display: inline-block;
+
 
      }
     /* nav .navlinks .open{

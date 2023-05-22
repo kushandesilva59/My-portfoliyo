@@ -1,0 +1,26 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.name{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 55px;
+    letter-spacing: 5px;
+}
+
+.location{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+
+.occupation{
+    color: #18dcff;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+

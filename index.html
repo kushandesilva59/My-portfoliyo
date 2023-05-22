@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="asserts/fonts/css/all.min.css">
     <link rel="stylesheet" href="../My-Portfoliyo/assignments/CSS/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Edit/Main.css">
 
     <base href="this site url">
 
@@ -4498,34 +4499,40 @@
 <main>
     <!--Hello i'm kushan-->
     <section class="hero">
-        <nav>
-            <h2 class="logo">Portfo<span>lio</span></h2>
+        <div class="container">
+            <nav>
+                <h2 class="logo">Portfo<span>lio</span>.</h2>
 
-            <div class="togglebtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-            <ul class="navlinks">
-                <li onclick="document.getElementById('about').scrollIntoView();">About me</li>
-                <li onclick="document.getElementById('services').scrollIntoView();">Services<!--<a href="#">Services</a>--></li>
-                <li onclick="document.getElementById('projects').scrollIntoView();">Projects<!--<a href="#">projects</a>--></li>
-                <li onclick="document.getElementById('skills').scrollIntoView();">Skills<!--<a href="#">Skills</a>--></li>
-<!--
-                <li onclick="document.getElementById('journey').scrollIntoView();">Journey&lt;!&ndash;<a href="#">Journey</a>&ndash;&gt;</li>
--->
-                <li onclick="document.getElementById('hobbies').scrollIntoView();">Hobbies<!--<a href="#">Hobbies</a>--></li>
-                <li onclick="document.getElementById('assignments').scrollIntoView();">Assignments<!--<a href="#">Assignments</a>--></li>
-            </ul>
+                <ul class="navlinks">
+                    <li onclick="document.getElementById('about').scrollIntoView();">About me</li>
+                    <li onclick="document.getElementById('services').scrollIntoView();">Services<!--<a href="#">Services</a>--></li>
+                    <li onclick="document.getElementById('projects').scrollIntoView();">Projects<!--<a href="#">projects</a>--></li>
+                    <li onclick="document.getElementById('skills').scrollIntoView();">Skills<!--<a href="#">Skills</a>--></li>
+                    <!--
+                                    <li onclick="document.getElementById('journey').scrollIntoView();">Journey&lt;!&ndash;<a href="#">Journey</a>&ndash;&gt;</li>
+                    -->
+                    <li onclick="document.getElementById('hobbies').scrollIntoView();">Hobbies<!--<a href="#">Hobbies</a>--></li>
+                    <li onclick="document.getElementById('assignments').scrollIntoView();">Assignments<!--<a href="#">Assignments</a>--></li>
+                </ul>
 
-            <button id="btnLetsTalk" onclick="document.getElementById('footer').scrollIntoView()" class="btn">Let's Talk</button>
-        </nav>
+                <button id="btnLetsTalk" onclick="document.getElementById('footer').scrollIntoView()" class="btn">Let's Talk</button>
+            </nav>
+        </div>
 
         <div class="content">
-            <h4>Hello, my name is</h4>
-            <h1>Kushan <span>Kumuditha</span></h1>
-            <h3>I'm a Full Stack Developer</h3>
+<!--            <h4>Hello, my name is</h4>-->
+<!--            <h1>Kushan <span>Kumuditha</span></h1>-->
+<!--            <h3>I'm a Full Stack Developer</h3>-->
+
+            <h4 class="occupation">Fullstack Developer</h4>
+            <h1 class="name">Hi, I'm<span>Kushan</span></h1>
+            <h3 class="location">Silva From Sri Lanka</h3>
             <div class="newslatter">
                 <form>
                     <input type="email" name="email" id="mail" placeholder="Enter Your e-mail">
@@ -4607,8 +4614,59 @@
         </div>
     </section>
 
+   <section class="projects">
+       <div class="title">
+           <h2>Projects</h2>
+       </div>
 
-    <section class="projects" id="projects">
+       <div class="desc">
+           <h5>Here are some projects I've been working on.</h5>
+       </div>
+
+
+       <section class="sample">
+           <section class="sample-main">
+               <div class="card2">
+                   <div class="body">
+                       <div class="content">
+                           <h2>Cool Animated card</h2>
+                           <p> molestias, nam neque nesciunt non
+                               nulla obcaecati quaerat quis tenetur veritatis.</p>
+                           <button class="sample-button"><a href="">View project</a></button>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <section class="sample-main">
+               <div class="card2">
+                   <div class="body">
+                       <div class="content">
+                           <h2>Cool Animated card</h2>
+                           <p> molestias, nam neque nesciunt non
+                               nulla obcaecati quaerat quis tenetur veritatis.</p>
+                           <button class="sample-button">Learn more</button>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <section class="sample-main">
+               <div class="card2">
+                   <div class="body">
+                       <div class="content">
+                           <h2>Cool Animated card</h2>
+                           <p> molestias, nam neque nesciunt non
+                               nulla obcaecati quaerat quis tenetur veritatis.</p>
+                           <button class="sample-button">Learn more</button>
+                       </div>
+                   </div>
+               </div>
+           </section>
+       </section>
+   </section>
+
+   <!-- <section class="projects" id="projects">
         <div class="title">
             <h2>Projects</h2>
         </div>
@@ -4623,13 +4681,13 @@
 
 
            <a href="">
-              <!-- <div class="image">-->
+              &lt;!&ndash; <div class="image">&ndash;&gt;
                    <div class="textImage">
                        <h6 class="titleImage">Hostel Management System</h6>
                        <p class="parImage">This is a small hostel management system project using JavaFx & java</p>
                    </div>
 
-                   <!--Hover image-->
+                   &lt;!&ndash;Hover image&ndash;&gt;
                    <div class="pic" id="hostelManagement">
 
                    </div>
@@ -4638,17 +4696,17 @@
                    <div class="icon">
                        <i class="fa-sharp fa-solid fa-layer-group"></i>
                    </div>
-              <!-- </div>-->
+              &lt;!&ndash; </div>&ndash;&gt;
            </a>
 
            <a href="">
-               <!--<div class="image">-->
+               &lt;!&ndash;<div class="image">&ndash;&gt;
                    <div class="textImage">
                        <h6 class="titleImage">Vehicle Parking System</h6>
                        <p class="parImage">This is a small hostel management system project using JavaFx & java</p>
                    </div>
 
-                   <!--Hover image-->
+                   &lt;!&ndash;Hover image&ndash;&gt;
                    <div class="pic" id="vehicleParking">
 
                    </div>
@@ -4657,18 +4715,18 @@
                    <div class="icon">
                        <i class="fa-sharp fa-solid fa-layer-group"></i>
                    </div>
-             <!--  </div>-->
+             &lt;!&ndash;  </div>&ndash;&gt;
            </a>
 
 
            <a href="">
-              <!-- <div class="image">-->
+              &lt;!&ndash; <div class="image">&ndash;&gt;
                    <div class="textImage">
                        <h6 class="titleImage">Small Farm Shop</h6>
                        <p class="parImage">This is a small hostel management system project using JavaFx & java</p>
                    </div>
 
-                   <!--Hover image-->
+                   &lt;!&ndash;Hover image&ndash;&gt;
                    <div class="pic" id="farmShop">
 
                    </div>
@@ -4677,7 +4735,7 @@
                    <div class="icon">
                        <i class="fa-sharp fa-solid fa-layer-group"></i>
                    </div>
-          <!--     </div>-->
+          &lt;!&ndash;     </div>&ndash;&gt;
            </a>
        </div>
 
@@ -4686,8 +4744,7 @@
        <div>
           <a class="btn" href="https://github.com/kushandesilva59?tab=repositories" target="_blank">More</a>
        </div>
-    </section>
-
+    </section>-->
 
     <section class="skills" id="skills">
         <div class="title">
@@ -4816,8 +4873,6 @@
             <div id="dot6" class="dot"></div>
         </div>
 
-
-
     </section>
 
     <section class="assignments" id="assignments">
@@ -4883,6 +4938,7 @@
     </footer >
 
 
+
 </main>
 
 
@@ -4890,6 +4946,14 @@
     <script src="asserts/js/jquery-3.6.1.min.js"></script>
 
     <script>
+        var pictures = [];
+        pictures.push("url(asserts/images/Portfolio/Cricket.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/Travel.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/Beach-camping.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/case 2.png)");
+        pictures.push("url(asserts/images/Portfolio/case 4.png)");
+        pictures.push("url(asserts/images/Portfolio/Pic.jpeg)");
+        pictures.push("url(asserts/images/Portfolio/pic1.jpg)");
         /*Toggle button function start*/
         let answer = 0;
 
@@ -4913,11 +4977,7 @@
 
         /*Toggle button function end*/
         
-        var pictures = [];
-        pictures.push("url(asserts/images/Portfolio/Cricket.jpeg)");
-        pictures.push("url(asserts/images/Portfolio/Travel.jpeg)");
-        pictures.push("url(asserts/images/Portfolio/Beach-camping.jpeg)");
-        pictures.push("url(asserts/images/Portfolio/Pool.JPG)");
+
 
         let count = 0;
         $("#dot"+count).css("background-color","#0652DD");
@@ -4934,7 +4994,7 @@
             count--;
 
             if(count<0){
-                count = 3;
+                count = 6;
             }
 
             $("#display").css("background-image",pictures[count]);
@@ -4950,7 +5010,7 @@
             count++;
 
 
-            if(count>3){
+            if(count>6){
                 count=0;
             }
 
