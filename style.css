@@ -1072,34 +1072,80 @@ footer p:nth-child(2){
 }
 
 /*Mobile Medium*/
-@media all and (min-width: 375px)and (max-width: 400px){
-    .name{
+@media all and (min-width: 375px)and (max-width: 400px) {
+    .name {
         font-size: 40px !important;
     }
 
-    .location{
+    .location {
         font-size: 15px !important;
         letter-spacing: 3px !important;
     }
 
-    .newslatter form input:first-child{
+    .newslatter form input:first-child {
         width: 50%;
 
     }
 
-    .newslatter form input:last-child{
+    .newslatter form input:last-child {
         right: 50px;
     }
 
-    .about img{
+    .about img {
         width: 325px;
     }
 
-    .main .about-text{
+    .main .about-text {
         width: 100%;
     }
-}
 
+    .services .box {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 265px;
+    }
+
+    .projects{
+        height: 1570px;
+    }
+
+    .sample{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .skills{
+        height: 1525px;
+    }
+
+    .hobbies{
+        height: 190vh;
+        padding: 1px;
+    }
+
+    .dot{
+        width: 20px;
+        height: 2px;
+    }
+
+    .assignments{
+        height: 1370px;
+    }
+
+    .heading h2{
+        font-size: 50px;
+    }
+
+    .contact-me p{
+        font-size: 20px;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 12px;
+    }
+}
 
 /*Mobile large*/
 @media all and (min-width: 400px) and (max-width: 600px){
