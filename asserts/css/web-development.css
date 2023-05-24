@@ -1,0 +1,40 @@
+.web-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.display{
+    background-image: url("../images/Portfolio/Web-development.gif");
+    position: relative;
+    width: 650px;
+    height: 650px;
+}
+
+
+.btn{
+    bottom: 60px;
+    left: 75%;
+    width: max-content;
+    position: absolute;
+    /*right: 0;*/
+    /*left: 0;*/
+    margin:auto;
+    background-color: #0652DD;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid #0652DD;
+    cursor: pointer;
+}

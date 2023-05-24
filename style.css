@@ -335,9 +335,22 @@ h5{
     align-items: center;
 }
 
+#parkingSystem{
+    background-image: url("asserts/images/Portfolio/Parking-system.png");
+}
+
+
+#smallShop{
+    background-image: url("asserts/images/Portfolio/Kumara-shop.png");
+}
+
+
+#hostelManagement{
+    background-image: url("asserts/images/Portfolio/Hostel-System.png");
+}
+
 .card2{
-    background-color: #0dcaf0;
-    background-image: url("asserts/images/Portfolio/Beach-camping.jpeg");
+    /*background-color: #0dcaf0;*/
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -460,17 +473,6 @@ section .desc h5{
     opacity: 0;
 }
 
-#hostelManagement{
-    background-image: url("asserts/images/Portfolio/Hostel-management-Image.png");
-}
-
-#vehicleParking{
-    background-image: url("asserts/images/Portfolio/Parking-System-Image.png");
-}
-
-#farmShop{
-    background-image: url("asserts/images/Portfolio/Thoda-kade-Image.png");
-}
 
 .textImage{
     top: 0;
@@ -632,7 +634,7 @@ section .skill{
     position: relative;
 }
 #display{
-    background-image: url("asserts/images/Portfolio/Cricket.jpeg");
+    background-image: url("asserts/images/Portfolio/Hatton.JPG");
     background-size: cover;
     background-position: center;
 }
